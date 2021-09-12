@@ -1,0 +1,10 @@
+[[snippets]]
+  description = "Quickly retrieve imperative commands to create k8s resources."
+  command = "kubectl run -h | grep '# ' -A2"
+  tag = ["kubernetes", "kubectl"]
+  output = "list of different ways to create k8s resources imperatively using kubectl"
+[[snippets]]
+  description = "Quickly retrieve imperative commands to create k8s resources."
+  command = "kubectl describe pod <pod-name> | grep -i events -A 10"
+  tag = ["kubernetes", "kubectl"]
+  output = "Check last 10 events on pod"

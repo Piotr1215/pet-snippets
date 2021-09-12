@@ -1,0 +1,26 @@
+  # Kubernetes related bookmarks
+[[snippets]]
+    description = "START: cheatsheet and useful commands"
+    command = "xdg-open https://kubernetes.io/docs/reference/kubectl/cheatsheet/"
+    tag = ["kubernetes", "bookmark"]
+    output = ""
+[[snippets]]
+    description = "SPEC: audit policy YAML spec"
+    command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/audit/audit-policy.yaml"
+    tag = ["kubernetes", "bookmark"]
+    output = ""
+[[snippets]]
+    description = "SPEC: cronjob YAML spec"
+    command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/pods/storage/pv-claim.yaml"
+    tag = ["kubernetes", "bookmark"]
+    output = ""
+[[snippets]]
+    description = "SPEC: sample nginx YAML deployment spec"
+    command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/simple_deployment.yaml"
+    tag = ["kubernetes", "bookmark"]
+    output = ""
+[[snippets]]
+    description = "SPEC: minimalistic ingress YAML spec"
+    command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/service/networking/minimal-ingress.yaml"
+    tag = ["kubernetes", "bookmark"]
+    output = ""
