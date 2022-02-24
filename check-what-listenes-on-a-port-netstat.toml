@@ -1,0 +1,3 @@
+[[snippets]]
+  description = "Check what listenes on a port netstat"
+  command = "sudo netstat -pnltu | grep <port=80>"

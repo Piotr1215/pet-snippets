@@ -1,0 +1,3 @@
+[[snippets]]
+  description = "List all repos with BLOG label"
+  command = "gh repo list --limit 100 --topic blog"

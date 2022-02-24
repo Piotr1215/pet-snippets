@@ -1,0 +1,4 @@
+[[snippets]]
+  description = "Upgrade single package to newest version"
+  command = "sudo apt --only-upgrade install <package>"
+  tag = ["linux,", "apt,", "upgrade"]
