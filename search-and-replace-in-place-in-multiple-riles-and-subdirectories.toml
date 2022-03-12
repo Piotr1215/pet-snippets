@@ -1,4 +1,0 @@
-[[snippets]]
-  description = "Search and replace in place in multiple riles and subdirectories"
-  command = "grep -RiIl '<search>' | xargs sed -i 's/<search>/<replace>/g'"
-  tag = ["linux,", "text-operations"]

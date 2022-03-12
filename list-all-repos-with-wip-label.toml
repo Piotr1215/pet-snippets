@@ -1,3 +1,0 @@
-[[snippets]]
-  description = "List all repos with WIP label"
-  command = "gh repo list --limit 100 --topic wip"
