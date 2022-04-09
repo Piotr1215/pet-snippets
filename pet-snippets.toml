@@ -128,3 +128,9 @@
   command = "go run cmd/provider/main.go --terraform-version 1.0.11 --terraform-provider-source terraform-providers/mongodbatlas --terraform-provider-version 1.2.0 -d"
   tag = ["crossplane"]
   output = "Runs crossplane provider against active cluster"
+
+[[snippets]]
+  description = "find zsh alias by name, first result usually list file where alias originates from"
+  command = "zsh -ixc : 2>&1 | rg <alias=alias>"
+  tag = ["linux,", "command line"]
+  output = "Top has files with possible aliases"
