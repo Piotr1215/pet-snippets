@@ -119,7 +119,7 @@
 
 [[snippets]]
   description = "Locate a file and open in vim"
-  command = "vim \"$(fd <file=name> | fzf)\""
+  command = "nvim \"$(fd <file=name> | fzf)\""
   tag = ["linux,", "command line", "files"]
   output = "Opens file in vim"
 
@@ -134,3 +134,13 @@
   command = "zsh -ixc : 2>&1 | rg <alias=alias>"
   tag = ["linux,", "command line"]
   output = "Top has files with possible aliases"
+
+[[snippets]]
+  description = "Copy path to a file to the clipboard"
+  command = "readlink -f <filename=filename> | xsel"
+  output = "Path to a file copied to clipboard"
+
+[[snippets]]
+  description = "Find content in a file with ripgrep and open the file in nvim"
+  command = "rg -e <\"search\"> --files-with-matches | fzf | xargs nvim"
+  output = "File opened in nvim"
