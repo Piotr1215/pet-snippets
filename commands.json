@@ -1,0 +1,205 @@
+{
+  "snippets": [
+    {
+      "command": "rg <string=sample> --files-with-matches | xargs sed -i 's/<string=sample>/<string=replace>/g'",
+      "description": "Change all ocurrances of a string and replace with another string",
+      "output": "Files with string found are changed by replacing the string with a new one",
+      "tag": [
+        "linux",
+        "tools",
+        "grep"
+      ]
+    },
+    {
+      "command": "sudo netstat -pnltu | grep <port=80>",
+      "description": "Check what listenes on a port netstat",
+      "output": ""
+    },
+    {
+      "command": "docker run -d --name Watchtower -e WATCHTOWER_CLEANUP=true -e WATCHTOWER_DEBUG=trued -e WATCHTOWER_INCLUDE_STOPPED=trued -v /var/run/docker.sock:/var/run/docker.sockd containrrr/watchtower",
+      "description": "Docker watchtower to update images or all running contianers to their newest versions",
+      "output": ""
+    },
+    {
+      "command": "xdg-open https://kubernetes.io/docs/reference/kubectl/cheatsheet/",
+      "description": "START: cheatsheet and useful commands",
+      "output": "",
+      "tag": [
+        "kubernetes",
+        "bookmark"
+      ]
+    },
+    {
+      "command": "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/audit/audit-policy.yaml",
+      "description": "SPEC: audit policy YAML spec",
+      "output": "",
+      "tag": [
+        "kubernetes",
+        "bookmark"
+      ]
+    },
+    {
+      "command": "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/pods/storage/pv-claim.yaml",
+      "description": "SPEC: cronjob YAML spec",
+      "output": "",
+      "tag": [
+        "kubernetes",
+        "bookmark"
+      ]
+    },
+    {
+      "command": "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/simple_deployment.yaml",
+      "description": "SPEC: sample nginx YAML deployment spec",
+      "output": "",
+      "tag": [
+        "kubernetes",
+        "bookmark"
+      ]
+    },
+    {
+      "command": "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/service/networking/minimal-ingress.yaml",
+      "description": "SPEC: minimalistic ingress YAML spec",
+      "output": "",
+      "tag": [
+        "kubernetes",
+        "bookmark"
+      ]
+    },
+    {
+      "command": "gh repo list --limit 100 --topic blog",
+      "description": "List all repos with BLOG label",
+      "output": ""
+    },
+    {
+      "command": "gh repo list --limit 100 --topic wip",
+      "description": "List all repos with WIP label",
+      "output": ""
+    },
+    {
+      "command": "gh s -u Piotr1215 | xargs xdg-open",
+      "description": "Open my repo with s plugin for gh CLI",
+      "output": ""
+    },
+    {
+      "command": "grep -RiIl '<search>' | xargs sed -i 's/<search>/<replace>/g'",
+      "description": "Search and replace in place in multiple riles and subdirectories",
+      "output": "",
+      "tag": [
+        "linux,",
+        "text-operations"
+      ]
+    },
+    {
+      "command": "fd --extension=png <search:k8s> | fzf | xargs xdg-open",
+      "description": "Search for png and open, FZF, PNG, pictures, search",
+      "output": ""
+    },
+    {
+      "command": "ip add show enp3s0 | awk 'NR==3 {print $2}' | cut -d '/' -f 1",
+      "description": "Show IP address of enp2s0 interface, main address without CIDR",
+      "output": ""
+    },
+    {
+      "command": "kubectl run -h | grep '# ' -A2",
+      "description": "Quickly retrieve imperative commands to create k8s resources.",
+      "output": "List of different ways to create k8s resources imperatively using kubectl.",
+      "tag": [
+        "kubernetes",
+        "kubectl"
+      ]
+    },
+    {
+      "command": "kubectl describe pod <pod-name=nginx> | grep -i events -A 10",
+      "description": "Quickly retrieve imperative commands to create k8s resources.",
+      "output": "Last 10 events on a selected pod.",
+      "tag": [
+        "kubernetes",
+        "kubectl"
+      ]
+    },
+    {
+      "command": "ps -ef --forest | grep kube-apiserver | grep <setting=admission-plugins>",
+      "description": "Quickly find kube api server settings.",
+      "output": "",
+      "tag": [
+        "kubernetes",
+        "kubectl"
+      ]
+    },
+    {
+      "command": "kubectl api-resources -owide",
+      "description": "Display all k8s resources.",
+      "output": "",
+      "tag": [
+        "kubernetes",
+        "kubectl"
+      ]
+    },
+    {
+      "command": "cat <csr=myuser.csr> | base64 | tr -d \"\\n\"",
+      "description": "Get encoded csr in a proper format",
+      "output": "Token ready to be pasted in the token field of Kubernetes dashboard for example.",
+      "tag": [
+        "kubernetes",
+        "kubectl"
+      ]
+    },
+    {
+      "command": "sudo apt --only-upgrade install <package>",
+      "description": "Upgrade single package to newest version",
+      "output": "",
+      "tag": [
+        "linux,",
+        "apt,",
+        "upgrade"
+      ]
+    },
+    {
+      "command": "cd \"$(dirname \"$(fd <file=name> | fzf)\")\"",
+      "description": "Locata a file and cd into its location.",
+      "output": "Changes directory to the location of found file",
+      "tag": [
+        "linux,",
+        "command line",
+        "files"
+      ]
+    },
+    {
+      "command": "nvim \"$(fd <file=name> | fzf)\"",
+      "description": "Locate a file and open in vim",
+      "output": "Opens file in vim",
+      "tag": [
+        "linux,",
+        "command line",
+        "files"
+      ]
+    },
+    {
+      "command": "go run cmd/provider/main.go --terraform-version 1.0.11 --terraform-provider-source terraform-providers/mongodbatlas --terraform-provider-version 1.2.0 -d",
+      "description": "Run crossplane provider",
+      "output": "Runs crossplane provider against active cluster",
+      "tag": [
+        "crossplane"
+      ]
+    },
+    {
+      "command": "zsh -ixc : 2>&1 | rg <alias=alias>",
+      "description": "find zsh alias by name, first result usually list file where alias originates from",
+      "output": "Top has files with possible aliases",
+      "tag": [
+        "linux,",
+        "command line"
+      ]
+    },
+    {
+      "command": "readlink -f <filename=filename> | xsel",
+      "description": "Copy path to a file to the clipboard",
+      "output": "Path to a file copied to clipboard"
+    },
+    {
+      "command": "rg -e <\"search\"> --files-with-matches | fzf | xargs nvim",
+      "description": "Find content in a file with ripgrep and open the file in nvim",
+      "output": "File opened in nvim"
+    }
+  ]
+}
