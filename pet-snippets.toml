@@ -15,36 +15,6 @@
   output = ""
 
 [[snippets]]
-  description = "START: cheatsheet and useful commands"
-  command = "xdg-open https://kubernetes.io/docs/reference/kubectl/cheatsheet/"
-  tag = ["kubernetes", "bookmark"]
-  output = ""
-
-[[snippets]]
-  description = "SPEC: audit policy YAML spec"
-  command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/audit/audit-policy.yaml"
-  tag = ["kubernetes", "bookmark"]
-  output = ""
-
-[[snippets]]
-  description = "SPEC: cronjob YAML spec"
-  command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/pods/storage/pv-claim.yaml"
-  tag = ["kubernetes", "bookmark"]
-  output = ""
-
-[[snippets]]
-  description = "SPEC: sample nginx YAML deployment spec"
-  command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/simple_deployment.yaml"
-  tag = ["kubernetes", "bookmark"]
-  output = ""
-
-[[snippets]]
-  description = "SPEC: minimalistic ingress YAML spec"
-  command = "xdg-open https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/service/networking/minimal-ingress.yaml"
-  tag = ["kubernetes", "bookmark"]
-  output = ""
-
-[[snippets]]
   description = "List all repos with BLOG label"
   command = "gh repo list --limit 100 --topic blog"
   output = ""
@@ -76,26 +46,8 @@
   output = ""
 
 [[snippets]]
-  description = "Quickly retrieve imperative commands to create k8s resources."
-  command = "kubectl run -h | grep '# ' -A2"
-  tag = ["kubernetes", "kubectl"]
-  output = "List of different ways to create k8s resources imperatively using kubectl."
-
-[[snippets]]
-  description = "Quickly retrieve imperative commands to create k8s resources."
-  command = "kubectl describe pod <pod-name=nginx> | grep -i events -A 10"
-  tag = ["kubernetes", "kubectl"]
-  output = "Last 10 events on a selected pod."
-
-[[snippets]]
   description = "Quickly find kube api server settings."
   command = "ps -ef --forest | grep kube-apiserver | grep <setting=admission-plugins>"
-  tag = ["kubernetes", "kubectl"]
-  output = ""
-
-[[snippets]]
-  description = "Display all k8s resources."
-  command = "kubectl api-resources -owide"
   tag = ["kubernetes", "kubectl"]
   output = ""
 
@@ -124,13 +76,13 @@
   output = "Opens file in vim"
 
 [[snippets]]
-  description = "Run crossplane provider"
+  description = "Run crossplane mongodbatlas provider"
   command = "go run cmd/provider/main.go --terraform-version 1.0.11 --terraform-provider-source terraform-providers/mongodbatlas --terraform-provider-version 1.2.0 -d"
   tag = ["crossplane"]
   output = "Runs crossplane provider against active cluster"
 
 [[snippets]]
-  description = "find zsh alias by name, first result usually list file where alias originates from"
+  description = "Find zsh alias by name, first result usually list file where alias originates from"
   command = "zsh -ixc : 2>&1 | rg <alias=alias>"
   tag = ["linux,", "command line"]
   output = "Top has files with possible aliases"
