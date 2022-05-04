@@ -6,7 +6,7 @@
 
 [[snippets]]
   description = "Check what listenes on a port netstat"
-  command = "sudo netstat -pnltu | grep <port=80>"
+  command = "sudo netstat -pnltu | grep PORT?"
   output = ""
 
 [[snippets]]
@@ -96,3 +96,14 @@
   description = "Find content in a file with ripgrep and open the file in nvim"
   command = "rg -e <\"search\"> --files-with-matches | fzf | xargs nvim"
   output = "File opened in nvim"
+
+[[snippets]]
+  description = "Copy file name without extension and without new line at the end"
+  command = "stat -t <filename:name-with-extension> | cut -d '.' -f1 | xargs echo -n | xclip"
+  output = ""
+
+[[snippets]]
+  description = "Git show all changes commits to a file, helpful for tracking changes"
+  command = "git log --follow --stat -p -- "
+  tag = ["git,", "commit"]
+  output = ""
