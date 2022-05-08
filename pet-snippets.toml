@@ -107,3 +107,18 @@
   command = "git log --follow --stat -p -- "
   tag = ["git,", "commit"]
   output = ""
+
+[[snippets]]
+  description = "Check if branch is eligible for merge"
+  command = "git merge --no-commit --no-ff create-mongocla-composite && echo $? && git merge --abort"
+  output = ""
+
+[[snippets]]
+  description = "Check git status of every directory in repos folder, assuming every directory is a git repo"
+  command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git fetch origin && git status -s && echo)' \\;"
+  output = ""
+
+[[snippets]]
+  description = "Git check unpushed commits in every local repo folder in dev"
+  command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git log --branches --not --remotes && echo)' \\;"
+  output = ""
