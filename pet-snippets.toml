@@ -70,8 +70,14 @@
   output = "Changes directory to the location of found file"
 
 [[snippets]]
+  description = "Locate a file and open in a default program"
+  command = "xdg-open \"$(fd <file> ~/dev | fzf)\""
+  tag = ["linux,", "command line", "files"]
+  output = "Opens file in a default program"
+
+[[snippets]]
   description = "Locate a file and open in vim"
-  command = "nvim \"$(fd <file=name> | fzf)\""
+  command = "nvim \"$(fd <file> ~/dev | fzf)\""
   tag = ["linux,", "command line", "files"]
   output = "Opens file in vim"
 
@@ -89,7 +95,7 @@
 
 [[snippets]]
   description = "Copy path to a file to the clipboard"
-  command = "readlink -f <filename=filename> | xsel"
+  command = "xsel <<(readlink -fn"
   output = "Path to a file copied to clipboard"
 
 [[snippets]]
