@@ -122,3 +122,18 @@
   description = "Git check unpushed commits in every local repo folder in dev"
   command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git log --branches --not --remotes && echo)' \\;"
   output = ""
+
+[[snippets]]
+  description = "Git list branches not merged with upstream main"
+  command = "git branch --no-merged upstream/main"
+  output = ""
+
+[[snippets]]
+  description = "Git list branches merged with origin main"
+  command = "git branch --merged origin/main"
+  output = ""
+
+[[snippets]]
+  description = "Find differences between svg files referenced in markdown but not in the dagrams/rendered folder. Run from /arch/platform folder."
+  command = "diff <(rg --type \"md\" .svg | cut -d '/' -f 5- | sed 's/.$//' | sort) <(fd .  ./diagrams/rendered | cut -d '/' -f 4- | sort)"
+  output = ""
