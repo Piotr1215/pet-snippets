@@ -64,8 +64,8 @@
   output = ""
 
 [[snippets]]
-  description = "Locata a file and cd into its location."
-  command = "cd \"$(dirname \"$(fd <file=name> | fzf)\")\""
+  description = "Locata a file and cd into its location. Defaults to HOME/dev"
+  command = "cd \"$(dirname \"$(fd <file> ~/dev | fzf)\")\""
   tag = ["linux,", "command line", "files"]
   output = "Changes directory to the location of found file"
 
