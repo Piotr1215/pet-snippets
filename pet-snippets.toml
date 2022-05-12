@@ -143,3 +143,8 @@
   description = "Find differences between svg files referenced in markdown but not in the dagrams/rendered folder. Run from /arch/platform folder."
   command = "diff <(rg --type \"md\" .svg | cut -d '/' -f 5- | sed 's/.$//' | sort) <(fd .  ./diagrams/rendered | cut -d '/' -f 4- | sort)"
   output = ""
+
+[[snippets]]
+  description = "Install new version of coc.nvim after PluginUpdate"
+  command = "cd /home/decoder/.vim/bundle/coc.nvim && yarn install && cd"
+  output = ""
