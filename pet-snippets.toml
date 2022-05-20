@@ -148,3 +148,13 @@
   description = "Install new version of coc.nvim after PluginUpdate"
   command = "cd /home/decoder/.vim/bundle/coc.nvim && yarn install && cd"
   output = ""
+
+[[snippets]]
+  description = "Run this in Browser console to show resolved comments on the PR page"
+  command = "document.querySelectorAll('span.Details-content--closed').forEach((e)=>{e.click()})"
+  output = ""
+
+[[snippets]]
+  description = "Add content copied from clipboard to a file"
+  command = "xclip -o -sel primary >> "
+  output = ""
