@@ -30,12 +30,6 @@
   output = ""
 
 [[snippets]]
-  description = "Search and replace in place in multiple riles and subdirectories"
-  command = "grep -RiIl '<search>' | xargs sed -i 's/<search>/<replace>/g'"
-  tag = ["linux,", "text-operations"]
-  output = ""
-
-[[snippets]]
   description = "Search for png and open, FZF, PNG, pictures, search"
   command = "fd --extension=png <search:k8s> | fzf | xargs xdg-open"
   output = ""
