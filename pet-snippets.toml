@@ -158,3 +158,8 @@
   description = "Paste content copied from clipboard to a file"
   command = "xclip -o -sel clipboard >> "
   output = ""
+
+[[snippets]]
+  description = "Linux fix errors when installing something with apt"
+  command = "sudo dpkg --configure -a"
+  output = ""
