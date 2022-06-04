@@ -163,3 +163,13 @@
   description = "Linux fix errors when installing something with apt"
   command = "sudo dpkg --configure -a"
   output = ""
+
+[[snippets]]
+  description = "Search git commit history, provide file path ot \"**/name.*\" if unknown"
+  command = "git log --all --full-history -- ${0}\"**/name.*\""
+  output = ""
+
+[[snippets]]
+  description = "Git find deleted files and show their commits. Helpful when need to undelete a file."
+  command = "git log --diff-filter=D --summary | grep -E 'delete|^commit\\s+\\S+'"
+  output = ""
