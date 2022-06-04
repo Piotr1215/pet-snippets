@@ -155,6 +155,6 @@
   output = ""
 
 [[snippets]]
-  description = "Add content copied from clipboard to a file"
-  command = "xclip -o -sel primary >> "
+  description = "Paste content copied from clipboard to a file"
+  command = "xclip -o -sel clipboard >> "
   output = ""
