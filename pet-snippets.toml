@@ -167,3 +167,18 @@
   description = "Git find deleted files and show their commits. Helpful when need to undelete a file."
   command = "git log --diff-filter=D --summary | grep -E 'delete|^commit\\s+\\S+'"
   output = ""
+
+[[snippets]]
+  description = "List all make targets"
+  command = "make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\\/\\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}' | sort -u"
+  output = ""
+
+[[snippets]]
+  description = "Upbound MCP, create package-pull-secret token for authentication with the package pulling source"
+  command = "kubectl create secret docker-registry package-pull-secret --namespace=${NAMESPACE} --docker-server=xpkg.upbound.io --docker-username=${UPBOUND_ROBOT_ACCESS_ID} --docker-password=${UPBOUND_ROBOT_TOKEN}"
+  output = ""
+
+[[snippets]]
+  description = "Paste yaml from clipboard and apply with kubectl"
+  command = "xclip -o -sel clipboard | kubectl apply -f -"
+  output = ""
