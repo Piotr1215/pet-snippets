@@ -1,6 +1,6 @@
 [[snippets]]
   description = "Change all ocurrances of a string and replace with another string"
-  command = "rg <string=sample> --files-with-matches | xargs sed -i 's/<string=sample>/<string=replace>/g'"
+  command = "rg <string to replace> --files-with-matches | xargs sed -i 's/<string to replace>/<new string>/g'"
   tag = ["linux", "tools", "grep"]
   output = "Files with string found are changed by replacing the string with a new one"
 
