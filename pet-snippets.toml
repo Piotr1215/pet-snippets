@@ -182,3 +182,58 @@
   description = "Paste yaml from clipboard and apply with kubectl"
   command = "xclip -o -sel clipboard | kubectl apply -f -"
   output = ""
+
+[[snippets]]
+  description = "Fix git gpg failed to sign data on mac"
+  command = "export GPG_TTY=$(tty)"
+  output = ""
+
+[[snippets]]
+  description = "Copy a sample index.html to GCP storage bucket"
+  command = "gsutil cp index.html gs://bucket-demo-hour"
+  output = ""
+
+[[snippets]]
+  description = "Grep for exact match"
+  command = "rg -w "
+  output = ""
+
+[[snippets]]
+  description = "Generate plantuml diagrams in svg format and place them in the rendered subdirectory"
+  command = "java -DPLANTUML_LIMIT_SIZE=8192 -jar /usr/local/bin/plantuml.jar -tsvg ./ -o ./rendered"
+  output = ""
+
+[[snippets]]
+  description = "Create folder with the current date formatted in day-month-year"
+  command = "mkdir $(date +\"%d-%m-%y\")"
+  output = ""
+
+[[snippets]]
+  description = "Install universal crossplane into upbound-system namespace development branch"
+  command = "helm install uxp --namespace upbound-system upbound-stable/universal-crossplane --devel"
+  output = ""
+
+[[snippets]]
+  description = "Search git commit history content"
+  command = "git grep <search> $(git rev-list --all)"
+  output = ""
+
+[[snippets]]
+  description = "Reformat a file with 1 space between words and 2 spaces between paragraphs"
+  command = "fmt -u notes-upbound.md"
+  output = ""
+
+[[snippets]]
+  description = "Create script to run at startup, update rc.local and run this command"
+  command = "update-rc.d rc.local defaults 80"
+  output = ""
+
+[[snippets]]
+  description = "Bash copy last command from history without a new line, meaning don't execute it just output to the terminal"
+  command = "fc -ln -1 | tr -d '\\n' | xsel --clipboard"
+  output = ""
+
+[[snippets]]
+  description = "SSH Cheat Sheet"
+  command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
+  output = ""
