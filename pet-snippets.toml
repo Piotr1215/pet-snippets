@@ -252,3 +252,8 @@
   description = "List all the shell shortcuts"
   command = "bindkey"
   output = ""
+
+[[snippets]]
+  description = "List all installed apt packages"
+  command = "sudo dpkg -l"
+  output = ""
