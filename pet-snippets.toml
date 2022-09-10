@@ -257,3 +257,8 @@
   description = "List all installed apt packages"
   command = "sudo dpkg -l"
   output = ""
+
+[[snippets]]
+  description = "Tmux cleanly and gracefully kill all tmux open sessions"
+  command = "tmux kill-server"
+  output = ""
