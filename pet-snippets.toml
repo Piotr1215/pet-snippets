@@ -247,3 +247,8 @@
   description = "Git compare diff two branches showing only your changes between the main and your branch"
   command = "git diff main...$(git branch | sed -n -e 's/^\\* \\(.*\\)/\\1/p')"
   output = ""
+
+[[snippets]]
+  description = "List all the shell shortcuts"
+  command = "bindkey"
+  output = ""
