@@ -237,3 +237,8 @@
   description = "SSH Cheat Sheet"
   command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
   output = ""
+
+[[snippets]]
+  description = "Get current history and remove new line that bash might add"
+  command = "echo \"history\" | bash -i 2>/dev/null | sed -e 's/\\x1b\\[.//g'"
+  output = ""
