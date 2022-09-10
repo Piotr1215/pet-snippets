@@ -242,3 +242,8 @@
   description = "Get current history and remove new line that bash might add"
   command = "echo \"history\" | bash -i 2>/dev/null | sed -e 's/\\x1b\\[.//g'"
   output = ""
+
+[[snippets]]
+  description = "Git compare diff two branches showing only your changes between the main and your branch"
+  command = "git diff main...$(git branch | sed -n -e 's/^\\* \\(.*\\)/\\1/p')"
+  output = ""
