@@ -262,3 +262,43 @@
   description = "Tmux cleanly and gracefully kill all tmux open sessions"
   command = "tmux kill-server"
   output = ""
+
+[[snippets]]
+  description = "Display fancy kubernetes status including health check"
+  command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version --short && kubectl get nodes && kubectl cluster-info; \\n} | grep -z 'Ready\\| ok\\|passed\\|running'"
+  output = ""
+
+[[snippets]]
+  description = "Vim fix for go files when folds are closed on save"
+  command = "xdg-open https://stackoverflow.com/a/55327996"
+  output = ""
+
+[[snippets]]
+  description = "Apt ubuntu remove ppa from the repositories"
+  command = "sudo add-apt-repository --remove ppa:NAME?"
+  output = ""
+
+[[snippets]]
+  description = "Generate random password and copy to clipboard"
+  command = "apg -M SNCL -m 22 | fzf | xsel -ib"
+  output = ""
+
+[[snippets]]
+  description = "Vim generate ctags exuberant tags"
+  command = "ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log ."
+  output = ""
+
+[[snippets]]
+  description = "At reminder times table, formats execution"
+  command = "xdg-open https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-schedule-jobs-in-linux-at-and-crontab-commands-255842/\\#:\\~:text\\=Formats%20for%20the%20at%20Command%20for%20the%20Time%20of%20Execution"
+  output = ""
+
+[[snippets]]
+  description = "Modify access for a specific user to a file or folder using ACL access control list, setfacl"
+  command = "xdg-open https://superuser.com/a/145007"
+  output = ""
+
+[[snippets]]
+  description = "Modify ACL for decoder"
+  command = "setfacl -m u:decoder:rwx"
+  output = ""
