@@ -236,6 +236,7 @@
 [[snippets]]
   description = "SSH Cheat Sheet"
   command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
+  tag = ["link"]
   output = ""
 
 [[snippets]]
@@ -271,6 +272,7 @@
 [[snippets]]
   description = "Vim fix for go files when folds are closed on save"
   command = "xdg-open https://stackoverflow.com/a/55327996"
+  tag = ["link"]
   output = ""
 
 [[snippets]]
@@ -291,11 +293,13 @@
 [[snippets]]
   description = "At reminder times table, formats execution"
   command = "xdg-open https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-schedule-jobs-in-linux-at-and-crontab-commands-255842/\\#:\\~:text\\=Formats%20for%20the%20at%20Command%20for%20the%20Time%20of%20Execution"
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Modify access for a specific user to a file or folder using ACL access control list, setfacl"
   command = "xdg-open https://superuser.com/a/145007"
+  tag = ["link"]
   output = ""
 
 [[snippets]]
