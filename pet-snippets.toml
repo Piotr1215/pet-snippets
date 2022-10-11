@@ -306,3 +306,36 @@
   description = "Modify ACL for decoder"
   command = "setfacl -m u:decoder:rwx"
   output = ""
+
+[[snippets]]
+  description = "Link to nvim lua guide"
+  command = "xdg-open https://github.com/nanotee/nvim-lua-guide"
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to neovim folder structure"
+  command = "https://github.com/nanotee/nvim-lua-guide#runtime-files"
+  tag = ["link,", "neovim"]
+  output = ""
+
+[[snippets]]
+  description = "Link to bash conditional operators"
+  command = "https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#:~:text=6.4%20bash%20conditional%20expressions"
+  tag = ["link,", "neovim"]
+  output = ""
+
+[[snippets]]
+  description = "SSH generate ecdsa key in the ssh folder"
+  command = "ssh-keygen -t ecdsa -f ~/.ssh/argo_infra_rsa"
+  output = ""
+
+[[snippets]]
+  description = "Fix sealed secret error cannot fetch certificate"
+  command = "kubectl -n kube-system patch svc sealed-secrets-controller --type='json' -p='[{\"op\": \"remove\", \"path\": \"/spec/ports/0/name\"}, {\"op\": \"replace\", \"path\": \"/spec/ports/0/targetPort\", \"value\":8080}]'"
+  output = ""
+
+[[snippets]]
+  description = "Link to the taskwarrior possible due date fields"
+  command = "xdg-open https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
+  output = ""
