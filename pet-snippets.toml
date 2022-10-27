@@ -339,3 +339,32 @@
   description = "Link to the taskwarrior possible due date fields"
   command = "xdg-open https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
   output = ""
+
+[[snippets]]
+  description = "Install newest version of up CLI"
+  command = "curl -sL \"https://cli.upbound.io\" | sh && sudo mv up /usr/local/bin/"
+  tag = ["Upbound,", "CLI"]
+  output = ""
+
+[[snippets]]
+  description = "Git copy file from source branch to current branch"
+  command = "git checkout ?SOURCE_BRANCH ?PATH_TO_FILE"
+  tag = ["git"]
+  output = ""
+
+[[snippets]]
+  description = "Add GCP official provider to providers cache for LSP to work. Crossplane.yaml must be in the same folder as composition/definition or in the root of the repo."
+  command = "up xpkg dep xpkg.upbound.io/upbound/provider-gcp"
+  tag = ["crossplane"]
+  output = ""
+
+[[snippets]]
+  description = "Enable debugging in neovim for rust and go"
+  command = "sudo apt install -y lldb-11 && sudo ln -s /usr/bin/lldb-vscode-11 /usr/bin/lldb-vscode"
+  tag = ["nvim,", "debugging"]
+  output = ""
+
+[[snippets]]
+  description = "Increase instances of allowed max user_instances open files for the file watcher"
+  command = "sudo sysctl fs.inotify.max_user_instances=8192"
+  output = ""
