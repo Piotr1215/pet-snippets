@@ -94,7 +94,7 @@
 
 [[snippets]]
   description = "Find content in a file with ripgrep and open the file in nvim"
-  command = "rg -e <\"search\"> --files-with-matches | fzf | xargs nvim"
+  command = "rg -e \"<search>\" --files-with-matches | fzf | xargs nvim"
   output = "File opened in nvim"
 
 [[snippets]]
@@ -367,4 +367,10 @@
 [[snippets]]
   description = "Increase instances of allowed max user_instances open files for the file watcher"
   command = "sudo sysctl fs.inotify.max_user_instances=8192"
+  output = ""
+
+[[snippets]]
+  description = "Launch program on file change. In this case kubectl apply"
+  command = "/usr/bin/ls <pattern=*.yaml> | entr -s <command=kubectl apply -f>"
+  tag = ["kubernetes,", "linux"]
   output = ""
