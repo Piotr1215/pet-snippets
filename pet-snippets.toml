@@ -374,3 +374,18 @@
   command = "/usr/bin/ls <pattern=*.yaml> | entr -s <command=kubectl apply -f>"
   tag = ["kubernetes,", "linux"]
   output = ""
+
+[[snippets]]
+  description = "Show colorized directory tree 1 level deep with less"
+  command = "tree -LC 2 --si --sort name | less"
+  output = ""
+
+[[snippets]]
+  description = "Generate simple git changelog"
+  command = "git log --pretty=\"- %s\" | grep -v Merge"
+  output = ""
+
+[[snippets]]
+  description = "sound setup"
+  command = "alsamixer"
+  output = ""
