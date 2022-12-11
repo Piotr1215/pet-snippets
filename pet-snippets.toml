@@ -389,3 +389,8 @@
   description = "sound setup"
   command = "alsamixer"
   output = ""
+
+[[snippets]]
+  description = "gifcap record gifs from screen"
+  command = "xdg-open https://gifcap.dev/"
+  output = ""
