@@ -400,3 +400,14 @@
   command = "fd <file=README.md> | cpio -pdm <destination=~/dev>"
   tag = ["linux,", "terminal"]
   output = ""
+
+[[snippets]]
+  description = "Update all global go packages"
+  command = "go-global-update"
+  output = ""
+
+[[snippets]]
+  description = "Update all global cargo packages"
+  command = "cargo install-update -a"
+  tag = ["rust"]
+  output = ""
