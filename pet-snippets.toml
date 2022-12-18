@@ -394,3 +394,9 @@
   description = "gifcap record gifs from screen"
   command = "xdg-open https://gifcap.dev/"
   output = ""
+
+[[snippets]]
+  description = "Copy files found in a directory tree to another directory including subdirectories"
+  command = "fd <file=README.md> | cpio -pdm <destination=~/dev>"
+  tag = ["linux,", "terminal"]
+  output = ""
