@@ -58,7 +58,7 @@
   output = ""
 
 [[snippets]]
-  description = "Locata a file and cd into its location. Defaults to HOME/dev"
+  description = "Locate a file and cd into its location. Defaults to HOME/dev"
   command = "cd \"$(dirname \"$(fd <file> ~/dev | fzf)\")\""
   tag = ["linux,", "command line", "files"]
   output = "Changes directory to the location of found file"
@@ -76,12 +76,6 @@
   output = "Opens file in vim"
 
 [[snippets]]
-  description = "Run crossplane mongodbatlas provider"
-  command = "go run cmd/provider/main.go --terraform-version 1.0.11 --terraform-provider-source terraform-providers/mongodbatlas --terraform-provider-version 1.2.0 -d"
-  tag = ["crossplane"]
-  output = "Runs crossplane provider against active cluster"
-
-[[snippets]]
   description = "Find zsh alias by name, first result usually list file where alias originates from"
   command = "zsh -ixc : 2>&1 | rg <alias=alias>"
   tag = ["linux,", "command line"]
@@ -93,13 +87,13 @@
   output = "Path to a file copied to clipboard"
 
 [[snippets]]
-  description = "Find content in a file with ripgrep and open the file in nvim"
-  command = "rg -e \"<search>\" --files-with-matches | fzf | xargs nvim"
+  description = "Find content in a file with ripgrep and open the file in nvim Ctrl+x+e to edit command."
+  command = "rg -e \"search\" --files-with-matches | fzf | xargs nvim"
   output = "File opened in nvim"
 
 [[snippets]]
   description = "Copy file name without extension and without new line at the end"
-  command = "stat -t <filename:name-with-extension> | cut -d '.' -f1 | xargs echo -n | xclip"
+  command = "stat -t FILENAME:NAME-WITH-EXTENSION | cut -d '.' -f1 | xargs echo -n | xclip"
   output = ""
 
 [[snippets]]
@@ -111,26 +105,31 @@
 [[snippets]]
   description = "Check if branch is eligible for merge"
   command = "git merge --no-commit --no-ff create-mongocla-composite && echo $? && git merge --abort"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Check git status of every directory in repos folder, assuming every directory is a git repo"
   command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git fetch origin && git status -s && echo)' \\;"
-  output = ""
+  tag = ["git"]
+  output = "If a directory is not a git repo, it will be ignored with a warrning and command will continue."
 
 [[snippets]]
   description = "Git check unpushed commits in every local repo folder in dev"
   command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git log --branches --not --remotes && echo)' \\;"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
-  description = "Git list branches not merged with upstream main"
-  command = "git branch --no-merged upstream/main"
+  description = "Git list branches not merged with origin main"
+  command = "git branch --no-merged origin/main"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Git list branches merged with origin main"
   command = "git branch --merged origin/main"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -141,6 +140,7 @@
 [[snippets]]
   description = "Install new version of coc.nvim after PluginUpdate"
   command = "cd /home/decoder/.vim/bundle/coc.nvim && yarn install && cd"
+  tag = ["nvim"]
   output = ""
 
 [[snippets]]
@@ -156,16 +156,19 @@
 [[snippets]]
   description = "Linux fix errors when installing something with apt"
   command = "sudo dpkg --configure -a"
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Search git commit history, provide file path ot \"**/name.*\" if unknown"
   command = "git log --all --full-history -- ${0}\"**/name.*\""
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Git find deleted files and show their commits. Helpful when need to undelete a file."
   command = "git log --diff-filter=D --summary | grep -E 'delete|^commit\\s+\\S+'"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -181,6 +184,7 @@
 [[snippets]]
   description = "Paste yaml from clipboard and apply with kubectl"
   command = "xclip -o -sel clipboard | kubectl apply -f -"
+  tag = ["kubectl"]
   output = ""
 
 [[snippets]]
@@ -211,11 +215,13 @@
 [[snippets]]
   description = "Install universal crossplane into upbound-system namespace development branch"
   command = "helm install uxp --namespace upbound-system upbound-stable/universal-crossplane --devel"
+  tag = ["crossplane"]
   output = ""
 
 [[snippets]]
   description = "Search git commit history content"
   command = "git grep <search> $(git rev-list --all)"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -242,21 +248,25 @@
 [[snippets]]
   description = "Get current history and remove new line that bash might add"
   command = "echo \"history\" | bash -i 2>/dev/null | sed -e 's/\\x1b\\[.//g'"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Git compare diff two branches showing only your changes between the main and your branch"
   command = "git diff main...$(git branch | sed -n -e 's/^\\* \\(.*\\)/\\1/p')"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "List all the shell shortcuts"
   command = "bindkey"
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "List all installed apt packages"
   command = "sudo dpkg -l"
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
@@ -267,6 +277,7 @@
 [[snippets]]
   description = "Display fancy kubernetes status including health check"
   command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version --short && kubectl get nodes && kubectl cluster-info; \\n} | grep -z 'Ready\\| ok\\|passed\\|running'"
+  tag = ["kubectl"]
   output = ""
 
 [[snippets]]
@@ -278,16 +289,19 @@
 [[snippets]]
   description = "Apt ubuntu remove ppa from the repositories"
   command = "sudo add-apt-repository --remove ppa:NAME?"
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Generate random password and copy to clipboard"
   command = "apg -M SNCL -m 22 | fzf | xsel -ib"
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Vim generate ctags exuberant tags"
   command = "ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log ."
+  tag = ["nvim"]
   output = ""
 
 [[snippets]]
@@ -310,19 +324,19 @@
 [[snippets]]
   description = "Link to nvim lua guide"
   command = "xdg-open https://github.com/nanotee/nvim-lua-guide"
-  tag = ["link"]
+  tag = ["link", "nvim"]
   output = ""
 
 [[snippets]]
   description = "Link to neovim folder structure"
   command = "https://github.com/nanotee/nvim-lua-guide#runtime-files"
-  tag = ["link,", "neovim"]
+  tag = ["link,", "nvim"]
   output = ""
 
 [[snippets]]
   description = "Link to bash conditional operators"
   command = "https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#:~:text=6.4%20bash%20conditional%20expressions"
-  tag = ["link,", "neovim"]
+  tag = ["link,", "nvim"]
   output = ""
 
 [[snippets]]
@@ -338,12 +352,13 @@
 [[snippets]]
   description = "Link to the taskwarrior possible due date fields"
   command = "xdg-open https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Install newest version of up CLI"
   command = "curl -sL \"https://cli.upbound.io\" | sh && sudo mv up /usr/local/bin/"
-  tag = ["Upbound,", "CLI"]
+  tag = ["upbound,", "cli"]
   output = ""
 
 [[snippets]]
@@ -361,28 +376,31 @@
 [[snippets]]
   description = "Enable debugging in neovim for rust and go"
   command = "sudo apt install -y lldb-11 && sudo ln -s /usr/bin/lldb-vscode-11 /usr/bin/lldb-vscode"
-  tag = ["nvim,", "debugging"]
+  tag = ["nvim,"]
   output = ""
 
 [[snippets]]
   description = "Increase instances of allowed max user_instances open files for the file watcher"
   command = "sudo sysctl fs.inotify.max_user_instances=8192"
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Launch program on file change. In this case kubectl apply"
-  command = "/usr/bin/ls <pattern=*.yaml> | entr -s <command=kubectl apply -f>"
-  tag = ["kubernetes,", "linux"]
+  command = "/usr/bin/ls *.yaml | entr -s kubectl apply -f"
+  tag = ["kubectl", "linux"]
   output = ""
 
 [[snippets]]
   description = "Show colorized directory tree 1 level deep with less"
   command = "tree -LC 2 --si --sort name | less"
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Generate simple git changelog"
   command = "git log --pretty=\"- %s\" | grep -v Merge"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -393,6 +411,7 @@
 [[snippets]]
   description = "gifcap record gifs from screen"
   command = "xdg-open https://gifcap.dev/"
+  tag = ["link"]
   output = ""
 
 [[snippets]]
