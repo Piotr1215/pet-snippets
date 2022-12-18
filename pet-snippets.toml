@@ -402,12 +402,7 @@
   output = ""
 
 [[snippets]]
-  description = "Update all global go packages"
-  command = "go-global-update"
-  output = ""
-
-[[snippets]]
-  description = "Update all global cargo packages"
-  command = "cargo install-update -a"
-  tag = ["rust"]
+  description = "Update all global cargo and go packages"
+  command = "__global_updates.sh"
+  tag = ["rust", "go", "linux"]
   output = ""
