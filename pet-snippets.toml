@@ -15,23 +15,8 @@
   output = ""
 
 [[snippets]]
-  description = "List all repos with BLOG label"
-  command = "gh repo list --limit 100 --topic blog"
-  output = ""
-
-[[snippets]]
-  description = "List all repos with WIP label"
-  command = "gh repo list --limit 100 --topic wip"
-  output = ""
-
-[[snippets]]
   description = "Open my repo with s plugin for gh CLI"
   command = "gh s -u Piotr1215 | xargs xdg-open"
-  output = ""
-
-[[snippets]]
-  description = "Search for png and open, FZF, PNG, pictures, search"
-  command = "fd --extension=png <search:k8s> | fzf | xargs xdg-open"
   output = ""
 
 [[snippets]]
@@ -68,12 +53,6 @@
   command = "xdg-open \"$(fd <file> ~/dev | fzf)\""
   tag = ["linux,", "command line", "files"]
   output = "Opens file in a default program"
-
-[[snippets]]
-  description = "Locate a file and open in vim"
-  command = "nvim \"$(fd <file> ~/dev | fzf)\""
-  tag = ["linux,", "command line", "files"]
-  output = "Opens file in vim"
 
 [[snippets]]
   description = "Find zsh alias by name, first result usually list file where alias originates from"
@@ -138,12 +117,6 @@
   output = ""
 
 [[snippets]]
-  description = "Install new version of coc.nvim after PluginUpdate"
-  command = "cd /home/decoder/.vim/bundle/coc.nvim && yarn install && cd"
-  tag = ["nvim"]
-  output = ""
-
-[[snippets]]
   description = "Run this in Browser console to show resolved comments on the PR page"
   command = "document.querySelectorAll('span.Details-content--closed').forEach((e)=>{e.click()})"
   output = ""
@@ -177,11 +150,6 @@
   output = ""
 
 [[snippets]]
-  description = "Upbound MCP, create package-pull-secret token for authentication with the package pulling source"
-  command = "kubectl create secret docker-registry package-pull-secret --namespace=${NAMESPACE} --docker-server=xpkg.upbound.io --docker-username=${UPBOUND_ROBOT_ACCESS_ID} --docker-password=${UPBOUND_ROBOT_TOKEN}"
-  output = ""
-
-[[snippets]]
   description = "Paste yaml from clipboard and apply with kubectl"
   command = "xclip -o -sel clipboard | kubectl apply -f -"
   tag = ["kubectl"]
@@ -190,11 +158,6 @@
 [[snippets]]
   description = "Fix git gpg failed to sign data on mac"
   command = "export GPG_TTY=$(tty)"
-  output = ""
-
-[[snippets]]
-  description = "Copy a sample index.html to GCP storage bucket"
-  command = "gsutil cp index.html gs://bucket-demo-hour"
   output = ""
 
 [[snippets]]
@@ -225,8 +188,8 @@
   output = ""
 
 [[snippets]]
-  description = "Reformat a file with 1 space between words and 2 spaces between paragraphs"
-  command = "fmt -u notes-upbound.md"
+  description = "Reformat a file with 1 space between words and 2 spaces between paragraphs. Helpful when limiting text width to 80 for PR reviews"
+  command = "fmt -u FILE?"
   output = ""
 
 [[snippets]]
@@ -424,4 +387,21 @@
   description = "Update all global cargo and go packages"
   command = "__global_updates.sh"
   tag = ["rust", "go", "linux"]
+  output = ""
+
+[[snippets]]
+  description = "git synchronize local fork origin with remote upstream"
+  command = "git merge upstream/master"
+  output = ""
+
+[[snippets]]
+  description = "chrontab expression generator"
+  command = "xdg-open https://crontab-generator.org/"
+  tag = ["linux,", "chron"]
+  output = ""
+
+[[snippets]]
+  description = "interactive svg reference"
+  command = "xgd-open https://fffuel.co/sssvg/"
+  tag = ["web,", "svg"]
   output = ""
