@@ -1,7 +1,7 @@
 [[snippets]]
   description = "Change all ocurrances of a string and replace with another string"
   command = "rg <string to replace> --files-with-matches | xargs sed -i 's/<string to replace>/<new string>/g'"
-  tag = [ "linux", "tools", "grep" ]
+  tag = ["linux", "tools", "grep"]
   output = "Files with string found are changed by replacing the string with a new one"
 
 [[snippets]]
@@ -27,37 +27,37 @@
 [[snippets]]
   description = "Quickly find kube api server settings."
   command = "ps -ef --forest | grep kube-apiserver | grep <setting=admission-plugins>"
-  tag = [ "kubernetes", "kubectl" ]
+  tag = ["kubernetes", "kubectl"]
   output = ""
 
 [[snippets]]
   description = "Get encoded csr in a proper format"
   command = "cat <csr=myuser.csr> | base64 | tr -d \"\\n\""
-  tag = [ "kubernetes", "kubectl" ]
+  tag = ["kubernetes", "kubectl"]
   output = "Token ready to be pasted in the token field of Kubernetes dashboard for example."
 
 [[snippets]]
   description = "Upgrade single package to newest version"
   command = "sudo apt --only-upgrade install <package>"
-  tag = [ "linux,", "apt,", "upgrade" ]
+  tag = ["linux,", "apt,", "upgrade"]
   output = ""
 
 [[snippets]]
   description = "Locate a file and cd into its location. Defaults to HOME/dev"
   command = "cd \"$(dirname \"$(fd <file> ~/dev | fzf)\")\""
-  tag = [ "linux,", "command line", "files" ]
+  tag = ["linux,", "command line", "files"]
   output = "Changes directory to the location of found file"
 
 [[snippets]]
   description = "Link to Locate a file and open in a default program"
   command = "xdg-open \"$(fd <file> ~/dev | fzf)\""
-  tag = [ "linux,", "command line", "files" ]
+  tag = ["linux,", "command line", "files"]
   output = "Opens file in a default program"
 
 [[snippets]]
   description = "Find zsh alias by name, first result usually list file where alias originates from"
   command = "zsh -ixc : 2>&1 | rg <alias=alias>"
-  tag = [ "linux,", "command line" ]
+  tag = ["linux,", "command line"]
   output = "Top has files with possible aliases"
 
 [[snippets]]
@@ -78,37 +78,37 @@
 [[snippets]]
   description = "Git show all changes commits to a file, helpful for tracking changes"
   command = "git log --follow --stat -p -- "
-  tag = [ "git,", "commit" ]
+  tag = ["git,", "commit"]
   output = ""
 
 [[snippets]]
   description = "Check if branch is eligible for merge"
   command = "git merge --no-commit --no-ff create-mongocla-composite && echo $? && git merge --abort"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Check git status of every directory in repos folder, assuming every directory is a git repo"
   command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git fetch origin && git status -s && echo)' \\;"
-  tag = [ "git" ]
+  tag = ["git"]
   output = "If a directory is not a git repo, it will be ignored with a warrning and command will continue."
 
 [[snippets]]
   description = "Git check unpushed commits in every local repo folder in dev"
   command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git log --branches --not --remotes && echo)' \\;"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Git list branches not merged with origin main"
   command = "git branch --no-merged origin/main"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Git list branches merged with origin main"
   command = "git branch --merged origin/main"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -129,19 +129,19 @@
 [[snippets]]
   description = "Linux fix errors when installing something with apt"
   command = "sudo dpkg --configure -a"
-  tag = [ "linux" ]
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Search git commit history, provide file path ot \"**/name.*\" if unknown"
   command = "git log --all --full-history -- ${0}\"**/name.*\""
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Git find deleted files and show their commits. Helpful when need to undelete a file."
   command = "git log --diff-filter=D --summary | grep -E 'delete|^commit\\s+\\S+'"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -152,7 +152,7 @@
 [[snippets]]
   description = "Paste yaml from clipboard and apply with kubectl"
   command = "xclip -o -sel clipboard | kubectl apply -f -"
-  tag = [ "kubectl" ]
+  tag = ["kubectl"]
   output = ""
 
 [[snippets]]
@@ -178,13 +178,13 @@
 [[snippets]]
   description = "Install universal crossplane into upbound-system namespace development branch"
   command = "helm install uxp --namespace upbound-system upbound-stable/universal-crossplane --devel"
-  tag = [ "crossplane" ]
+  tag = ["crossplane"]
   output = ""
 
 [[snippets]]
   description = "Search git commit history content"
-  command = "git grep <search> $(git rev-list --all)"
-  tag = [ "git" ]
+  command = "git log -p --all -G '"
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -205,25 +205,25 @@
 [[snippets]]
   description = "Link to SSH Cheat Sheet"
   command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
-  tag = [ "link" ]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Git compare diff two branches showing only your changes between the main and your branch"
   command = "git diff main...$(git branch | sed -n -e 's/^\\* \\(.*\\)/\\1/p')"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "List all the shell shortcuts"
   command = "bindkey"
-  tag = [ "linux" ]
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "List all installed apt packages"
   command = "sudo dpkg -l"
-  tag = [ "linux" ]
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
@@ -234,43 +234,43 @@
 [[snippets]]
   description = "Display fancy kubernetes status including health check"
   command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version --short && kubectl get nodes && kubectl cluster-info; \\n} | grep -z 'Ready\\| ok\\|passed\\|running'"
-  tag = [ "kubectl" ]
+  tag = ["kubectl"]
   output = ""
 
 [[snippets]]
   description = "Link to Vim fix for go files when folds are closed on save"
   command = "xdg-open https://stackoverflow.com/a/55327996"
-  tag = [ "link" ]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Apt ubuntu remove ppa from the repositories"
   command = "sudo add-apt-repository --remove ppa:NAME?"
-  tag = [ "linux" ]
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Generate random password and copy to clipboard"
   command = "apg -M SNCL -m 22 | fzf | xsel -ib"
-  tag = [ "linux" ]
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Vim generate ctags exuberant tags"
   command = "ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log ."
-  tag = [ "nvim" ]
+  tag = ["nvim"]
   output = ""
 
 [[snippets]]
   description = "Link to At reminder times table, formats execution"
   command = "xdg-open https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-schedule-jobs-in-linux-at-and-crontab-commands-255842/\\#:\\~:text\\=Formats%20for%20the%20at%20Command%20for%20the%20Time%20of%20Execution"
-  tag = [ "link" ]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Link to Modify access for a specific user to a file or folder using ACL access control list, setfacl"
   command = "xdg-open https://superuser.com/a/145007"
-  tag = [ "link" ]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
@@ -281,19 +281,19 @@
 [[snippets]]
   description = "Link to nvim lua guide"
   command = "xdg-open https://github.com/nanotee/nvim-lua-guide"
-  tag = [ "link", "nvim" ]
+  tag = ["link", "nvim"]
   output = ""
 
 [[snippets]]
   description = "Link to neovim folder structure"
   command = "https://github.com/nanotee/nvim-lua-guide#runtime-files"
-  tag = [ "link,", "nvim" ]
+  tag = ["link,", "nvim"]
   output = ""
 
 [[snippets]]
   description = "Link to bash conditional operators"
   command = "https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#:~:text=6.4%20bash%20conditional%20expressions"
-  tag = [ "link,", "nvim" ]
+  tag = ["link,", "nvim"]
   output = ""
 
 [[snippets]]
@@ -309,55 +309,55 @@
 [[snippets]]
   description = "Link to the taskwarrior possible due date fields"
   command = "xdg-open https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
-  tag = [ "link" ]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Install newest version of up CLI"
   command = "curl -sL \"https://cli.upbound.io\" | sh && sudo mv up /usr/local/bin/"
-  tag = [ "upbound,", "cli" ]
+  tag = ["upbound,", "cli"]
   output = ""
 
 [[snippets]]
   description = "Git copy file from source branch to current branch"
   command = "git checkout ?SOURCE_BRANCH ?PATH_TO_FILE"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
   description = "Add GCP official provider to providers cache for LSP to work. Crossplane.yaml must be in the same folder as composition/definition or in the root of the repo."
   command = "up xpkg dep xpkg.upbound.io/upbound/provider-gcp"
-  tag = [ "crossplane" ]
+  tag = ["crossplane"]
   output = ""
 
 [[snippets]]
   description = "Enable debugging in neovim for rust and go"
   command = "sudo apt install -y lldb-11 && sudo ln -s /usr/bin/lldb-vscode-11 /usr/bin/lldb-vscode"
-  tag = [ "nvim," ]
+  tag = ["nvim,"]
   output = ""
 
 [[snippets]]
   description = "Increase instances of allowed max user_instances open files for the file watcher"
   command = "sudo sysctl fs.inotify.max_user_instances=8192"
-  tag = [ "linux" ]
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Launch program on file change. In this case kubectl apply"
   command = "/usr/bin/ls *.yaml | entr -s kubectl apply -f"
-  tag = [ "kubectl", "linux" ]
+  tag = ["kubectl", "linux"]
   output = ""
 
 [[snippets]]
   description = "Show colorized directory tree 1 level deep with less"
   command = "tree -LC 2 --si --sort name | less"
-  tag = [ "linux" ]
+  tag = ["linux"]
   output = ""
 
 [[snippets]]
   description = "Generate simple git changelog"
   command = "git log --pretty=\"- %s\" | grep -v Merge"
-  tag = [ "git" ]
+  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -368,19 +368,19 @@
 [[snippets]]
   description = "Link to gifcap record gifs from screen"
   command = "xdg-open https://gifcap.dev/"
-  tag = [ "link" ]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Copy files found in a directory tree to another directory including subdirectories"
   command = "fd <file=README.md> | cpio -pdm <destination=~/dev>"
-  tag = [ "linux,", "terminal" ]
+  tag = ["linux,", "terminal"]
   output = ""
 
 [[snippets]]
   description = "Update all global cargo and go packages"
   command = "__global_updates.sh"
-  tag = [ "rust", "go", "linux" ]
+  tag = ["rust", "go", "linux"]
   output = ""
 
 [[snippets]]
@@ -391,31 +391,31 @@
 [[snippets]]
   description = "Link to chrontab expression generator"
   command = "xdg-open https://crontab-generator.org/"
-  tag = [ "linux,", "chron" ]
+  tag = ["linux,", "chron"]
   output = ""
 
 [[snippets]]
   description = "interactive svg reference"
   command = "xgd-open https://fffuel.co/sssvg/"
-  tag = [ "web,", "svg" ]
+  tag = ["web,", "svg"]
   output = ""
 
 [[snippets]]
   description = "Update managed resources deletion policy to orphan on an active cluster"
   command = "kubectl patch $(kubectl get managed -o name) -p '{\"spec\": {\"deletionPolicy\":\"Orphan\"}}' --type=merge"
-  tag = [ "kubectl,", "crossplane" ]
+  tag = ["kubectl,", "crossplane"]
   output = ""
 
 [[snippets]]
   description = "Link to link to resolving issue when gcloud: The user does not have access to service account ..."
   command = "xdg-open https://stackoverflow.com/questions/40367866/gcloud-the-user-does-not-have-access-to-service-account-default"
-  tag = [ "link,", "gcp,", "gcloud" ]
+  tag = ["link,", "gcp,", "gcloud"]
   output = ""
 
 [[snippets]]
   description = "List configuration file of a service"
   command = "systemctl cat SVC"
-  tag = [ "linux,", "systemd,", "service" ]
+  tag = ["linux,", "systemd,", "service"]
   output = ""
 
 [[snippets]]
@@ -426,25 +426,25 @@
 [[snippets]]
   description = "Link to bash pitfalls"
   command = "xdg-open http://mywiki.wooledge.org/BashPitfalls"
-  tag = [ "link" ]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Add current directory to LXC container mount directory"
   command = "lxc config device add ubuntu src disk source=$(pwd) path=/src"
-  tag = [ "LXC,", "linux" ]
+  tag = ["LXC,", "linux"]
   output = ""
 
 [[snippets]]
   description = "copy your public key to your server"
   command = "ssh-copy-id remote_username@server_ip_address"
-  tag = [ "linux,", "ssh" ]
+  tag = ["linux,", "ssh"]
   output = ""
 
 [[snippets]]
   description = "Found multiple accounts with the same username 'piotr@upbound.io'"
   command = "az account clear"
-  tag = [ "azure" ]
+  tag = ["azure"]
   output = ""
 
 [[snippets]]
