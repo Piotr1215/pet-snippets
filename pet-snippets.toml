@@ -487,3 +487,17 @@
   command = "xdg-open \"https://vim.fandom.com/wiki/Power_of_g\""
   output = ""
 
+[[snippets]]
+  description = "Link to write blogs with AI"
+  command = "xdg-open \"https://cowriter.org/\""
+  output = ""
+
+[[snippets]]
+  description = "Shod currently installed nvida graphics driver"
+  command = "dkms status | grep -i nvidia"
+  output = ""
+
+[[snippets]]
+  description = "Swap to nvidia graphics mode after nvidia driver update when the update was wrong"
+  command = "sudo system76-power graphics"
+  output = ""
