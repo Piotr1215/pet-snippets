@@ -521,3 +521,8 @@
   description = "Set new git remote url"
   command = "git remote set-url origin REPOLINK"
   output = ""
+
+[[snippets]]
+  description = "Compare diff files listing ls between two folders"
+  command = "diff -rq folder1 folder2 | grep -E 'Only in|differ'"
+  output = ""
