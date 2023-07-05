@@ -526,3 +526,8 @@
   description = "Compare diff files listing ls between two folders"
   command = "diff -rq folder1 folder2 | grep -E 'Only in|differ'"
   output = ""
+
+[[snippets]]
+  description = "Check where funcion is located"
+  command = "type -a funcion"
+  output = ""
