@@ -531,3 +531,13 @@
   description = "Check where funcion is located"
   command = "type -a funcion"
   output = ""
+
+[[snippets]]
+  description = "Link to Mason registry of LSPs, DAPs, etc"
+  command = "xdg-open \"https://mason-registry.dev/registry/list\""
+  output = ""
+
+[[snippets]]
+  description = "Pull all PRs crated by me with specific pattern matching"
+  command = "gh search prs --author \"@me\" --state=open --json url,repository,title |jq -r '.[] | select(.title | contains(\"backstage\")) | .url'"
+  output = ""
