@@ -541,3 +541,13 @@
   description = "Pull all PRs crated by me with specific pattern matching"
   command = "gh search prs --author \"@me\" --state=open --json url,repository,title |jq -r '.[] | select(.title | contains(\"backstage\")) | .url'"
   output = ""
+
+[[snippets]]
+  description = "List all pending tasks from taskwarrior for a given project"
+  command = "task project.is:<project=perf> status:pending export | jq -r '.[] | \"- [ ] \" + .description'"
+  output = ""
+
+[[snippets]]
+  description = "check crossplane usages useful when checking providerconfig deletion"
+  command = "k get crd | grep -i usages"
+  output = ""
