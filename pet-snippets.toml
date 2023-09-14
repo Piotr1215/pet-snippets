@@ -551,3 +551,38 @@
   description = "check crossplane usages useful when checking providerconfig deletion"
   command = "k get crd | grep -i usages"
   output = ""
+
+[[snippets]]
+  description = "Link to taskwarrior using dates effectively"
+  command = "xdg-open \"https://taskwarrior.org/docs/using_dates/\""
+  output = ""
+
+[[snippets]]
+  description = "List all registered zle commands zsh shell"
+  command = "zle -al"
+  output = ""
+
+[[snippets]]
+  description = "Get kube config to upbound mcp cluster"
+  command = "up ctp kubeconfig get <cluster> -a <account=upbound> --token=$UP_PASSWORD"
+  output = ""
+
+[[snippets]]
+  description = "Extract kubeconfig from secret"
+  command = "KUBECONFIG=$(kubectl get secret <secret=3d82d95e-a985-4a2c-81a6-4b5bb2b2571f-aks> -n upbound-system -o jsonpath='{.data.kubeconfig}' | base64 --decode)"
+  output = ""
+
+[[snippets]]
+  description = "Link to call <plug> command from lua"
+  command = "xdg-open \"https://www.reddit.com/r/neovim/comments/t9l75z/call_plugcommands_with_luaapi/\""
+  output = ""
+
+[[snippets]]
+  description = "Link to Github actions built in variables"
+  command = "xdg-open \"https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables\""
+  output = ""
+
+[[snippets]]
+  description = "Git find commit where branch was created from main"
+  command = "git merge-base main HEAD"
+  output = ""
