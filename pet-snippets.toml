@@ -51,7 +51,7 @@
 [[snippets]]
   description = "Link to Locate a file and open in a default program"
   command = "xdg-open \"$(fd <file> ~/dev | fzf)\""
-  tag = ["linux,", "command line", "files"]
+  tag = ["command line", "files", "link", "linux"]
   output = "Opens file in a default program"
 
 [[snippets]]
@@ -287,13 +287,13 @@
 [[snippets]]
   description = "Link to neovim folder structure"
   command = "https://github.com/nanotee/nvim-lua-guide#runtime-files"
-  tag = ["link,", "nvim"]
+  tag = ["link", "nvim"]
   output = ""
 
 [[snippets]]
   description = "Link to bash conditional operators"
   command = "https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#:~:text=6.4%20bash%20conditional%20expressions"
-  tag = ["link,", "nvim"]
+  tag = ["link", "nvim"]
   output = ""
 
 [[snippets]]
@@ -391,7 +391,7 @@
 [[snippets]]
   description = "Link to chrontab expression generator"
   command = "xdg-open https://crontab-generator.org/"
-  tag = ["linux,", "chron"]
+  tag = ["chron", "link", "linux"]
   output = ""
 
 [[snippets]]
@@ -409,7 +409,7 @@
 [[snippets]]
   description = "Link to link to resolving issue when gcloud: The user does not have access to service account ..."
   command = "xdg-open https://stackoverflow.com/questions/40367866/gcloud-the-user-does-not-have-access-to-service-account-default"
-  tag = ["link,", "gcp,", "gcloud"]
+  tag = ["gcloud", "gcp", "link"]
   output = ""
 
 [[snippets]]
@@ -471,26 +471,31 @@
   description = "Link to ec2 instances"
   command = "xdg-open https://aws.amazon.com/ec2/instance-types/"
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Link to chat gtp 4 link"
   command = "xdg-open \"https://chat.openai.com/chat?model=gpt-4\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Link to create diagrams with keyboard"
   command = "xdg-open \"https://vicalc.io/\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Link to Vim/Nvim power of g"
   command = "xdg-open \"https://vim.fandom.com/wiki/Power_of_g\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Link to write blogs with AI"
   command = "xdg-open \"https://cowriter.org/\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Shod currently installed nvida graphics driver"
@@ -511,11 +516,13 @@
   description = "Link to youtbe"
   command = "xdg-open \"https://www.youtube.com/\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Link to fix chatGPT neovim submit command"
   command = "xdg-open \"https://github.com/jackMort/ChatGPT.nvim/issues/105#issuecomment-1504718730\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Set new git remote url"
@@ -536,6 +543,7 @@
   description = "Link to Mason registry of LSPs, DAPs, etc"
   command = "xdg-open \"https://mason-registry.dev/registry/list\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Pull all PRs crated by me with specific pattern matching"
@@ -556,6 +564,7 @@
   description = "Link to taskwarrior using dates effectively"
   command = "xdg-open \"https://taskwarrior.org/docs/using_dates/\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "List all registered zle commands zsh shell"
@@ -576,11 +585,13 @@
   description = "Link to call <plug> command from lua"
   command = "xdg-open \"https://www.reddit.com/r/neovim/comments/t9l75z/call_plugcommands_with_luaapi/\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Link to Github actions built in variables"
   command = "xdg-open \"https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables\""
   output = ""
+  tag = ["link"]
 
 [[snippets]]
   description = "Git find commit where branch was created from main"
