@@ -470,32 +470,32 @@
 [[snippets]]
   description = "Link to ec2 instances"
   command = "xdg-open https://aws.amazon.com/ec2/instance-types/"
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Link to chat gtp 4 link"
   command = "xdg-open \"https://chat.openai.com/chat?model=gpt-4\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Link to create diagrams with keyboard"
   command = "xdg-open \"https://vicalc.io/\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Link to Vim/Nvim power of g"
   command = "xdg-open \"https://vim.fandom.com/wiki/Power_of_g\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Link to write blogs with AI"
   command = "xdg-open \"https://cowriter.org/\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Shod currently installed nvida graphics driver"
@@ -515,14 +515,14 @@
 [[snippets]]
   description = "Link to youtbe"
   command = "xdg-open \"https://www.youtube.com/\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Link to fix chatGPT neovim submit command"
   command = "xdg-open \"https://github.com/jackMort/ChatGPT.nvim/issues/105#issuecomment-1504718730\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Set new git remote url"
@@ -542,8 +542,8 @@
 [[snippets]]
   description = "Link to Mason registry of LSPs, DAPs, etc"
   command = "xdg-open \"https://mason-registry.dev/registry/list\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Pull all PRs crated by me with specific pattern matching"
@@ -563,8 +563,8 @@
 [[snippets]]
   description = "Link to taskwarrior using dates effectively"
   command = "xdg-open \"https://taskwarrior.org/docs/using_dates/\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "List all registered zle commands zsh shell"
@@ -584,14 +584,14 @@
 [[snippets]]
   description = "Link to call <plug> command from lua"
   command = "xdg-open \"https://www.reddit.com/r/neovim/comments/t9l75z/call_plugcommands_with_luaapi/\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Link to Github actions built in variables"
   command = "xdg-open \"https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables\""
-  output = ""
   tag = ["link"]
+  output = ""
 
 [[snippets]]
   description = "Git find commit where branch was created from main"
@@ -601,4 +601,10 @@
 [[snippets]]
   description = "Link to Neovim and Nix home-manager: Supercharge Your Development Environment"
   command = "xdg-open \"https://www.youtube.com/watch?v=YZAnJ0rwREA&ab_channel=Vimjoyer\""
+  output = ""
+
+[[snippets]]
+  description = "Link to function-template-go"
+  command = "xdg-open \"https://github.com/crossplane/function-template-go\""
+  tag = ["link"]
   output = ""
