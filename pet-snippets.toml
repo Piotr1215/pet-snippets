@@ -586,3 +586,8 @@
   description = "Git find commit where branch was created from main"
   command = "git merge-base main HEAD"
   output = ""
+
+[[snippets]]
+  description = "Link to Neovim and Nix home-manager: Supercharge Your Development Environment"
+  command = "xdg-open \"https://www.youtube.com/watch?v=YZAnJ0rwREA&ab_channel=Vimjoyer\""
+  output = ""
