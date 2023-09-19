@@ -608,3 +608,9 @@
   command = "xdg-open \"https://github.com/crossplane/function-template-go\""
   tag = ["link"]
   output = ""
+
+[[snippets]]
+  description = "Link to AutoKey Wiki Documentation"
+  command = "xdg-open \"https://github.com/autokey/autokey/wiki\""
+  tag = ["automation,linux,productivity"]
+  output = ""
