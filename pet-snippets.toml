@@ -614,3 +614,9 @@
   command = "xdg-open \"https://github.com/autokey/autokey/wiki\""
   tag = ["automation,linux,productivity"]
   output = ""
+
+[[snippets]]
+  description = "Link to Rust and Neovim - A Thorough Guide and Walkthrough"
+  command = "xdg-open \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
+  tag = ["LuaConfiguration,RustTools,NeovimConfig"]
+  output = ""
