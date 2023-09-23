@@ -612,18 +612,18 @@
 [[snippets]]
   description = "Link to AutoKey Wiki Documentation"
   command = "xdg-open \"https://github.com/autokey/autokey/wiki\""
-  tag = ["automation,linux,productivity"]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Link to Rust and Neovim - A Thorough Guide and Walkthrough"
   command = "xdg-open \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
-  tag = ["LuaConfiguration,RustTools,NeovimConfig"]
+  tag = ["link"]
   output = ""
 
 [[snippets]]
   description = "Link to Introduction to Autokey"
   command = "xdg-open \"https://autokey.github.io/intro.html\""
-  tag = ["unknown,unavailable,website"]
+  tag = ["link"]
   output = ""
 
