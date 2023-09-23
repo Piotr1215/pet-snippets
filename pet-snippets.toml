@@ -286,7 +286,7 @@
 
 [[snippets]]
   description = "Link to neovim folder structure"
-  command = "https://github.com/nanotee/nvim-lua-guide#runtime-files"
+  command = "xdg-open https://github.com/nanotee/nvim-lua-guide#runtime-files"
   tag = ["link", "nvim"]
   output = ""
 
@@ -620,3 +620,10 @@
   command = "xdg-open \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
   tag = ["LuaConfiguration,RustTools,NeovimConfig"]
   output = ""
+
+[[snippets]]
+  description = "Link to Introduction to Autokey"
+  command = "xdg-open \"https://autokey.github.io/intro.html\""
+  tag = ["unknown,unavailable,website"]
+  output = ""
+
