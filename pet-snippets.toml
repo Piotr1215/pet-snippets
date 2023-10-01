@@ -627,3 +627,8 @@
   tag = ["link"]
   output = ""
 
+[[snippets]]
+  description = "Link to GKE - Enable Audit"
+  command = "xdg-open \"https://cloud.google.com/kubernetes-engine/docs/how-to/audit-logging#console\""
+  tag = ["unknown", "website", "link"]
+  output = ""
