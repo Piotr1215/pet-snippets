@@ -632,3 +632,15 @@
   command = "xdg-open \"https://cloud.google.com/kubernetes-engine/docs/how-to/audit-logging#console\""
   tag = ["unknown", "website", "link"]
   output = ""
+
+[[snippets]]
+  description = "Link to Progressive Delivery: A Comprehensive Guide"
+  command = "xdg-open \"https://www.weave.works/blog/progressive-delivery-continuous-delivery\""
+  tag = ["progdelivery", "appfeatures", "cloudrolldout", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Conditionally show function in shell only if in git repo"
+  command = "xdg-open \"https://gist.github.com/Piotr1215/41c4670cd9d282683613a3338123f3c4\""
+  tag = ["link"]
+  output = ""
