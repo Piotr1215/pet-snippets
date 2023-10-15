@@ -644,3 +644,37 @@
   command = "xdg-open \"https://gist.github.com/Piotr1215/41c4670cd9d282683613a3338123f3c4\""
   tag = ["link"]
   output = ""
+
+[[snippets]]
+  description = "Print out all the shell commands, zsh, commands."
+  command = "whence -vm \"*\""
+  output = ""
+
+[[snippets]]
+  description = "Update default programs settings"
+  command = "sudo update-alternatives --get-selections"
+  output = ""
+
+[[snippets]]
+  description = "Link to FL0 Deploy backend applications and databases in minutes"
+  command = "xdg-open \"https://www.fl0.com/?ref=producthunt\""
+  tag = ["deploy", "backend", "databases", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Create file and direcotry structure in the same time"
+  command = "install -D /dev/null"
+  tag = ["linux"]
+  output = ""
+
+[[snippets]]
+  description = "Link to MPV Keyboard Shortcuts - Make Tech Easier — Mozilla Firefox"
+  command = "xdg-open \"https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/\""
+  tag = ["mpv", "media", "linux", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to mfontanini/presenterm: A terminal slideshow tool — Mozilla Firefox"
+  command = "xdg-open \"https://github.com/mfontanini/presenterm\""
+  tag = ["web", "link"]
+  output = ""
