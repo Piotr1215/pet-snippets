@@ -689,3 +689,8 @@
   command = "task rc.debug.hooks=2"
   tag = ["taskwarrior"]
   output = ""
+
+[[snippets]]
+  description = "Get all package pkg type resources and print kubeclt get"
+  command = "for resource in $(kubectl api-resources | grep pkg | awk '{print $1}'); do echo \"Resource: $resource\"; kubectl get \"$resource\"; echo; done"
+  output = ""
