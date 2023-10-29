@@ -11,7 +11,7 @@
 
 [[snippets]]
   description = "Docker watchtower to update images or all running contianers to their newest versions"
-  command = "docker run -d --name Watchtower -e WATCHTOWER_CLEANUP=true -e WATCHTOWER_DEBUG=trued -e WATCHTOWER_INCLUDE_STOPPED=trued -v /var/run/docker.sock:/var/run/docker.sockd containrrr/watchtower"
+  command = "docker run --rm --name Watchtower -e WATCHTOWER_CLEANUP=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_INCLUDE_STOPPED=true -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once"
   output = ""
 
 [[snippets]]
@@ -698,5 +698,28 @@
 [[snippets]]
   description = "Link to SingleStoreDB"
   command = "xdg-open \"https://www.singlestore.com/?utm_content=inline-mention\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Show charecter codes for each key press"
+  command = "xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\\n\", $5, $8 }'"
+  output = ""
+
+[[snippets]]
+  description = "Watch crossplane managed resource with false flag"
+  command = "watch -n 1 'kubectl get managed | grep -i false'"
+  tag = ["crossplane"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Activate Azure global admin role"
+  command = "xdg-open \"https://portal.azure.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to PlantUML Themes"
+  command = "xdg-open \"https://plantuml.com/theme\""
   tag = ["web", "link"]
   output = ""
