@@ -723,3 +723,8 @@
   command = "xdg-open \"https://plantuml.com/theme\""
   tag = ["web", "link"]
   output = ""
+
+[[snippets]]
+  description = "install latest crossplane CLI from master branch"
+  command = "curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh && sudo mv crossplane /usr/local/bin"
+  output = ""
