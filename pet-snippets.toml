@@ -728,3 +728,25 @@
   description = "install latest crossplane CLI from master branch"
   command = "curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh && sudo mv crossplane /usr/local/bin"
   output = ""
+
+[[snippets]]
+  description = "Link to Nix package versions when needing specific version of the package"
+  command = "xdg-open \"https://lazamar.co.uk/nix-versions/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to a little professional services group within the engineering org"
+  command = "xdg-open \"https://martinfowler.com/articles/platform-teams-stuff-done.html\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "crossplane functions remove development annotation from selected function"
+  command = "yq eval -i 'select(.kind == \"Function\" and .metadata.name == \"<function-name=function-auto-ready>\").metadata.annotations |= del(.[\"render.crossplane.io/runtime\"])' <function-file=functions.yaml>"
+  output = ""
+
+[[snippets]]
+  description = "crossplane funcions add development annotation to a funcion"
+  command = "yq eval -i '(select(.kind == \"Function\" and .metadata.name == \"<function-name=function-auto-ready>\").metadata.annotations.\"render.crossplane.io/runtime\") = \"Development\"' <function-file=functions.yaml>"
+  output = ""
