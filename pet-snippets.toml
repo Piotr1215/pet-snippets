@@ -750,3 +750,39 @@
   description = "crossplane funcions add development annotation to a funcion"
   command = "yq eval -i '(select(.kind == \"Function\" and .metadata.name == \"<function-name=function-auto-ready>\").metadata.annotations.\"render.crossplane.io/runtime\") = \"Development\"' <function-file=functions.yaml>"
   output = ""
+
+[[snippets]]
+  description = "Link to P&T as a Function Gdoc"
+  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/863ff6c2f53af47424dab941dbef83ca12e7d74f/design/design-doc-composition-functions.md#patch-and-transform-as-a-function\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Writing Crossplane Composition Function"
+  command = "xdg-open \"https://youtu.be/otwg-bO757A\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Development Notes from Users"
+  command = "xdg-open \"https://vshn.github.io/appcat/appcat/explanations/dev-notes.html\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Experience Report"
+  command = "xdg-open \"https://www.notion.so/upbound/Converting-existing-composition-to-use-Go-Templating-Function-9fbc3b88da16409ea6fa6a1fd3c7e885?pvs=4\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Write Go Function"
+  command = "xdg-open \"https://docs.crossplane.io/knowledge-base/guides/write-a-composition-function-in-go/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to My first composition function"
+  command = "xdg-open \"https://github.com/Piotr1215/function-simple-label\""
+  tag = ["link"]
+  output = ""
