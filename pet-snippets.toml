@@ -304,6 +304,7 @@
 [[snippets]]
   description = "Fix sealed secret error cannot fetch certificate"
   command = "kubectl -n kube-system patch svc sealed-secrets-controller --type='json' -p='[{\"op\": \"remove\", \"path\": \"/spec/ports/0/name\"}, {\"op\": \"replace\", \"path\": \"/spec/ports/0/targetPort\", \"value\":8080}]'"
+  tag = ["kubectl"]
   output = ""
 
 [[snippets]]
@@ -579,6 +580,7 @@
 [[snippets]]
   description = "Extract kubeconfig from secret"
   command = "KUBECONFIG=$(kubectl get secret <secret=3d82d95e-a985-4a2c-81a6-4b5bb2b2571f-aks> -n upbound-system -o jsonpath='{.data.kubeconfig}' | base64 --decode)"
+  tag = ["kubectl"]
   output = ""
 
 [[snippets]]
@@ -693,6 +695,7 @@
 [[snippets]]
   description = "Get all package pkg type resources and print kubeclt get"
   command = "for resource in $(kubectl api-resources | grep pkg | awk '{print $1}'); do echo \"Resource: $resource\"; kubectl get \"$resource\"; echo; done"
+  tag = ["kubectl"]
   output = ""
 
 [[snippets]]
@@ -709,7 +712,7 @@
 [[snippets]]
   description = "Watch crossplane managed resource with false flag"
   command = "watch -n 1 'kubectl get managed | grep -i false'"
-  tag = ["crossplane"]
+  tag = ["crossplane", "kubectl"]
   output = ""
 
 [[snippets]]
@@ -785,4 +788,128 @@
   description = "Link to My first composition function"
   command = "xdg-open \"https://github.com/Piotr1215/function-simple-label\""
   tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "killercoda concatenate all workshop files into single content sorted markdown file"
+  command = "(cat intro.md; find . -maxdepth 2 -name 'step*.md' | sort -V | xargs cat; cat finish.md) > workshop.md"
+  output = ""
+
+[[snippets]]
+  description = "kubectl get all latest events sorted by timestamp and with custom columns"
+  command = "kubectl get events --all-namespaces --field-selector type=Warning -o custom-columns=TIME:.lastTimestamp,NAMESPACE:.metadata.namespace,NAME:.involvedObject.name,KIND:.involvedObject.kind,NODE:.source.host,REASON:.reason,MESSAGE:.message | { read -r header; echo \"$header\"; sort -t ',' -k1,1 }"
+  tag = ["kubernetes", "kubectl"]
+  output = ""
+
+[[snippets]]
+  description = "kubectl get top nodes sorted by cpu utilization"
+  command = "kubectl top nodes | { read -r header; echo \"$header\"; sort -k3,3nr; }"
+  tag = ["kubernetes", "kubectl"]
+  output = ""
+
+[[snippets]]
+  description = "Show all non running pods kubectl kubernetes"
+  command = "kubectl get pods --all-namespaces --field-selector 'status.phase!=Running' | grep -vi completed"
+  tag = ["kubernetes", "kubectl"]
+  output = ""
+
+[[snippets]]
+  description = "kubectl top usabe by cpu per pod per container kubernetes"
+  command = "kubectl top pod --sort-by cpu --containers -A L"
+  tag = ["kubernetes", "kubectl"]
+  output = ""
+
+[[snippets]]
+  description = "docker build image with buildx and load to local images from cache"
+  command = "docker build . --progress=plain --tag <tag=runtime> --load"
+  tag = ["docker", "buildx"]
+  output = ""
+
+[[snippets]]
+  description = "Link to My killercoda, katacoda scenarios"
+  command = "xdg-open \"https://killercoda.com/creator/scenarios\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to OpenAI Assistants API"
+  command = "xdg-open \"https://platform.openai.com/docs/assistants/overview\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Promote Composition Functions to GA"
+  command = "xdg-open \"https://github.com/crossplane/crossplane/issues/4951\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Optionally run crossplane beta render against a live control plane"
+  command = "xdg-open \"https://github.com/crossplane/crossplane/issues/4996\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "install kdash"
+  command = "curl https://raw.githubusercontent.com/kdash-rs/kdash/main/deployment/getLatest.sh | bash"
+  output = ""
+
+[[snippets]]
+  description = "copy openai API key"
+  command = "printenv G OPEN | cut -d = -f2 | tr -d '\\n' C"
+  output = ""
+
+[[snippets]]
+  description = "Get the yaml resources and kinds from yaml files compositions or regular managed resources"
+  command = "current_path=$(pwd)\\necho \"Path: $current_path\" | tee -a ~/dev/costam\\n__pull_crossplane_apiversion_kind.sh | sort -u | tee -a ~/dev/costam\\necho \"\" | tee -a ~/dev/costam"
+  output = ""
+
+[[snippets]]
+  description = "Link to Crossplane Local Development Instructions"
+  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/master/contributing/README.md#establishing-a-development-environment\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "swap to quiet to quiet all the obsidian notifications"
+  command = "nvim +29 /home/decoder/.local/share/nvim/site/pack/packer/start/obsidian.nvim/lua/obsidian/client.lua"
+  output = ""
+
+[[snippets]]
+  description = "Link to ollama models"
+  command = "xdg-open \"https://ollama.ai/library\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to client-go-examples for kubectl"
+  command = "xdg-open \"https://github.com/iximiuz/client-go-examples\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to ngrok dashboard"
+  command = "xdg-open \"https://dashboard.ngrok.com/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Check what's listening on specific port and kill it"
+  command = "sudo netstat -tulnp | fzf --height 40% --layout=reverse --prompt=\"Select a port: \" | awk '{print $7}' | cut -d'/' -f1 | xargs -r sudo kill"
+  output = ""
+
+[[snippets]]
+  description = "list all images loaded on a kubernetes cluster"
+  command = "kubectl get pods -A -o jsonpath=\"{..image}\" | tr -s '[[:space:]]' '\\n' | sort | uniq -c"
+  output = ""
+
+[[snippets]]
+  description = "run debug container and attach to a pod's container"
+  command = "kubectl -n <namespace=upbound-system> debug -it <pod> --image=ghcr.io/superbrothers/debug --target=<container>"
+  tag = ["kubernetes,", "kubectl,", "debug"]
+  output = ""
+
+[[snippets]]
+  description = "concatenate all markdown files into one and include file names"
+  command = "tail -n +1 *.md > crossplane_concepts.md"
   output = ""
