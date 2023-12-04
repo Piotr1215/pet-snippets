@@ -913,3 +913,26 @@
   description = "concatenate all markdown files into one and include file names"
   command = "tail -n +1 *.md > crossplane_concepts.md"
   output = ""
+
+[[snippets]]
+  description = "Link to Levels FYI - Job board"
+  command = "xdg-open \"https://www.levels.fyi/profile\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to The Ultimate Guide to GitHub Reusable Workflows"
+  command = "xdg-open \"https://www.dhiwise.com/post/the-ultimate-guide-to-github-reusable-workflows-maximize-efficiency-and-collaboration\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to A Tour of Crossplane 1.14"
+  command = "xdg-open \"https://gist.github.com/stevendborrelli/f94d796076490010b4f03dede9dd886d\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "dynamically detec and track mouse position"
+  command = "watch -t -n 1 xdotool getmouselocation"
+  output = ""
