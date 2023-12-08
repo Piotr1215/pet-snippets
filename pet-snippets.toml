@@ -936,3 +936,15 @@
   description = "dynamically detec and track mouse position"
   command = "watch -t -n 1 xdotool getmouselocation"
   output = ""
+
+[[snippets]]
+  description = "Link to Developer Conferences Agenda"
+  command = "xdg-open \"https://developers.events/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "kill process listening on port"
+  command = "kill -9 lsof -ti :PORT"
+  tag = ["linux"]
+  output = ""
