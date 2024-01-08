@@ -232,12 +232,6 @@
   output = ""
 
 [[snippets]]
-  description = "Display fancy kubernetes status including health check"
-  command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version --short && kubectl get nodes && kubectl cluster-info; \\n} | grep -z 'Ready\\| ok\\|passed\\|running'"
-  tag = ["kubectl"]
-  output = ""
-
-[[snippets]]
   description = "Link to Vim fix for go files when folds are closed on save"
   command = "xdg-open https://stackoverflow.com/a/55327996"
   tag = ["link"]
@@ -944,7 +938,17 @@
   output = ""
 
 [[snippets]]
-  description = "kill process listening on port"
-  command = "kill -9 lsof -ti :PORT"
-  tag = ["linux"]
+  description = "get kubectl connection to MCP by number"
+  command = "kubectl get secret kubeconfig-ctp<ctp_num=1> -n default -o jsonpath='{.data.kubeconfig}' | base64 -d > /tmp/ctp<ctp_num=1>.yaml"
+  tag = ["linux", "kubectl"]
+  output = ""
+
+[[snippets]]
+  description = "Display fancy kubectl kubernetes status"
+  command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version && kubectl get nodes && kubectl cluster-info; } | grep -z 'Ready\\| ok\\|passed\\|running'"
+  output = ""
+
+[[snippets]]
+  description = "Kill process listening on a port"
+  command = "sudo kill -9 $(sudo lsof -t -i:<port>)"
   output = ""
