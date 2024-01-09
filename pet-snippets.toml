@@ -952,3 +952,9 @@
   description = "Kill process listening on a port"
   command = "sudo kill -9 $(sudo lsof -t -i:<port>)"
   output = ""
+
+[[snippets]]
+  description = "Link to Resolve Git Merge Conflicts with Neovim and Fugitive!"
+  command = "xdg-open \"https://www.youtube.com/watch?v=vpwJ7fqD1CE\""
+  tag = ["web", "link"]
+  output = ""
