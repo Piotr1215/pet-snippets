@@ -958,3 +958,58 @@
   command = "xdg-open \"https://www.youtube.com/watch?v=vpwJ7fqD1CE\""
   tag = ["web", "link"]
   output = ""
+
+[[snippets]]
+  description = "Link to Upbound marketplace"
+  command = "xdg-open \"https://marketplace.upbound.io/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Select header row and regular expression for data rows with awk"
+  command = " | awk 'NR == 1 || /REGEX/'"
+  output = ""
+
+[[snippets]]
+  description = "Install latest crossplane CLI"
+  command = "curl -sL \"https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh\" | sh"
+  output = ""
+
+[[snippets]]
+  description = "Build statically linked crossplane-cli for killercoda scenario"
+  command = "CGO_ENABLED=0 go build -a -installsuffix cgo -o crossplane-cli ."
+  tag = ["go,", "crossplane"]
+  output = ""
+
+[[snippets]]
+  description = "Show my public IP address"
+  command = "curl ifconfig.me"
+  tag = ["IP,", "linux,", "curl"]
+  output = ""
+
+[[snippets]]
+  description = "List all kubernetes object of an mcp mxe mxp control plane"
+  command = "kubectl get object -l crossplane.io/composite=$MCPID -o 'custom-columns=NAME:.metadata.name,FOR:.metadata.annotations.crossplane\\.io/composition-resource-name,SYNCED:.status.conditions[?(@.type==\"Synced\")].status,READY:.status.conditions[?(@.type==\"Ready\")].status'"
+  output = ""
+
+[[snippets]]
+  description = "List all helm releases of an mcp mxe mxp control plane"
+  command = "kubectl get release -l crossplane.io/composite=$MCPID -o 'custom-columns=NAME:.metadata.name,FOR:.metadata.annotations.crossplane\\.io/composition-resource-name,SYNCED:.status.conditions[?(@.type==\"Synced\")].status,READY:.status.conditions[?(@.type==\"Ready\")].status'"
+  output = ""
+
+[[snippets]]
+  description = "Link to List of neovim nvim text objects"
+  command = "xdg-open \"https://github.com/chrisgrieser/nvim-various-textobjs?tab=readme-ov-file#list-of-text-objects\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to ugrep grep replacement"
+  command = "xdg-open \"https://ugrep.com/?ref=console.dev#TUI\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "List system info neofetch uname lscpu df"
+  command = "{ printf \"===Neofetch Info===\"; neofetch --stdout; echo \"\\n===Kernel Information===\"; uname -a; echo \"\\n===CPU Information===\"; lscpu; echo \"\\n===Memory Information===\"; free -m; echo \"\\n===Disk Usage Information===\"; df -h; echo \"\\n===PCI Devices===\"; lspci; echo \"\\n===USB Devices===\"; lsusb; } W"
+  output = ""
