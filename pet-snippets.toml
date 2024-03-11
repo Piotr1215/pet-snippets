@@ -56,7 +56,7 @@
 
 [[snippets]]
   description = "Find zsh alias by name, first result usually list file where alias originates from"
-  command = "zsh -ixc : 2>&1 | rg <alias=alias>"
+  command = "zsh -ixc : 2>&1 | rg <alias=alias> -B 5"
   tag = ["linux,", "command line"]
   output = "Top has files with possible aliases"
 
