@@ -1,10 +1,4 @@
 [[snippets]]
-  description = "Change all ocurrances of a string and replace with another string"
-  command = "rg <string to replace> --files-with-matches | xargs sed -i 's/<string to replace>/<new string>/g'"
-  tag = ["linux", "tools", "grep"]
-  output = "Files with string found are changed by replacing the string with a new one"
-
-[[snippets]]
   description = "Check what listenes on a port netstat"
   command = "sudo netstat -pnltu | grep PORT?"
   output = ""
@@ -12,22 +6,6 @@
 [[snippets]]
   description = "Docker watchtower to update images or all running contianers to their newest versions"
   command = "docker run --rm --name Watchtower -e WATCHTOWER_CLEANUP=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_INCLUDE_STOPPED=true -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once"
-  output = ""
-
-[[snippets]]
-  description = "Open my repo with s plugin for gh CLI"
-  command = "gh s -u Piotr1215 | xargs xdg-open"
-  output = ""
-
-[[snippets]]
-  description = "Show IP address of enp2s0 interface, main address without CIDR"
-  command = "ip add show enp3s0 | awk 'NR==3 {print $2}' | cut -d '/' -f 1"
-  output = ""
-
-[[snippets]]
-  description = "Quickly find kube api server settings."
-  command = "ps -ef --forest | grep kube-apiserver | grep <setting=admission-plugins>"
-  tag = ["kubernetes", "kubectl"]
   output = ""
 
 [[snippets]]
@@ -43,18 +21,6 @@
   output = ""
 
 [[snippets]]
-  description = "Locate a file and cd into its location. Defaults to HOME/dev"
-  command = "cd \"$(dirname \"$(fd <file> ~/dev | fzf)\")\""
-  tag = ["linux,", "command line", "files"]
-  output = "Changes directory to the location of found file"
-
-[[snippets]]
-  description = "Link to Locate a file and open in a default program"
-  command = "xdg-open \"$(fd <file> ~/dev | fzf)\""
-  tag = ["command line", "files", "link", "linux"]
-  output = "Opens file in a default program"
-
-[[snippets]]
   description = "Find zsh alias by name, first result usually list file where alias originates from"
   command = "zsh -ixc : 2>&1 | rg <alias=alias> -B 5"
   tag = ["linux,", "command line"]
@@ -66,16 +32,6 @@
   output = "Path to a file copied to clipboard"
 
 [[snippets]]
-  description = "Find content in a file with ripgrep and open the file in nvim Ctrl+x+e to edit command."
-  command = "rg -e \"search\" --files-with-matches | fzf | xargs nvim"
-  output = "File opened in nvim"
-
-[[snippets]]
-  description = "Copy file name without extension and without new line at the end"
-  command = "stat -t FILENAME:NAME-WITH-EXTENSION | cut -d '.' -f1 | xargs echo -n | xclip"
-  output = ""
-
-[[snippets]]
   description = "Git show all changes commits to a file, helpful for tracking changes"
   command = "git log --follow --stat -p -- "
   tag = ["git,", "commit"]
@@ -83,7 +39,7 @@
 
 [[snippets]]
   description = "Check if branch is eligible for merge"
-  command = "git merge --no-commit --no-ff create-mongocla-composite && echo $? && git merge --abort"
+  command = "git merge --no-commit --no-ff <branch> && echo $? && git merge --abort"
   tag = ["git"]
   output = ""
 
@@ -112,16 +68,6 @@
   output = ""
 
 [[snippets]]
-  description = "Find differences between svg files referenced in markdown but not in the dagrams/rendered folder. Run from /arch/platform folder."
-  command = "diff <(rg --type \"md\" .svg | cut -d '/' -f 5- | sed 's/.$//' | sort) <(fd .  ./diagrams/rendered | cut -d '/' -f 4- | sort)"
-  output = ""
-
-[[snippets]]
-  description = "Run this in Browser console to show resolved comments on the PR page"
-  command = "document.querySelectorAll('span.Details-content--closed').forEach((e)=>{e.click()})"
-  output = ""
-
-[[snippets]]
   description = "Paste content copied from clipboard to a file"
   command = "xclip -o -sel clipboard >> "
   output = ""
@@ -130,12 +76,6 @@
   description = "Linux fix errors when installing something with apt"
   command = "sudo dpkg --configure -a"
   tag = ["linux"]
-  output = ""
-
-[[snippets]]
-  description = "Search git commit history, provide file path ot \"**/name.*\" if unknown"
-  command = "git log --all --full-history -- ${0}\"**/name.*\""
-  tag = ["git"]
   output = ""
 
 [[snippets]]
@@ -158,27 +98,7 @@
 [[snippets]]
   description = "Fix git gpg failed to sign data on mac"
   command = "export GPG_TTY=$(tty)"
-  output = ""
-
-[[snippets]]
-  description = "Grep for exact match"
-  command = "rg -w "
-  output = ""
-
-[[snippets]]
-  description = "Generate plantuml diagrams in svg format and place them in the rendered subdirectory"
-  command = "java -DPLANTUML_LIMIT_SIZE=8192 -jar /usr/local/bin/plantuml.jar -tsvg ./ -o ./rendered"
-  output = ""
-
-[[snippets]]
-  description = "Create folder with the current date formatted in day-month-year"
-  command = "mkdir $(date +\"%d-%m-%y\")"
-  output = ""
-
-[[snippets]]
-  description = "Install universal crossplane into upbound-system namespace development branch"
-  command = "helm install uxp --namespace upbound-system upbound-stable/universal-crossplane --devel"
-  tag = ["crossplane"]
+  tag = ["gpg"]
   output = ""
 
 [[snippets]]
@@ -198,37 +118,15 @@
   output = ""
 
 [[snippets]]
-  description = "Bash copy last command from history without a new line, meaning don't execute it just output to the terminal"
-  command = "fc -ln -1 | tr -d '\\n' | xsel --clipboard"
-  output = ""
-
-[[snippets]]
   description = "Link to SSH Cheat Sheet"
   command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
   tag = ["link"]
   output = ""
 
 [[snippets]]
-  description = "Git compare diff two branches showing only your changes between the main and your branch"
+  description = "Git compare diff between main and current branch"
   command = "git diff main...$(git branch | sed -n -e 's/^\\* \\(.*\\)/\\1/p')"
   tag = ["git"]
-  output = ""
-
-[[snippets]]
-  description = "List all the shell shortcuts"
-  command = "bindkey"
-  tag = ["linux"]
-  output = ""
-
-[[snippets]]
-  description = "List all installed apt packages"
-  command = "sudo dpkg -l"
-  tag = ["linux"]
-  output = ""
-
-[[snippets]]
-  description = "Tmux cleanly and gracefully kill all tmux open sessions"
-  command = "tmux kill-server"
   output = ""
 
 [[snippets]]
@@ -265,11 +163,6 @@
   description = "Link to Modify access for a specific user to a file or folder using ACL access control list, setfacl"
   command = "xdg-open https://superuser.com/a/145007"
   tag = ["link"]
-  output = ""
-
-[[snippets]]
-  description = "Modify ACL for decoder"
-  command = "setfacl -m u:decoder:rwx"
   output = ""
 
 [[snippets]]
@@ -402,7 +295,7 @@
   output = ""
 
 [[snippets]]
-  description = "Link to link to resolving issue when gcloud: The user does not have access to service account ..."
+  description = "Link to resolving issue when the gcloud user does not have access to service account ..."
   command = "xdg-open https://stackoverflow.com/questions/40367866/gcloud-the-user-does-not-have-access-to-service-account-default"
   tag = ["gcloud", "gcp", "link"]
   output = ""
@@ -437,12 +330,6 @@
   output = ""
 
 [[snippets]]
-  description = "Found multiple accounts with the same username 'piotr@upbound.io'"
-  command = "az account clear"
-  tag = ["azure"]
-  output = ""
-
-[[snippets]]
   description = "transpose text"
   command = "datamash"
   output = ""
@@ -469,18 +356,6 @@
   output = ""
 
 [[snippets]]
-  description = "Link to chat gtp 4 link"
-  command = "xdg-open \"https://chat.openai.com/chat?model=gpt-4\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to create diagrams with keyboard"
-  command = "xdg-open \"https://vicalc.io/\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
   description = "Link to Vim/Nvim power of g"
   command = "xdg-open \"https://vim.fandom.com/wiki/Power_of_g\""
   tag = ["link"]
@@ -493,7 +368,7 @@
   output = ""
 
 [[snippets]]
-  description = "Shod currently installed nvida graphics driver"
+  description = "Show currently installed nvida graphics driver"
   command = "dkms status | grep -i nvidia"
   output = ""
 
@@ -503,25 +378,9 @@
   output = ""
 
 [[snippets]]
-  description = "extract json file structure from a sample file"
-  command = "jq 'def schema: \\n    if type == \"array\" then \\n        (first | schema) \\n    elif type == \"object\" then \\n        with_entries(.value |= schema) \\n    else \\n        \"type: \" + type \\n    end; schema' conversations.json"
-  output = ""
-
-[[snippets]]
   description = "Link to youtbe"
   command = "xdg-open \"https://www.youtube.com/\""
   tag = ["link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to fix chatGPT neovim submit command"
-  command = "xdg-open \"https://github.com/jackMort/ChatGPT.nvim/issues/105#issuecomment-1504718730\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
-  description = "Set new git remote url"
-  command = "git remote set-url origin REPOLINK"
   output = ""
 
 [[snippets]]
@@ -530,7 +389,7 @@
   output = ""
 
 [[snippets]]
-  description = "Check where funcion is located"
+  description = "Check where funcion or command is located"
   command = "type -a funcion"
   output = ""
 
@@ -541,18 +400,8 @@
   output = ""
 
 [[snippets]]
-  description = "Pull all PRs crated by me with specific pattern matching"
-  command = "gh search prs --author \"@me\" --state=open --json url,repository,title |jq -r '.[] | select(.title | contains(\"backstage\")) | .url'"
-  output = ""
-
-[[snippets]]
   description = "List all pending tasks from taskwarrior for a given project"
   command = "task project.is:<project=perf> status:pending export | jq -r '.[] | \"- [ ] \" + .description'"
-  output = ""
-
-[[snippets]]
-  description = "check crossplane usages useful when checking providerconfig deletion"
-  command = "k get crd | grep -i usages"
   output = ""
 
 [[snippets]]
@@ -564,11 +413,6 @@
 [[snippets]]
   description = "List all registered zle commands zsh shell"
   command = "zle -al"
-  output = ""
-
-[[snippets]]
-  description = "Get kube config to upbound mcp cluster"
-  command = "up ctp kubeconfig get <cluster> -a <account=upbound> --token=$UP_PASSWORD"
   output = ""
 
 [[snippets]]
@@ -595,17 +439,6 @@
   output = ""
 
 [[snippets]]
-  description = "Link to Neovim and Nix home-manager: Supercharge Your Development Environment"
-  command = "xdg-open \"https://www.youtube.com/watch?v=YZAnJ0rwREA&ab_channel=Vimjoyer\""
-  output = ""
-
-[[snippets]]
-  description = "Link to function-template-go"
-  command = "xdg-open \"https://github.com/crossplane/function-template-go\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
   description = "Link to AutoKey Wiki Documentation"
   command = "xdg-open \"https://github.com/autokey/autokey/wiki\""
   tag = ["link"]
@@ -615,24 +448,6 @@
   description = "Link to Rust and Neovim - A Thorough Guide and Walkthrough"
   command = "xdg-open \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
   tag = ["link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to Introduction to Autokey"
-  command = "xdg-open \"https://autokey.github.io/intro.html\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to GKE - Enable Audit"
-  command = "xdg-open \"https://cloud.google.com/kubernetes-engine/docs/how-to/audit-logging#console\""
-  tag = ["unknown", "website", "link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to Progressive Delivery: A Comprehensive Guide"
-  command = "xdg-open \"https://www.weave.works/blog/progressive-delivery-continuous-delivery\""
-  tag = ["progdelivery", "appfeatures", "cloudrolldout", "link"]
   output = ""
 
 [[snippets]]
@@ -659,7 +474,7 @@
 
 [[snippets]]
   description = "Create file and direcotry structure in the same time"
-  command = "install -D /dev/null"
+  command = "install -D /dev/null path/to/file"
   tag = ["linux"]
   output = ""
 
@@ -670,14 +485,9 @@
   output = ""
 
 [[snippets]]
-  description = "Link to mfontanini/presenterm: A terminal slideshow tool — Mozilla Firefox"
-  command = "xdg-open \"https://github.com/mfontanini/presenterm\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
-  description = "build xpkg package ignoring workflow files"
+  description = "up cli build xpkg package ignoring workflow files"
   command = "up xpkg build --ignore=\".github/workflows/*.yaml,.github/workflows/*.yml,examples/*.yaml,.work/uptest-datasource.yaml\""
+  tag = ["up", "cli"]
   output = ""
 
 [[snippets]]
@@ -693,20 +503,8 @@
   output = ""
 
 [[snippets]]
-  description = "Link to SingleStoreDB"
-  command = "xdg-open \"https://www.singlestore.com/?utm_content=inline-mention\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
   description = "Show charecter codes for each key press"
   command = "xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\\n\", $5, $8 }'"
-  output = ""
-
-[[snippets]]
-  description = "Watch crossplane managed resource with false flag"
-  command = "watch -n 1 'kubectl get managed | grep -i false'"
-  tag = ["crossplane", "kubectl"]
   output = ""
 
 [[snippets]]
@@ -722,19 +520,8 @@
   output = ""
 
 [[snippets]]
-  description = "install latest crossplane CLI from master branch"
-  command = "curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh && sudo mv crossplane /usr/local/bin"
-  output = ""
-
-[[snippets]]
   description = "Link to Nix package versions when needing specific version of the package"
   command = "xdg-open \"https://lazamar.co.uk/nix-versions/\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to a little professional services group within the engineering org"
-  command = "xdg-open \"https://martinfowler.com/articles/platform-teams-stuff-done.html\""
   tag = ["web", "link"]
   output = ""
 
@@ -761,32 +548,15 @@
   output = ""
 
 [[snippets]]
-  description = "Link to Development Notes from Users"
-  command = "xdg-open \"https://vshn.github.io/appcat/appcat/explanations/dev-notes.html\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to Experience Report"
-  command = "xdg-open \"https://www.notion.so/upbound/Converting-existing-composition-to-use-Go-Templating-Function-9fbc3b88da16409ea6fa6a1fd3c7e885?pvs=4\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
   description = "Link to Write Go Function"
   command = "xdg-open \"https://docs.crossplane.io/knowledge-base/guides/write-a-composition-function-in-go/\""
   tag = ["link"]
   output = ""
 
 [[snippets]]
-  description = "Link to My first composition function"
-  command = "xdg-open \"https://github.com/Piotr1215/function-simple-label\""
-  tag = ["link"]
-  output = ""
-
-[[snippets]]
   description = "killercoda concatenate all workshop files into single content sorted markdown file"
   command = "(cat intro.md; find . -maxdepth 2 -name 'step*.md' | sort -V | xargs cat; cat finish.md) > workshop.md"
+  tag = ["killercoda"]
   output = ""
 
 [[snippets]]
@@ -826,36 +596,8 @@
   output = ""
 
 [[snippets]]
-  description = "Link to OpenAI Assistants API"
-  command = "xdg-open \"https://platform.openai.com/docs/assistants/overview\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to Promote Composition Functions to GA"
-  command = "xdg-open \"https://github.com/crossplane/crossplane/issues/4951\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to Optionally run crossplane beta render against a live control plane"
-  command = "xdg-open \"https://github.com/crossplane/crossplane/issues/4996\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
-  description = "install kdash"
-  command = "curl https://raw.githubusercontent.com/kdash-rs/kdash/main/deployment/getLatest.sh | bash"
-  output = ""
-
-[[snippets]]
   description = "copy openai API key"
   command = "printenv G OPEN | cut -d = -f2 | tr -d '\\n' C"
-  output = ""
-
-[[snippets]]
-  description = "Get the yaml resources and kinds from yaml files compositions or regular managed resources"
-  command = "current_path=$(pwd)\\necho \"Path: $current_path\" | tee -a ~/dev/costam\\n__pull_crossplane_apiversion_kind.sh | sort -u | tee -a ~/dev/costam\\necho \"\" | tee -a ~/dev/costam"
   output = ""
 
 [[snippets]]
@@ -865,7 +607,7 @@
   output = ""
 
 [[snippets]]
-  description = "swap to quiet to quiet all the obsidian notifications"
+  description = "swap to quiet all the obsidian notifications"
   command = "nvim +29 /home/decoder/.local/share/nvim/site/pack/packer/start/obsidian.nvim/lua/obsidian/client.lua"
   output = ""
 
@@ -904,25 +646,8 @@
   output = ""
 
 [[snippets]]
-  description = "concatenate all markdown files into one and include file names"
-  command = "tail -n +1 *.md > crossplane_concepts.md"
-  output = ""
-
-[[snippets]]
   description = "Link to Levels FYI - Job board"
   command = "xdg-open \"https://www.levels.fyi/profile\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to The Ultimate Guide to GitHub Reusable Workflows"
-  command = "xdg-open \"https://www.dhiwise.com/post/the-ultimate-guide-to-github-reusable-workflows-maximize-efficiency-and-collaboration\""
-  tag = ["web", "link"]
-  output = ""
-
-[[snippets]]
-  description = "Link to A Tour of Crossplane 1.14"
-  command = "xdg-open \"https://gist.github.com/stevendborrelli/f94d796076490010b4f03dede9dd886d\""
   tag = ["web", "link"]
   output = ""
 
@@ -946,11 +671,6 @@
 [[snippets]]
   description = "Display fancy kubectl kubernetes status"
   command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version && kubectl get nodes && kubectl cluster-info; } | grep -z 'Ready\\| ok\\|passed\\|running'"
-  output = ""
-
-[[snippets]]
-  description = "Kill process listening on a port"
-  command = "sudo kill -9 $(sudo lsof -t -i:<port>)"
   output = ""
 
 [[snippets]]
@@ -1012,4 +732,33 @@
 [[snippets]]
   description = "List system info neofetch uname lscpu df"
   command = "{ printf \"===Neofetch Info===\"; neofetch --stdout; echo \"\\n===Kernel Information===\"; uname -a; echo \"\\n===CPU Information===\"; lscpu; echo \"\\n===Memory Information===\"; free -m; echo \"\\n===Disk Usage Information===\"; df -h; echo \"\\n===PCI Devices===\"; lspci; echo \"\\n===USB Devices===\"; lsusb; } W"
+  output = ""
+
+[[snippets]]
+  description = "Example kail log with jq filtering"
+  command = "kail -p shell-operator -n example-monitor-pods -o json-pretty | jq '. | select(.message.output==\"stdout\") | .message.msg'\\n"
+  output = ""
+
+[[snippets]]
+  description = "launch helm dashboard on 8080"
+  command = "helm dashboard"
+  tag = ["helm,", "dashboard"]
+  output = ""
+
+[[snippets]]
+  description = "Link to brev portal"
+  command = "xdg-open \"https://console.brev.dev/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Devbox tools per shell"
+  command = "xdg-open \"https://www.jetpack.io/devbox/docs/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Certificates tracing tool"
+  command = "xdg-open \"https://crt.sh/\""
+  tag = ["link"]
   output = ""
