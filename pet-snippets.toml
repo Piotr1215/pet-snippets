@@ -762,3 +762,14 @@
   command = "xdg-open \"https://crt.sh/\""
   tag = ["link"]
   output = ""
+
+[[snippets]]
+  description = "clenup devbox packages"
+  command = "devbox run -- nix store gc"
+  output = ""
+
+[[snippets]]
+  description = "cleanup nix store packages"
+  command = "nix store gc"
+  tag = ["nix"]
+  output = ""
