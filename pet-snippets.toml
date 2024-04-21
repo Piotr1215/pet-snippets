@@ -773,3 +773,50 @@
   command = "nix store gc"
   tag = ["nix"]
   output = ""
+
+[[snippets]]
+  description = "Link to Algolia dashboard github login"
+  command = "xdg-open \"https://dashboard.algolia.com/apps/YVUCIOP9V7/explorer/browse/itcertificationsguide?searchMode=search\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to dca build pipeline on netlify"
+  command = "xdg-open \"https://app.netlify.com/teams/piotr1215/builds\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to helm charts repository artifacthub"
+  command = "xdg-open \"https://artifacthub.io/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "nslookup and dig records for my site"
+  command = "nslookup -type=<record=ns> <subdomain=app.>cloudrumble.net; dig <record=ns> <subdomain=app.>cloudrumble.net"
+  output = "DNS records"
+
+[[snippets]]
+  description = "Link to local development certificates anchor"
+  command = "xdg-open \"https://anchor.dev/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to software licenses expalined in plain english, FOSSA"
+  command = "xdg-open \"https://www.tldrlegal.com/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to zenity autokey implementaton"
+  command = "xdg-open \"https://autokey.github.io/api.html\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to def list_menu_multi"
+  command = "xdg-open \"https://autokey.github.io/_modules/autokey/scripting/dialog_gtk.html#GtkDialog.list_menu_multi\""
+  tag = ["web", "link"]
+  output = ""
