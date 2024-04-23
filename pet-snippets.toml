@@ -820,3 +820,9 @@
   command = "xdg-open \"https://autokey.github.io/_modules/autokey/scripting/dialog_gtk.html#GtkDialog.list_menu_multi\""
   tag = ["web", "link"]
   output = ""
+
+[[snippets]]
+  description = "Link to fiverr find web page developers and designers"
+  command = "xdg-open \"https://www.fiverr.com/\""
+  tag = ["link"]
+  output = ""
