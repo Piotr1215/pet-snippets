@@ -826,3 +826,8 @@
   command = "xdg-open \"https://www.fiverr.com/\""
   tag = ["link"]
   output = ""
+
+[[snippets]]
+  description = "taskwarrior search for anything in all tasks"
+  command = "task <search=pattern> all"
+  output = ""
