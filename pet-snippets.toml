@@ -831,3 +831,30 @@
   description = "taskwarrior search for anything in all tasks"
   command = "task <search=pattern> all"
   output = ""
+
+[[snippets]]
+  description = "Link to test regular expressions regex tester"
+  command = "xdg-open \"https://regex101.com/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "git stage only certain hunks in a file"
+  command = "git add -p FILE"
+  output = ""
+
+[[snippets]]
+  description = "git show staged changes to be commited"
+  command = "git diff --cached"
+  output = ""
+
+[[snippets]]
+  description = "Decrypt archive into new archive of the same name"
+  command = "gpg -d \\<file>.tar.gz.gpg > \\<file>.tar.gz"
+  output = ""
+
+[[snippets]]
+  description = "run internet speed test from command line"
+  command = "speedtest-cli"
+  tag = ["cli"]
+  output = ""
