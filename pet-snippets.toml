@@ -858,3 +858,14 @@
   command = "speedtest-cli"
   tag = ["cli"]
   output = ""
+
+[[snippets]]
+  description = "copy file name with extension to clipboard use alt F to find"
+  command = "xsel --clipboard --input < <(basename "
+  output = ""
+
+[[snippets]]
+  description = "Link to eraser.io AI generated diagrams, really handy for systems design"
+  command = "xdg-open \"https://app.eraser.io\""
+  tag = ["link"]
+  output = ""
