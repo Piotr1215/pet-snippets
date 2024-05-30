@@ -869,3 +869,14 @@
   command = "xdg-open \"https://app.eraser.io\""
   tag = ["link"]
   output = ""
+
+[[snippets]]
+  description = "Link to ttl.sh | An anonymous & ephemeral (and free) Docker image registry — Mozilla Firefox"
+  command = "xdg-open \"http://ttl.sh/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "convert medium blog to usable markdown"
+  command = "mediumexporter URL > output.md"
+  output = ""
