@@ -890,3 +890,8 @@
   description = "set default microphone to blue yeti sound input"
   command = "pactl set-default-source alsa_input.usb-Generic_Blue_Microphones_2147BAH02Z78-00.iec958-stereo\\n"
   output = ""
+
+[[snippets]]
+  description = "fix error 13 permissions error when installing pytnon packages"
+  command = "sudo chown -R $(whoami) /usr/local/bin/"
+  output = ""
