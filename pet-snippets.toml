@@ -885,3 +885,8 @@
   description = "pandoc convert indented code into fenced code in markdown file using lua filter"
   command = "pandoc --lua-filter=__convert_indented_code.lua INPUT OUTPUT"
   output = ""
+
+[[snippets]]
+  description = "set default microphone to blue yeti sound input"
+  command = "pactl set-default-source alsa_input.usb-Generic_Blue_Microphones_2147BAH02Z78-00.iec958-stereo\\n"
+  output = ""
