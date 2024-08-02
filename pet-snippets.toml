@@ -883,7 +883,7 @@
 
 [[snippets]]
   description = "pandoc convert indented code into fenced code in markdown file using lua filter"
-  command = "pandoc --lua-filter=__convert_indented_code.lua INPUT OUTPUT"
+  command = "pandoc --lua-filter=__convert_indented_code.lua INPUT -o OUTPUT"
   output = ""
 
 [[snippets]]
@@ -894,4 +894,51 @@
 [[snippets]]
   description = "fix error 13 permissions error when installing pytnon packages"
   command = "sudo chown -R $(whoami) /usr/local/bin/"
+  output = ""
+
+[[snippets]]
+  description = "Link to image.nvim discord server"
+  command = "xdg-open \"https://discord.com/channels/1178095355548680222/1178098370468921465\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Fix issues with mount that prevent incus to start"
+  command = "__umount_mullavad_cls.sh"
+  output = ""
+
+[[snippets]]
+  description = "Link to Incus system container and vm manager"
+  command = "xdg-open \"https://linuxcontainers.org/incus/docs/main/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to bash hacker wiki"
+  command = "xdg-open \"https://flokoe.github.io/bash-hackers-wiki/#how-to\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to zsh-tips-tricks"
+  command = "xdg-open \"https://strcat.de/zsh/#tipps\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to None"
+  command = "xdg-open \"https://www.youtube.com/watch?v=oh4N2wBJCc8\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to gamma presentations"
+  command = "xdg-open \"https://gamma.app/settings#\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to linux vms in browser"
+  command = "xdg-open \"http://copy.sh/v86/\""
+  tag = ["link"]
   output = ""
