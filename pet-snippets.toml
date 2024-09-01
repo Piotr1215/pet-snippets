@@ -942,3 +942,30 @@
   command = "xdg-open \"http://copy.sh/v86/\""
   tag = ["link"]
   output = ""
+
+[[snippets]]
+  description = "Installing nerdfonts with the getnf utility"
+  command = "curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash && getnf"
+  output = ""
+
+[[snippets]]
+  description = "Link to Really cool blog valuable dev"
+  command = "xdg-open \"https://thevaluable.dev/post/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "output any man page as markdown"
+  command = "man <tool> | col -b W"
+  tag = ["man"]
+  output = ""
+
+[[snippets]]
+  description = "show manually installed linux packages"
+  command = "apt-mark showmanual\\n"
+  output = ""
+
+[[snippets]]
+  description = "show ip interfaces with names and ip addresses"
+  command = "ip -br -c a"
+  output = ""
