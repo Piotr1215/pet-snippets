@@ -969,3 +969,48 @@
   description = "show ip interfaces with names and ip addresses"
   command = "ip -br -c a"
   output = ""
+
+[[snippets]]
+  description = "soft reset current branch to the fist commit, easy to rewrite commit history instead of squashing"
+  command = "git reset --soft $(git rev-list --max-parents=0 HEAD)"
+  tag = ["git"]
+  output = ""
+
+[[snippets]]
+  description = "tasks completed today"
+  command = "task end.after:today completed"
+  output = ""
+
+[[snippets]]
+  description = "tasks completed yesterday, use today for tasks completed today"
+  command = "task end:yesterday completed"
+  output = ""
+
+[[snippets]]
+  description = "Link to devcontainer add your own feature"
+  command = "xdg-open \"https://github.com/devcontainers/feature-starter\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to netflix"
+  command = "xdg-open \"https://www.netflix.com/browse\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to loft content strategy"
+  command = "xdg-open \"https://docs.google.com/spreadsheets/d/1PVLQFsa4lPW-8aT2LUkgTTNKTLeBm5UJp44vjDGOHXg/edit?gid=1737628795#gid=1737628795\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "copy absolute path to file"
+  command = "realpath"
+  output = ""
+
+[[snippets]]
+  description = "Link to timewarrior cheatsheet"
+  command = "xdg-open \"https://github.com/mkluge/timewcs\""
+  tag = ["web", "link"]
+  output = ""
