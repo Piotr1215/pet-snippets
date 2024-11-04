@@ -1014,3 +1014,104 @@
   command = "xdg-open \"https://github.com/mkluge/timewcs\""
   tag = ["web", "link"]
   output = ""
+
+[[snippets]]
+  description = "Only show git commits in the current branch"
+  command = "git log --oneline --no-merges --cherry-mark $(git merge-base main HEAD)..HEAD\\n"
+  output = ""
+
+[[snippets]]
+  description = "show git branch history including parent commit"
+  command = "git log --graph --oneline --decorate --all --simplify-by-decoration --parents"
+  output = ""
+
+[[snippets]]
+  description = "Link to dracula  tmux config"
+  command = "xdg-open \"https://draculatheme.com/tmux\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "check what open ai models are available via api"
+  command = "curl https://api.openai.com/v1/models -H \"Authorization: Bearer $OPENAI_API_KEY\""
+  output = ""
+
+[[snippets]]
+  description = "useful when temporarily bringing changes from another branch git merge"
+  command = "git checkout branch -- "
+  output = ""
+
+[[snippets]]
+  description = "find all files with certain extension like mdx and concatenate the content"
+  command = "fd --type=file --extension=<extension:mdx> --exec bat"
+  tag = ["mdx"]
+  output = ""
+
+[[snippets]]
+  description = "upgrade fabric to latest version"
+  command = "cd ~/dev/fabric && go install -ldflags \"-X main.version=$(git describe --tags --always)\" github.com/danielmiessler/fabric@latest"
+  tag = ["fabric"]
+  output = ""
+
+[[snippets]]
+  description = "list all zsh ohmyzsh funcitons zsh shell"
+  command = "print -l ${(ok)functions}"
+  output = ""
+
+[[snippets]]
+  description = "Link to gptscript builtin tools"
+  command = "xdg-open \"https://github.com/gptscript-ai/gptscript/blob/6ec5178d9d26d21114f992e1da1b794ee27e440e/pkg/builtin/builtin.go\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "find out first commit of the current branch git"
+  command = "git log --oneline $(git merge-base $(git rev-parse --abbrev-ref HEAD) $(git rev-parse --abbrev-ref HEAD@{u}))..HEAD | tail -n 1"
+  output = ""
+
+[[snippets]]
+  description = "Link to Fast, Declarative, Reproducible, and Composable Developer Environments - devenv in nix"
+  command = "xdg-open \"https://devenv.sh/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to good kubernetes controllers tutorial operators custom resources"
+  command = "xdg-open \"https://github.com/gianlucam76/kubernetes-controller-tutorial/blob/main/docs/custom-resources.md\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Public Domain Pictures"
+  command = "xdg-open \"https://public.work/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to Kubernetes CRD generation pitfalls"
+  command = "xdg-open \"https://ahmet.im/blog/crd-generation-pitfalls/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to go app service blueprint"
+  command = "xdg-open \"https://github.com/Melkeydev/go-blueprint\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to github large runners pricing"
+  command = "xdg-open \"https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates-for-x64-powered-larger-runners\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Copy allow edits by maintainers"
+  command = "echo \"Could you please [allow edits by maintainers](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork), so I can help you with \\`vale\\`?.\" C"
+  output = ""
+
+[[snippets]]
+  description = "Link to docusaurus scss variables"
+  command = "xdg-open \"https://gist.githubusercontent.com/abhigyantrips/b828ca46b2460c6699c73e0162f6be80/raw/3a1a6625e9dc92fa235b07a186bce8cc0a69f384/docusaurus-css-variables.css\""
+  tag = ["web", "link"]
+  output = ""
