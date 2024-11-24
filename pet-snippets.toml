@@ -68,11 +68,6 @@
   output = ""
 
 [[snippets]]
-  description = "Paste content copied from clipboard to a file"
-  command = "xclip -o -sel clipboard >> "
-  output = ""
-
-[[snippets]]
   description = "Linux fix errors when installing something with apt"
   command = "sudo dpkg --configure -a"
   tag = ["linux"]
@@ -1113,5 +1108,35 @@
 [[snippets]]
   description = "Link to docusaurus scss variables"
   command = "xdg-open \"https://gist.githubusercontent.com/abhigyantrips/b828ca46b2460c6699c73e0162f6be80/raw/3a1a6625e9dc92fa235b07a186bce8cc0a69f384/docusaurus-css-variables.css\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to all hands november loft"
+  command = "xdg-open \"https://docs.google.com/presentation/d/1yYxcWC7uYCOkrfkwktkHCmJeASaUTp8keJkADnkZ8lI/edit#slide=id.g3124b87c8d1_0_1125\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to weekly engineering sync slides loft"
+  command = "xdg-open \"https://drive.google.com/drive/folders/16RirnEug8fA2WztbbSiVS-0x_vXQpxGO\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to canva youtube and blog content"
+  command = "xdg-open \"https://www.canva.com/\""
+  tag = ["link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to eksctl config file schema eks aws"
+  command = "xdg-open \"https://eksctl.io/usage/schema/\""
+  tag = ["web", "link"]
+  output = ""
+
+[[snippets]]
+  description = "Link to list of azure locations up to date regions"
+  command = "xdg-open \"https://gist.github.com/ausfestivus/04e55c7d80229069bf3bc75870630ec8\""
   tag = ["web", "link"]
   output = ""
