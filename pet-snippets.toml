@@ -1210,3 +1210,45 @@
   Output = ""
   Tag = []
   command = "gpg --armor --export piotrzan@gmail.com W"
+
+[[Snippets]]
+  Description = "Link to Installed Extensions - GNOME Shell Extensions — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://extensions.gnome.org/local/\""
+
+[[Snippets]]
+  Description = "show manually installed packages with apt and nala"
+  Output = ""
+  Tag = []
+  command = "zcat /var/log/apt/history.log.*.gz 2>/dev/null | cat - /var/log/apt/history.log | grep -Po '^Commandline:(?= apt(-get)?| nala)(?=.* install ) \\K.*' | tr ' ' '\\n' | sort -u | grep -v '^-'"
+
+[[Snippets]]
+  Description = "Install npm latest version"
+  Output = ""
+  Tag = []
+  command = "curl -L https://www.npmjs.com/install.sh | sh\\n"
+
+[[Snippets]]
+  Description = "Link to restic backup cli"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://restic.readthedocs.io/en/stable/010_introduction.html\""
+
+[[Snippets]]
+  Description = "Link to 12 antipatterns o iac"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://itnext.io/the-12-anti-factors-of-infrastructure-as-code-acb52fba3ae0\""
+
+[[Snippets]]
+  Description = "mount google drive"
+  Output = ""
+  Tag = []
+  command = "ls gdrive"
+
+[[Snippets]]
+  Description = "mount google drive gdrive with rclone"
+  Output = ""
+  Tag = []
+  command = "rclone mount --daemon --vfs-cache-mode full googledrive: /mnt/gdrive"
