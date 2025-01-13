@@ -1224,12 +1224,6 @@
   command = "zcat /var/log/apt/history.log.*.gz 2>/dev/null | cat - /var/log/apt/history.log | grep -Po '^Commandline:(?= apt(-get)?| nala)(?=.* install ) \\K.*' | tr ' ' '\\n' | sort -u | grep -v '^-'"
 
 [[Snippets]]
-  Description = "Install npm latest version"
-  Output = ""
-  Tag = []
-  command = "curl -L https://www.npmjs.com/install.sh | sh\\n"
-
-[[Snippets]]
   Description = "Link to restic backup cli"
   Output = ""
   Tag = ["web", "link"]
@@ -1252,3 +1246,15 @@
   Output = ""
   Tag = []
   command = "rclone mount --daemon --vfs-cache-mode full googledrive: /mnt/gdrive"
+
+[[Snippets]]
+  Description = "Install latest versions of nodejs and npm from deb repositories"
+  Output = ""
+  Tag = []
+  command = "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash - && sudo apt-get install -y nodejs"
+
+[[Snippets]]
+  Description = "Link to available gcp regions and zones google cloud"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://cloud.google.com/compute/docs/regions-zones\""
