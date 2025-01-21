@@ -1258,3 +1258,21 @@
   Output = ""
   Tag = ["web", "link"]
   command = "xdg-open \"https://cloud.google.com/compute/docs/regions-zones\""
+
+[[Snippets]]
+  Description = "Link to web-search oh my zsh search engines list"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search#:~:text=Available%20search%20contexts%20are:\""
+
+[[Snippets]]
+  Description = "remove all restic snapshots to start fresh"
+  Output = ""
+  Tag = []
+  command = "restic forget --keep-tag=SomeUnusedTag -vv"
+
+[[Snippets]]
+  Description = "pull all my open prs in markdown format"
+  Output = ""
+  Tag = []
+  command = "gh search prs --author \"@me\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
