@@ -99,13 +99,13 @@
   Description = "Link to SSH Cheat Sheet"
   Output = ""
   Tag = ["link"]
-  command = "lynx https://www.marcobehler.com/guides/ssh-cheat-sheet"
+  command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
 
 [[Snippets]]
   Description = "Link to Vim fix for go files when folds are closed on save"
   Output = ""
   Tag = ["link"]
-  command = "lynx https://stackoverflow.com/a/55327996"
+  command = "xdg-open https://stackoverflow.com/a/55327996"
 
 [[Snippets]]
   Description = "Apt ubuntu remove ppa from the repositories"
@@ -129,25 +129,25 @@
   Description = "Link to At reminder times table, formats execution"
   Output = ""
   Tag = ["link"]
-  command = "lynx https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-schedule-jobs-in-linux-at-and-crontab-commands-255842/\\#:\\~:text\\=Formats%20for%20the%20at%20Command%20for%20the%20Time%20of%20Execution"
+  command = "xdg-open https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-schedule-jobs-in-linux-at-and-crontab-commands-255842/\\#:\\~:text\\=Formats%20for%20the%20at%20Command%20for%20the%20Time%20of%20Execution"
 
 [[Snippets]]
   Description = "Link to Modify access for a specific user to a file or folder using ACL access control list, setfacl"
   Output = ""
   Tag = ["link"]
-  command = "lynx https://superuser.com/a/145007"
+  command = "xdg-open https://superuser.com/a/145007"
 
 [[Snippets]]
   Description = "Link to nvim lua guide"
   Output = ""
   Tag = ["link", "nvim"]
-  command = "lynx https://github.com/nanotee/nvim-lua-guide"
+  command = "xdg-open https://github.com/nanotee/nvim-lua-guide"
 
 [[Snippets]]
   Description = "Link to neovim folder structure"
   Output = ""
   Tag = ["link", "nvim"]
-  command = "lynx https://github.com/nanotee/nvim-lua-guide#runtime-files"
+  command = "xdg-open https://github.com/nanotee/nvim-lua-guide#runtime-files"
 
 [[Snippets]]
   Description = "Link to bash conditional operators"
@@ -171,7 +171,7 @@
   Description = "Link to the taskwarrior possible due date fields"
   Output = ""
   Tag = ["link"]
-  command = "lynx https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
+  command = "xdg-open https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
 
 [[Snippets]]
   Description = "Install newest version of up CLI"
@@ -231,7 +231,7 @@
   Description = "Link to gifcap record gifs from screen"
   Output = ""
   Tag = ["link"]
-  command = "lynx https://gifcap.dev/"
+  command = "xdg-open https://gifcap.dev/"
 
 [[Snippets]]
   Description = "Copy files found in a directory tree to another directory including subdirectories"
@@ -255,7 +255,7 @@
   Description = "Link to chrontab expression generator"
   Output = ""
   Tag = ["chron", "link", "linux"]
-  command = "lynx https://crontab-generator.org/"
+  command = "xdg-open https://crontab-generator.org/"
 
 [[Snippets]]
   Description = "interactive svg reference"
@@ -273,7 +273,7 @@
   Description = "Link to resolving issue when the gcloud user does not have access to service account ..."
   Output = ""
   Tag = ["gcloud", "gcp", "link"]
-  command = "lynx https://stackoverflow.com/questions/40367866/gcloud-the-user-does-not-have-access-to-service-account-default"
+  command = "xdg-open https://stackoverflow.com/questions/40367866/gcloud-the-user-does-not-have-access-to-service-account-default"
 
 [[Snippets]]
   Description = "List configuration file of a service"
@@ -291,7 +291,7 @@
   Description = "Link to bash pitfalls"
   Output = ""
   Tag = ["link"]
-  command = "lynx http://mywiki.wooledge.org/BashPitfalls"
+  command = "xdg-open http://mywiki.wooledge.org/BashPitfalls"
 
 [[Snippets]]
   Description = "Add current directory to LXC container mount directory"
@@ -333,19 +333,19 @@
   Description = "Link to ec2 instances"
   Output = ""
   Tag = ["link"]
-  command = "lynx https://aws.amazon.com/ec2/instance-types/"
+  command = "xdg-open https://aws.amazon.com/ec2/instance-types/"
 
 [[Snippets]]
   Description = "Link to Vim/Nvim power of g"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://vim.fandom.com/wiki/Power_of_g\""
+  command = "xdg-open \"https://vim.fandom.com/wiki/Power_of_g\""
 
 [[Snippets]]
   Description = "Link to write blogs with AI"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://cowriter.org/\""
+  command = "xdg-open \"https://cowriter.org/\""
 
 [[Snippets]]
   Description = "Show currently installed nvida graphics driver"
@@ -363,7 +363,7 @@
   Description = "Link to youtbe"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://www.youtube.com/\""
+  command = "xdg-open \"https://www.youtube.com/\""
 
 [[Snippets]]
   Description = "Compare diff files listing ls between two folders"
@@ -381,7 +381,7 @@
   Description = "Link to Mason registry of LSPs, DAPs, etc"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://mason-registry.dev/registry/list\""
+  command = "xdg-open \"https://mason-registry.dev/registry/list\""
 
 [[Snippets]]
   Description = "List all pending tasks from taskwarrior for a given project"
@@ -393,7 +393,7 @@
   Description = "Link to taskwarrior using dates effectively"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://taskwarrior.org/docs/using_dates/\""
+  command = "xdg-open \"https://taskwarrior.org/docs/using_dates/\""
 
 [[Snippets]]
   Description = "List all registered zle commands zsh shell"
@@ -411,13 +411,13 @@
   Description = "Link to call <plug> command from lua"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://www.reddit.com/r/neovim/comments/t9l75z/call_plugcommands_with_luaapi/\""
+  command = "xdg-open \"https://www.reddit.com/r/neovim/comments/t9l75z/call_plugcommands_with_luaapi/\""
 
 [[Snippets]]
   Description = "Link to Github actions built in variables"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables\""
+  command = "xdg-open \"https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables\""
 
 [[Snippets]]
   Description = "Git find commit where branch was created from main"
@@ -429,19 +429,19 @@
   Description = "Link to AutoKey Wiki Documentation"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://github.com/autokey/autokey/wiki\""
+  command = "xdg-open \"https://github.com/autokey/autokey/wiki\""
 
 [[Snippets]]
   Description = "Link to Rust and Neovim - A Thorough Guide and Walkthrough"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
+  command = "xdg-open \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
 
 [[Snippets]]
   Description = "Link to Conditionally show function in shell only if in git repo"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://gist.github.com/Piotr1215/41c4670cd9d282683613a3338123f3c4\""
+  command = "xdg-open \"https://gist.github.com/Piotr1215/41c4670cd9d282683613a3338123f3c4\""
 
 [[Snippets]]
   Description = "Print out all the shell commands, zsh, commands."
@@ -459,7 +459,7 @@
   Description = "Link to FL0 Deploy backend applications and databases in minutes"
   Output = ""
   Tag = ["deploy", "backend", "databases", "link"]
-  command = "lynx \"https://www.fl0.com/?ref=producthunt\""
+  command = "xdg-open \"https://www.fl0.com/?ref=producthunt\""
 
 [[Snippets]]
   Description = "Create file and direcotry structure in the same time"
@@ -471,7 +471,7 @@
   Description = "Link to MPV Keyboard Shortcuts - Make Tech Easier — Mozilla Firefox"
   Output = ""
   Tag = ["mpv", "media", "linux", "link"]
-  command = "lynx \"https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/\""
+  command = "xdg-open \"https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/\""
 
 [[Snippets]]
   Description = "up cli build xpkg package ignoring workflow files"
@@ -501,19 +501,19 @@
   Description = "Link to Activate Azure global admin role"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://portal.azure.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles\""
+  command = "xdg-open \"https://portal.azure.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles\""
 
 [[Snippets]]
   Description = "Link to PlantUML Themes"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://plantuml.com/theme\""
+  command = "xdg-open \"https://plantuml.com/theme\""
 
 [[Snippets]]
   Description = "Link to Nix package versions when needing specific version of the package"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://lazamar.co.uk/nix-versions/\""
+  command = "xdg-open \"https://lazamar.co.uk/nix-versions/\""
 
 [[Snippets]]
   Description = "crossplane functions remove development annotation from selected function"
@@ -531,19 +531,19 @@
   Description = "Link to P&T as a Function Gdoc"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://github.com/crossplane/crossplane/blob/863ff6c2f53af47424dab941dbef83ca12e7d74f/design/design-doc-composition-functions.md#patch-and-transform-as-a-function\""
+  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/863ff6c2f53af47424dab941dbef83ca12e7d74f/design/design-doc-composition-functions.md#patch-and-transform-as-a-function\""
 
 [[Snippets]]
   Description = "Link to Writing Crossplane Composition Function"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://youtu.be/otwg-bO757A\""
+  command = "xdg-open \"https://youtu.be/otwg-bO757A\""
 
 [[Snippets]]
   Description = "Link to Write Go Function"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://docs.crossplane.io/knowledge-base/guides/write-a-composition-function-in-go/\""
+  command = "xdg-open \"https://docs.crossplane.io/knowledge-base/guides/write-a-composition-function-in-go/\""
 
 [[Snippets]]
   Description = "killercoda concatenate all workshop files into single content sorted markdown file"
@@ -585,7 +585,7 @@
   Description = "Link to My killercoda, katacoda scenarios"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://killercoda.com/creator/scenarios\""
+  command = "xdg-open \"https://killercoda.com/creator/scenarios\""
 
 [[Snippets]]
   Description = "copy openai API key"
@@ -597,7 +597,7 @@
   Description = "Link to Crossplane Local Development Instructions"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/crossplane/crossplane/blob/master/contributing/README.md#establishing-a-development-environment\""
+  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/master/contributing/README.md#establishing-a-development-environment\""
 
 [[Snippets]]
   Description = "swap to quiet all the obsidian notifications"
@@ -609,19 +609,19 @@
   Description = "Link to ollama models"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://ollama.ai/library\""
+  command = "xdg-open \"https://ollama.ai/library\""
 
 [[Snippets]]
   Description = "Link to client-go-examples for kubectl"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/iximiuz/client-go-examples\""
+  command = "xdg-open \"https://github.com/iximiuz/client-go-examples\""
 
 [[Snippets]]
   Description = "Link to ngrok dashboard"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://dashboard.ngrok.com/\""
+  command = "xdg-open \"https://dashboard.ngrok.com/\""
 
 [[Snippets]]
   Description = "Check what's listening on specific port and kill it"
@@ -645,7 +645,7 @@
   Description = "Link to Levels FYI - Job board"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://www.levels.fyi/profile\""
+  command = "xdg-open \"https://www.levels.fyi/profile\""
 
 [[Snippets]]
   Description = "dynamically detec and track mouse position"
@@ -657,7 +657,7 @@
   Description = "Link to Developer Conferences Agenda"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://developers.events/\""
+  command = "xdg-open \"https://developers.events/\""
 
 [[Snippets]]
   Description = "get kubectl connection to MCP by number"
@@ -675,13 +675,13 @@
   Description = "Link to Resolve Git Merge Conflicts with Neovim and Fugitive!"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://www.youtube.com/watch?v=vpwJ7fqD1CE\""
+  command = "xdg-open \"https://www.youtube.com/watch?v=vpwJ7fqD1CE\""
 
 [[Snippets]]
   Description = "Link to Upbound marketplace"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://marketplace.upbound.io/\""
+  command = "xdg-open \"https://marketplace.upbound.io/\""
 
 [[Snippets]]
   Description = "Select header row and regular expression for data rows with awk"
@@ -723,13 +723,13 @@
   Description = "Link to List of neovim nvim text objects"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://github.com/chrisgrieser/nvim-various-textobjs?tab=readme-ov-file#list-of-text-objects\""
+  command = "xdg-open \"https://github.com/chrisgrieser/nvim-various-textobjs?tab=readme-ov-file#list-of-text-objects\""
 
 [[Snippets]]
   Description = "Link to ugrep grep replacement"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://ugrep.com/?ref=console.dev#TUI\""
+  command = "xdg-open \"https://ugrep.com/?ref=console.dev#TUI\""
 
 [[Snippets]]
   Description = "List system info neofetch uname lscpu df"
@@ -753,19 +753,19 @@
   Description = "Link to brev portal"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://console.brev.dev/\""
+  command = "xdg-open \"https://console.brev.dev/\""
 
 [[Snippets]]
   Description = "Link to Devbox tools per shell"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://www.jetpack.io/devbox/docs/\""
+  command = "xdg-open \"https://www.jetpack.io/devbox/docs/\""
 
 [[Snippets]]
   Description = "Link to Certificates tracing tool"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://crt.sh/\""
+  command = "xdg-open \"https://crt.sh/\""
 
 [[Snippets]]
   Description = "clenup devbox packages"
@@ -783,19 +783,19 @@
   Description = "Link to Algolia dashboard github login"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://dashboard.algolia.com/apps/YVUCIOP9V7/explorer/browse/itcertificationsguide?searchMode=search\""
+  command = "xdg-open \"https://dashboard.algolia.com/apps/YVUCIOP9V7/explorer/browse/itcertificationsguide?searchMode=search\""
 
 [[Snippets]]
   Description = "Link to dca build pipeline on netlify"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://app.netlify.com/teams/piotr1215/builds\""
+  command = "xdg-open \"https://app.netlify.com/teams/piotr1215/builds\""
 
 [[Snippets]]
   Description = "Link to helm charts repository artifacthub"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://artifacthub.io/\""
+  command = "xdg-open \"https://artifacthub.io/\""
 
 [[Snippets]]
   Description = "nslookup and dig records for my site"
@@ -807,31 +807,31 @@
   Description = "Link to local development certificates anchor"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://anchor.dev/\""
+  command = "xdg-open \"https://anchor.dev/\""
 
 [[Snippets]]
   Description = "Link to software licenses expalined in plain english, FOSSA"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://www.tldrlegal.com/\""
+  command = "xdg-open \"https://www.tldrlegal.com/\""
 
 [[Snippets]]
   Description = "Link to zenity autokey implementaton"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://autokey.github.io/api.html\""
+  command = "xdg-open \"https://autokey.github.io/api.html\""
 
 [[Snippets]]
   Description = "Link to def list_menu_multi"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://autokey.github.io/_modules/autokey/scripting/dialog_gtk.html#GtkDialog.list_menu_multi\""
+  command = "xdg-open \"https://autokey.github.io/_modules/autokey/scripting/dialog_gtk.html#GtkDialog.list_menu_multi\""
 
 [[Snippets]]
   Description = "Link to fiverr find web page developers and designers"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://www.fiverr.com/\""
+  command = "xdg-open \"https://www.fiverr.com/\""
 
 [[Snippets]]
   Description = "taskwarrior search for anything in all tasks"
@@ -843,7 +843,7 @@
   Description = "Link to test regular expressions regex tester"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://regex101.com/\""
+  command = "xdg-open \"https://regex101.com/\""
 
 [[Snippets]]
   Description = "git stage only certain hunks in a file"
@@ -879,13 +879,13 @@
   Description = "Link to eraser.io AI generated diagrams, really handy for systems design"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://app.eraser.io\""
+  command = "xdg-open \"https://app.eraser.io\""
 
 [[Snippets]]
   Description = "Link to ttl.sh | An anonymous & ephemeral (and free) Docker image registry — Mozilla Firefox"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"http://ttl.sh/\""
+  command = "xdg-open \"http://ttl.sh/\""
 
 [[Snippets]]
   Description = "convert medium blog to usable markdown"
@@ -915,7 +915,7 @@
   Description = "Link to image.nvim discord server"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://discord.com/channels/1178095355548680222/1178098370468921465\""
+  command = "xdg-open \"https://discord.com/channels/1178095355548680222/1178098370468921465\""
 
 [[Snippets]]
   Description = "Fix issues with mount that prevent incus to start"
@@ -927,37 +927,37 @@
   Description = "Link to Incus system container and vm manager"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://linuxcontainers.org/incus/docs/main/\""
+  command = "xdg-open \"https://linuxcontainers.org/incus/docs/main/\""
 
 [[Snippets]]
   Description = "Link to bash hacker wiki"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://flokoe.github.io/bash-hackers-wiki/#how-to\""
+  command = "xdg-open \"https://flokoe.github.io/bash-hackers-wiki/#how-to\""
 
 [[Snippets]]
   Description = "Link to zsh-tips-tricks"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://strcat.de/zsh/#tipps\""
+  command = "xdg-open \"https://strcat.de/zsh/#tipps\""
 
 [[Snippets]]
   Description = "Link to None"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://www.youtube.com/watch?v=oh4N2wBJCc8\""
+  command = "xdg-open \"https://www.youtube.com/watch?v=oh4N2wBJCc8\""
 
 [[Snippets]]
   Description = "Link to gamma presentations"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://gamma.app/settings#\""
+  command = "xdg-open \"https://gamma.app/settings#\""
 
 [[Snippets]]
   Description = "Link to linux vms in browser"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"http://copy.sh/v86/\""
+  command = "xdg-open \"http://copy.sh/v86/\""
 
 [[Snippets]]
   Description = "Installing nerdfonts with the getnf utility"
@@ -969,7 +969,7 @@
   Description = "Link to Really cool blog valuable dev"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://thevaluable.dev/post/\""
+  command = "xdg-open \"https://thevaluable.dev/post/\""
 
 [[Snippets]]
   Description = "output any man page as markdown"
@@ -1011,19 +1011,19 @@
   Description = "Link to devcontainer add your own feature"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/devcontainers/feature-starter\""
+  command = "xdg-open \"https://github.com/devcontainers/feature-starter\""
 
 [[Snippets]]
   Description = "Link to netflix"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://www.netflix.com/browse\""
+  command = "xdg-open \"https://www.netflix.com/browse\""
 
 [[Snippets]]
   Description = "Link to loft content strategy"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://docs.google.com/spreadsheets/d/1PVLQFsa4lPW-8aT2LUkgTTNKTLeBm5UJp44vjDGOHXg/edit?gid=1737628795#gid=1737628795\""
+  command = "xdg-open \"https://docs.google.com/spreadsheets/d/1PVLQFsa4lPW-8aT2LUkgTTNKTLeBm5UJp44vjDGOHXg/edit?gid=1737628795#gid=1737628795\""
 
 [[Snippets]]
   Description = "copy absolute path to file"
@@ -1035,7 +1035,7 @@
   Description = "Link to timewarrior cheatsheet"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/mkluge/timewcs\""
+  command = "xdg-open \"https://github.com/mkluge/timewcs\""
 
 [[Snippets]]
   Description = "Only show git commits in the current branch"
@@ -1053,7 +1053,7 @@
   Description = "Link to dracula  tmux config"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://draculatheme.com/tmux\""
+  command = "xdg-open \"https://draculatheme.com/tmux\""
 
 [[Snippets]]
   Description = "check what open ai models are available via api"
@@ -1089,7 +1089,7 @@
   Description = "Link to gptscript builtin tools"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/gptscript-ai/gptscript/blob/6ec5178d9d26d21114f992e1da1b794ee27e440e/pkg/builtin/builtin.go\""
+  command = "xdg-open \"https://github.com/gptscript-ai/gptscript/blob/6ec5178d9d26d21114f992e1da1b794ee27e440e/pkg/builtin/builtin.go\""
 
 [[Snippets]]
   Description = "find out first commit of the current branch git"
@@ -1101,37 +1101,37 @@
   Description = "Link to Fast, Declarative, Reproducible, and Composable Developer Environments - devenv in nix"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://devenv.sh/\""
+  command = "xdg-open \"https://devenv.sh/\""
 
 [[Snippets]]
   Description = "Link to good kubernetes controllers tutorial operators custom resources"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/gianlucam76/kubernetes-controller-tutorial/blob/main/docs/custom-resources.md\""
+  command = "xdg-open \"https://github.com/gianlucam76/kubernetes-controller-tutorial/blob/main/docs/custom-resources.md\""
 
 [[Snippets]]
   Description = "Link to Public Domain Pictures"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://public.work/\""
+  command = "xdg-open \"https://public.work/\""
 
 [[Snippets]]
   Description = "Link to Kubernetes CRD generation pitfalls"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://ahmet.im/blog/crd-generation-pitfalls/\""
+  command = "xdg-open \"https://ahmet.im/blog/crd-generation-pitfalls/\""
 
 [[Snippets]]
   Description = "Link to go app service blueprint"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/Melkeydev/go-blueprint\""
+  command = "xdg-open \"https://github.com/Melkeydev/go-blueprint\""
 
 [[Snippets]]
   Description = "Link to github large runners pricing"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates-for-x64-powered-larger-runners\""
+  command = "xdg-open \"https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates-for-x64-powered-larger-runners\""
 
 [[Snippets]]
   Description = "Copy allow edits by maintainers"
@@ -1143,37 +1143,37 @@
   Description = "Link to docusaurus scss variables"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://gist.githubusercontent.com/abhigyantrips/b828ca46b2460c6699c73e0162f6be80/raw/3a1a6625e9dc92fa235b07a186bce8cc0a69f384/docusaurus-css-variables.css\""
+  command = "xdg-open \"https://gist.githubusercontent.com/abhigyantrips/b828ca46b2460c6699c73e0162f6be80/raw/3a1a6625e9dc92fa235b07a186bce8cc0a69f384/docusaurus-css-variables.css\""
 
 [[Snippets]]
   Description = "Link to all hands november loft"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://docs.google.com/presentation/d/1yYxcWC7uYCOkrfkwktkHCmJeASaUTp8keJkADnkZ8lI/edit#slide=id.g3124b87c8d1_0_1125\""
+  command = "xdg-open \"https://docs.google.com/presentation/d/1yYxcWC7uYCOkrfkwktkHCmJeASaUTp8keJkADnkZ8lI/edit#slide=id.g3124b87c8d1_0_1125\""
 
 [[Snippets]]
   Description = "Link to weekly engineering sync slides loft"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://drive.google.com/drive/folders/16RirnEug8fA2WztbbSiVS-0x_vXQpxGO\""
+  command = "xdg-open \"https://drive.google.com/drive/folders/16RirnEug8fA2WztbbSiVS-0x_vXQpxGO\""
 
 [[Snippets]]
   Description = "Link to canva youtube and blog content"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://www.canva.com/\""
+  command = "xdg-open \"https://www.canva.com/\""
 
 [[Snippets]]
   Description = "Link to eksctl config file schema eks aws"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://eksctl.io/usage/schema/\""
+  command = "xdg-open \"https://eksctl.io/usage/schema/\""
 
 [[Snippets]]
   Description = "Link to list of azure locations up to date regions"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://gist.github.com/ausfestivus/04e55c7d80229069bf3bc75870630ec8\""
+  command = "xdg-open \"https://gist.github.com/ausfestivus/04e55c7d80229069bf3bc75870630ec8\""
 
 [[Snippets]]
   Description = "export default gpg key for example for github"
@@ -1185,7 +1185,7 @@
   Description = "Link to Installed Extensions - GNOME Shell Extensions — Mozilla Firefox"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://extensions.gnome.org/local/\""
+  command = "xdg-open \"https://extensions.gnome.org/local/\""
 
 [[Snippets]]
   Description = "show manually installed packages with apt and nala"
@@ -1197,13 +1197,13 @@
   Description = "Link to restic backup cli"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://restic.readthedocs.io/en/stable/010_introduction.html\""
+  command = "xdg-open \"https://restic.readthedocs.io/en/stable/010_introduction.html\""
 
 [[Snippets]]
   Description = "Link to 12 antipatterns o iac"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://itnext.io/the-12-anti-factors-of-infrastructure-as-code-acb52fba3ae0\""
+  command = "xdg-open \"https://itnext.io/the-12-anti-factors-of-infrastructure-as-code-acb52fba3ae0\""
 
 [[Snippets]]
   Description = "mount google drive"
@@ -1227,13 +1227,13 @@
   Description = "Link to available gcp regions and zones google cloud"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://cloud.google.com/compute/docs/regions-zones\""
+  command = "xdg-open \"https://cloud.google.com/compute/docs/regions-zones\""
 
 [[Snippets]]
   Description = "Link to web-search oh my zsh search engines list"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search#:~:text=Available%20search%20contexts%20are:\""
+  command = "xdg-open \"https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search#:~:text=Available%20search%20contexts%20are:\""
 
 [[Snippets]]
   Description = "remove all restic snapshots to start fresh"
@@ -1257,13 +1257,13 @@
   Description = "Link to taskwarrior virtual tags"
   Output = ""
   Tag = ["link"]
-  command = "lynx \"https://taskwarrior.org/docs/tags/#:~:text=conditions%2C%20for%20convenience.-,Supported%20Virtual%20Tags,-Since%20version%202.2.0%2C\""
+  command = "xdg-open \"https://taskwarrior.org/docs/tags/#:~:text=conditions%2C%20for%20convenience.-,Supported%20Virtual%20Tags,-Since%20version%202.2.0%2C\""
 
 [[Snippets]]
   Description = "Link to github runner base images ubuntu runner-images"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://github.com/actions/runner-images\""
+  command = "xdg-open \"https://github.com/actions/runner-images\""
 
 [[Snippets]]
   Description = "pull all opened prs in vcluster-docs repo git"
@@ -1293,19 +1293,19 @@
   Description = "Link to How platform teams get stuff done — Mozilla Firefox"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://martinfowler.com/articles/platform-teams-stuff-done.html\""
+  command = "xdg-open \"https://martinfowler.com/articles/platform-teams-stuff-done.html\""
 
 [[Snippets]]
   Description = "Link to artifacthub loft packages"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://artifacthub.io/packages/helm/loft/loft\""
+  command = "xdg-open \"https://artifacthub.io/packages/helm/loft/loft\""
 
 [[Snippets]]
   Description = "Link to typ.ing — Mozilla Firefox"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://typ.ing/\""
+  command = "xdg-open \"https://typ.ing/\""
 
 [[Snippets]]
   Description = "kubectl show how many running pods per node"
@@ -1323,7 +1323,7 @@
   Description = "Link to Workflow syntax for GitHub Actions - GitHub Docs — Mozilla Firefox"
   Output = ""
   Tag = ["web", "link"]
-  command = "lynx \"https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows\""
+  command = "xdg-open \"https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows\""
 
 [[Snippets]]
   Description = "git push without evaluating global and local hooks this will push to main use with caution"
@@ -1366,3 +1366,141 @@
   Output = ""
   Tag = []
   command = "curl wttr.in Frankfurt"
+
+[[Snippets]]
+  Description = "Link to engineering slides link"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://drive.google.com/drive/folders/1w1l6B9-3jU4-dz1O2eod0wUiSPuzE1Oj\""
+
+[[Snippets]]
+  Description = "Link to Tide Mende | Character | zKillboard — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://zkillboard.com/character/1216590223/\""
+
+[[Snippets]]
+  Description = "Link to slack loft release bot app"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://api.slack.com/apps/A08D0T15MRC/incoming-webhooks?\""
+
+[[Snippets]]
+  Description = "pull label ids from linear api"
+  Output = ""
+  Tag = []
+  command = "curl -s -X POST -H \"Content-Type: application/json\" -H \"Authorization: $LINEAR_API_KEY\" --data '{\"query\": \"query { team(id: \\\"eb475b2d-c6ea-46f6-9725-deaa66415cb6\\\") { id name labels { nodes { id name color description } } } }\"}' https://api.linear.app/graphql | jq ."
+
+[[Snippets]]
+  Description = "Link to github require status checks to pass before merging"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks\""
+
+[[Snippets]]
+  Description = "show current directory size"
+  Output = ""
+  Tag = []
+  command = "du -sh ."
+
+[[Snippets]]
+  Description = "Link to nginx compatibility chart kubernetes"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/kubernetes/ingress-nginx?tab=readme-ov-file#supported-versions-table\""
+
+[[Snippets]]
+  Description = "cd to steam eve online directory"
+  Output = ""
+  Tag = []
+  command = "cd /home/decoder/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/8500/pfx/drive_c/users/steamuser/AppData/Local/CCP/EVE/"
+
+[[Snippets]]
+  Description = "Link to custom terraform functions"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/valentindeaconu/terraform-provider-func\""
+
+[[Snippets]]
+  Description = "Link to good awk overview tutorial"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/vivus-ignis/the-art-of-the-terminal/tree/master/awksome\""
+
+[[Snippets]]
+  Description = "create tmux demo session"
+  Output = ""
+  Tag = []
+  command = "tmux new-session -d -s demo"
+
+[[Snippets]]
+  Description = "Link to vcluster and platform release dates"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.notion.so/loftsh/Release-Dates-12e10940806980ac925ee70613c6a14f\""
+
+[[Snippets]]
+  Description = "list new versions of go modules for upgrade"
+  Output = ""
+  Tag = []
+  command = "go list -mod=mod -m -json all | jq .Update.Major"
+
+[[Snippets]]
+  Description = "share terminal on the web securely"
+  Output = ""
+  Tag = ["terminal"]
+  command = "curl -sSf https://sshx.io/get | sh -s run"
+
+[[Snippets]]
+  Description = "create local vcluster on kind in one command"
+  Output = ""
+  Tag = ["vcluster,", "kind"]
+  command = "kind create cluster && vcluster create testme"
+
+[[Snippets]]
+  Description = "Link to pure bash bible"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/dylanaraps/pure-sh-bible\""
+
+[[Snippets]]
+  Description = "Link to pure bash bible guide"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/dylanaraps/pure-bash-bible\""
+
+[[Snippets]]
+  Description = "Link to Introduction - Model Context Protocol Specification"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://modelcontextprotocol.io/introduction\""
+
+[[Snippets]]
+  Description = "Link to claude awesome mcp servers"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/punkpeye/awesome-mcp-servers\""
+
+[[Snippets]]
+  Description = "Link to mcp servers official website"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://mcpservers.org/\""
+
+[[Snippets]]
+  Description = "Link to official mcp servers list original github"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/modelcontextprotocol/servers\""
+
+[[Snippets]]
+  Description = "Link to build mcp server with llm claude"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://modelcontextprotocol.io/tutorials/building-mcp-with-llms\""
+
+[[Snippets]]
+  Description = "Get available Claude models from Anthropic API"
+  Output = ""
+  Tag = ["anthropic", "api", "models", "claude"]
+  command = "curl -H \"Content-Type: application/json\" -H \"x-api-key: $ANTHROPIC_API_KEY\" -H \"anthropic-version: 2023-06-01\" https://api.anthropic.com/v1/models | jq"
