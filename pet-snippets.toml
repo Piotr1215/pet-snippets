@@ -1,702 +1,702 @@
 
 [[Snippets]]
-  Description = "Docker watchtower to update images or all running contianers to their newest versions"
+  Description = "docker: auto-update running containers"
   Output = ""
   Tag = []
   command = "docker run --rm --name Watchtower -e WATCHTOWER_CLEANUP=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_INCLUDE_STOPPED=true -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once"
 
 [[Snippets]]
-  Description = "Get encoded csr in a proper format"
+  Description = "kubectl: base64 encode a csr for a token"
   Output = "Token ready to be pasted in the token field of Kubernetes dashboard for example."
   Tag = ["kubernetes"]
   command = "cat NAME | base64 | tr -d \"\\n\" ?fil"
 
 [[Snippets]]
-  Description = "Upgrade single package to newest version"
+  Description = "apt: upgrade a single package"
   Output = ""
   Tag = ["linux"]
   command = "sudo apt --only-upgrade install NAME ?rep"
 
 [[Snippets]]
-  Description = "Git show all changes commits to a file, helpful for tracking changes"
+  Description = "git: every commit touching a file"
   Output = ""
   Tag = ["git"]
   command = "git log --follow --stat -p -- "
 
 [[Snippets]]
-  Description = "Check if branch is eligible for merge"
+  Description = "git: dry-run a merge to test eligibility"
   Output = ""
   Tag = ["git"]
   command = "git merge --no-commit --no-ff NAME && echo $? && git merge --abort ?rep"
 
 [[Snippets]]
-  Description = "Git list branches not merged with origin main"
+  Description = "git: branches not merged into origin/main"
   Output = ""
   Tag = ["git"]
   command = "git branch --no-merged origin/main"
 
 [[Snippets]]
-  Description = "Linux fix errors when installing something with apt"
+  Description = "apt: fix a broken install"
   Output = ""
   Tag = ["linux"]
   command = "sudo dpkg --configure -a"
 
 [[Snippets]]
-  Description = "Paste image from clipboard to file"
+  Description = "xclip: paste clipboard image to a file"
   Output = ""
   Tag = ["linux", "clipboard"]
   command = "xclip -selection clipboard -t image/png -o > <NAME>.png"
 
 [[Snippets]]
-  Description = "Copy image file to clipboard"
+  Description = "xclip: copy an image file to clipboard"
   Output = ""
   Tag = ["linux", "clipboard"]
   command = "xclip -selection clipboard -t image/png -i <NAME>"
 
 [[Snippets]]
-  Description = "Git find deleted files and show their commits. Helpful when need to undelete a file."
+  Description = "git: find deleted files and their commits"
   Output = ""
   Tag = ["git"]
   command = "git log --diff-filter=D --summary | grep -E 'delete|^commit\\s+\\S+'"
 
 [[Snippets]]
-  Description = "List all make targets"
+  Description = "make: list all targets"
   Output = ""
   Tag = []
   command = "make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\\/\\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}' | sort -u"
 
 [[Snippets]]
-  Description = "Paste yaml from clipboard and apply with kubectl"
+  Description = "kubectl: apply yaml from the clipboard"
   Output = ""
   Tag = ["kubernetes"]
   command = "xclip -o -sel clipboard | kubectl apply -f -"
 
 [[Snippets]]
-  Description = "Search git commit history content"
+  Description = "git: search commit history content"
   Output = ""
   Tag = ["git"]
   command = "git log -p --all -G '"
 
 [[Snippets]]
-  Description = "Reformat a file with 1 space between words and 2 spaces between paragraphs. Helpful when limiting text width to 80 for PR reviews"
+  Description = "fmt: reflow prose for 80-col pr review"
   Output = ""
   Tag = []
   command = "fmt -u NAME ?fil"
 
 [[Snippets]]
-  Description = "Apt ubuntu remove ppa from the repositories"
+  Description = "apt: remove a ppa"
   Output = ""
   Tag = ["linux"]
   command = "sudo add-apt-repository --remove ppa:NAME ?rep"
 
 [[Snippets]]
-  Description = "Generate random password and copy to clipboard"
+  Description = "apg: generate a password to clipboard"
   Output = ""
   Tag = ["linux"]
   command = "apg -M SNCL -m 22 | fzf | xsel -ib"
 
 [[Snippets]]
-  Description = "SSH generate ecdsa key in the ssh folder"
+  Description = "ssh-keygen: new ecdsa key in ~/.ssh"
   Output = ""
   Tag = []
   command = "ssh-keygen -t ecdsa -f ~/.ssh/NAME ?rep"
 
 [[Snippets]]
-  Description = "Git copy file from source branch to current branch"
+  Description = "git: copy a file from another branch"
   Output = ""
   Tag = ["git"]
   command = "git checkout NAME NAME ?rep"
 
 [[Snippets]]
-  Description = "Enable debugging in neovim for rust and go"
+  Description = "nvim: install lldb for rust and go debug"
   Output = ""
   Tag = ["nvim"]
   command = "sudo apt install -y lldb-11 && sudo ln -s /usr/bin/lldb-vscode-11 /usr/bin/lldb-vscode"
 
 [[Snippets]]
-  Description = "Launch program on file change. In this case kubectl apply"
+  Description = "entr: rerun kubectl apply on file change"
   Output = ""
   Tag = ["kubernetes", "linux"]
   command = "/usr/bin/ls *.yaml | entr -s kubectl apply -f"
 
 [[Snippets]]
-  Description = "Show colorized directory tree 1 level deep with less"
+  Description = "tree: colorized 1-level tree in less"
   Output = ""
   Tag = ["linux"]
   command = "tree -LC 2 --si --sort name | less"
 
 [[Snippets]]
-  Description = "Generate simple git changelog"
+  Description = "git: changelog from commit subjects"
   Output = ""
   Tag = ["git"]
   command = "git log --pretty=\"- %s\" | grep -v Merge"
 
 [[Snippets]]
-  Description = "Copy files found in a directory tree to another directory including subdirectories"
+  Description = "fd: copy matching files, keep the tree"
   Output = ""
   Tag = ["linux", "terminal"]
   command = "fd NAME | cpio -pdm NAME ?"
 
 [[Snippets]]
-  Description = "git synchronize local fork origin with remote upstream"
+  Description = "git: sync a fork with upstream master"
   Output = ""
   Tag = []
   command = "git merge upstream/master"
 
 [[Snippets]]
-  Description = "cleanup journalctl old logs"
+  Description = "journalctl: vacuum logs down to 10m"
   Output = ""
   Tag = []
   command = "sudo journalctl --vacuum-size=10M"
 
 [[Snippets]]
-  Description = "copy your public key to your server"
+  Description = "ssh-copy-id: install your key on a server"
   Output = ""
   Tag = ["linux"]
   command = "ssh-copy-id remote_username@server_ip_address"
 
 [[Snippets]]
-  Description = "Alacritty, show key code for setting up alacritty key mappings"
+  Description = "showkey: key codes for alacritty mappings"
   Output = ""
   Tag = []
   command = "showkey -a"
 
 [[Snippets]]
-  Description = "Concatenate various files including file name"
+  Description = "tail: concatenate files with their names"
   Output = ""
   Tag = []
   command = "tail -n +1 file1 file2"
 
 [[Snippets]]
-  Description = "Edit tmuxinator zsh completion script"
+  Description = "nvim: edit tmuxinator zsh completion"
   Output = ""
   Tag = []
   command = "nvim /home/decoder/.oh-my-zsh/plugins/tmuxinator/_tmuxinator"
 
 [[Snippets]]
-  Description = "Show currently installed nvida graphics driver"
+  Description = "dkms: show the installed nvidia driver"
   Output = ""
   Tag = []
   command = "dkms status | grep -i nvidia"
 
 [[Snippets]]
-  Description = "Compare diff files listing ls between two folders"
+  Description = "diff: compare two folders, names only"
   Output = ""
   Tag = []
   command = "diff -rq folder1 folder2 | grep -E 'Only in|differ'"
 
 [[Snippets]]
-  Description = "Check where funcion or command is located"
+  Description = "type: locate a command or function"
   Output = ""
   Tag = []
   command = "type -a funcion"
 
 [[Snippets]]
-  Description = "List all pending tasks from taskwarrior for a given project"
+  Description = "task: pending tasks for a project"
   Output = ""
   Tag = []
   command = "task project.is:NAME status:pending export | jq -r '.[] | \"- [ ] \" + .description' ?rep"
 
 [[Snippets]]
-  Description = "List all registered zle commands zsh shell"
+  Description = "zle: list registered zsh widgets"
   Output = ""
   Tag = []
   command = "zle -al"
 
 [[Snippets]]
-  Description = "Git find commit where branch was created from main"
+  Description = "git: commit where this branch left main"
   Output = ""
   Tag = []
   command = "git merge-base main HEAD"
 
 [[Snippets]]
-  Description = "Print out all the shell commands, zsh, commands."
+  Description = "whence: print every shell command"
   Output = ""
   Tag = []
   command = "whence -vm \"*\""
 
 [[Snippets]]
-  Description = "Update default programs settings"
+  Description = "update-alternatives: show default programs"
   Output = ""
   Tag = []
   command = "sudo update-alternatives --get-selections"
 
 [[Snippets]]
-  Description = "Create file and direcotry structure in the same time"
+  Description = "install: create a file and its directories"
   Output = ""
   Tag = ["linux"]
   command = "install -D /dev/null path/to/file"
 
 [[Snippets]]
-  Description = "taskwarrior run task action with debugging when developing hooks"
+  Description = "task: run with hook debugging on"
   Output = ""
   Tag = ["cli"]
   command = "task rc.debug.hooks=2"
 
 [[Snippets]]
-  Description = "Show charecter codes for each key press"
+  Description = "xev: show key codes as you type"
   Output = ""
   Tag = []
   command = "xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\\n\", $5, $8 }'"
 
 [[Snippets]]
-  Description = "killercoda concatenate all workshop files into single content sorted markdown file"
+  Description = "killercoda: merge workshop steps to one md"
   Output = ""
   Tag = ["kubernetes"]
   command = "(cat intro.md; find . -maxdepth 2 -name 'step*.md' | sort -V | xargs cat; cat finish.md) > workshop.md"
 
 [[Snippets]]
-  Description = "kubectl get all latest events sorted by timestamp and with custom columns"
+  Description = "kubectl: warning events by timestamp"
   Output = ""
   Tag = ["kubernetes"]
   command = "kubectl get events --all-namespaces --field-selector type=Warning -o custom-columns=TIME:.lastTimestamp,NAMESPACE:.metadata.namespace,NAME:.involvedObject.name,KIND:.involvedObject.kind,NODE:.source.host,REASON:.reason,MESSAGE:.message | { read -r header; echo \"$header\"; sort -t ',' -k1,1 }"
 
 [[Snippets]]
-  Description = "kubectl get top nodes sorted by cpu utilization"
+  Description = "kubectl: top nodes sorted by cpu"
   Output = ""
   Tag = ["kubernetes"]
   command = "kubectl top nodes | { read -r header; echo \"$header\"; sort -k3,3nr; }"
 
 [[Snippets]]
-  Description = "Show all non running pods kubectl kubernetes"
+  Description = "kubectl: pods that are not running"
   Output = ""
   Tag = ["kubernetes"]
   command = "kubectl get pods --all-namespaces --field-selector 'status.phase!=Running' | grep -vi completed"
 
 [[Snippets]]
-  Description = "kubectl top usabe by cpu per pod per container kubernetes"
+  Description = "kubectl: top pods by cpu, per container"
   Output = ""
   Tag = ["kubernetes"]
   command = "kubectl top pod --sort-by cpu --containers -A L"
 
 [[Snippets]]
-  Description = "docker build image with buildx and load to local images from cache"
+  Description = "docker: buildx build and load locally"
   Output = ""
   Tag = ["docker"]
   command = "docker build . --progress=plain --tag NAME --load ?rep"
 
 [[Snippets]]
-  Description = "copy openai API key"
+  Description = "env: copy the openai api key to clipboard"
   Output = ""
   Tag = []
   command = "printenv G OPEN | cut -d = -f2 | tr -d '\\n' C"
 
 [[Snippets]]
-  Description = "swap to quiet all the obsidian notifications"
+  Description = "nvim: silence obsidian.nvim notifications"
   Output = ""
   Tag = []
   command = "nvim +29 /home/decoder/.local/share/nvim/site/pack/packer/start/obsidian.nvim/lua/obsidian/client.lua"
 
 [[Snippets]]
-  Description = "Check what's listening on a port and kill the selected one"
+  Description = "netstat: pick a listening port and kill it"
   Output = ""
   Tag = ["network", "process", "kill"]
   command = "sudo netstat -tulnp | fzf --height 40% --layout=reverse --prompt=\"Select a port: \" | awk '{print $7}' | cut -d'/' -f1 | xargs -r sudo kill"
 
 [[Snippets]]
-  Description = "list all images loaded on a kubernetes cluster"
+  Description = "kubectl: every image in the cluster"
   Output = ""
   Tag = []
   command = "kubectl get pods -A -o jsonpath=\"{..image}\" | tr -s '[[:space:]]' '\\n' | sort | uniq -c"
 
 [[Snippets]]
-  Description = "run debug container and attach to a pod's container"
+  Description = "kubectl: debug container attached to a pod"
   Output = ""
   Tag = ["kubernetes", "git"]
   command = "kubectl -n NAME debug -it NAME --image=ghcr.io/superbrothers/debug --target=NAME ?rep"
 
 [[Snippets]]
-  Description = "dynamically detec and track mouse position"
+  Description = "xdotool: track mouse position live"
   Output = ""
   Tag = []
   command = "watch -t -n 1 xdotool getmouselocation"
 
 [[Snippets]]
-  Description = "Display fancy kubectl kubernetes status"
+  Description = "kubectl: cluster health dashboard"
   Output = ""
   Tag = []
   command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version && kubectl get nodes && kubectl cluster-info; } | grep -z 'Ready\\| ok\\|passed\\|running'"
 
 [[Snippets]]
-  Description = "Select header row and regular expression for data rows with awk"
+  Description = "awk: keep the header plus matching rows"
   Output = ""
   Tag = []
   command = " | awk 'NR == 1 || /REGEX/'"
 
 [[Snippets]]
-  Description = "Show my public IP address"
+  Description = "curl: show my public ip"
   Output = ""
   Tag = ["network", "linux", "curl"]
   command = "curl ifconfig.me"
 
 [[Snippets]]
-  Description = "List system info neofetch uname lscpu df"
+  Description = "neofetch: full system info dump"
   Output = ""
   Tag = []
   command = "{ printf \"===Neofetch Info===\"; neofetch --stdout; echo \"\\n===Kernel Information===\"; uname -a; echo \"\\n===CPU Information===\"; lscpu; echo \"\\n===Memory Information===\"; free -m; echo \"\\n===Disk Usage Information===\"; df -h; echo \"\\n===PCI Devices===\"; lspci; echo \"\\n===USB Devices===\"; lsusb; } W"
 
 [[Snippets]]
-  Description = "launch helm dashboard on 8080"
+  Description = "helm: launch the dashboard on 8080"
   Output = ""
   Tag = ["kubernetes"]
   command = "helm dashboard"
 
 [[Snippets]]
-  Description = "nslookup and dig records for my site"
+  Description = "dig: dns records for cloudrumble.net"
   Output = "DNS records"
   Tag = []
   command = "nslookup -type=NAME NAME.cloudrumble.net; dig NAME NAME.cloudrumble.net ?rep"
 
 [[Snippets]]
-  Description = "taskwarrior search for anything in all tasks"
+  Description = "task: search all tasks for a term"
   Output = ""
   Tag = []
   command = "task NAME all ?rep"
 
 [[Snippets]]
-  Description = "git stage only certain hunks in a file"
+  Description = "git: stage selected hunks in a file"
   Output = ""
   Tag = []
   command = "git add -p NAME ?rep"
 
 [[Snippets]]
-  Description = "git show staged changes to be commited"
+  Description = "git: show staged changes"
   Output = ""
   Tag = []
   command = "git diff --cached"
 
 [[Snippets]]
-  Description = "Decrypt archive into new archive of the same name"
+  Description = "gpg: decrypt an archive back to tar.gz"
   Output = ""
   Tag = []
   command = "gpg -d NAME.tar.gz.gpg > NAME.tar.gz ?rep"
 
 [[Snippets]]
-  Description = "copy file name with extension to clipboard use alt F to find"
+  Description = "xsel: copy a file's basename to clipboard"
   Output = ""
   Tag = []
   command = "xsel --clipboard --input < <(basename "
 
 [[Snippets]]
-  Description = "pandoc convert indented code into fenced code in markdown file using lua filter"
+  Description = "pandoc: indented code to fenced code"
   Output = ""
   Tag = []
   command = "pandoc --lua-filter=__convert_indented_code.lua INPUT -o OUTPUT"
 
 [[Snippets]]
-  Description = "set default microphone to blue yeti sound input"
+  Description = "pactl: set blue yeti as the default mic"
   Output = ""
   Tag = []
   command = "pactl set-default-source alsa_input.usb-Generic_Blue_Microphones_2147BAH02Z78-00.iec958-stereo\\n"
 
 [[Snippets]]
-  Description = "Installing nerdfonts with the getnf utility"
+  Description = "getnf: install nerd fonts"
   Output = ""
   Tag = []
   command = "curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash && getnf"
 
 [[Snippets]]
-  Description = "output any man page as markdown"
+  Description = "man: output a man page as markdown"
   Output = ""
   Tag = ["linux"]
   command = "man NAME | col -b W ?rep"
 
 [[Snippets]]
-  Description = "show manually installed linux packages"
+  Description = "apt-mark: list manually installed packages"
   Output = ""
   Tag = []
   command = "apt-mark showmanual\\n"
 
 [[Snippets]]
-  Description = "show ip interfaces with names and ip addresses"
+  Description = "ip: interfaces with names and addresses"
   Output = ""
   Tag = []
   command = "ip -br -c a"
 
 [[Snippets]]
-  Description = "soft reset current branch to the fist commit, easy to rewrite commit history instead of squashing"
+  Description = "git: soft reset to the first commit"
   Output = ""
   Tag = ["git"]
   command = "git reset --soft $(git rev-list --max-parents=0 HEAD)"
 
 [[Snippets]]
-  Description = "tasks completed today"
+  Description = "task: completed today"
   Output = ""
   Tag = []
   command = "task end.after:today completed"
 
 [[Snippets]]
-  Description = "tasks completed yesterday, use today for tasks completed today"
+  Description = "task: completed yesterday"
   Output = ""
   Tag = []
   command = "task end:yesterday completed"
 
 [[Snippets]]
-  Description = "copy absolute path to file"
+  Description = "realpath: copy a file's absolute path"
   Output = ""
   Tag = []
   command = "realpath"
 
 [[Snippets]]
-  Description = "Only show git commits in the current branch"
+  Description = "git: commits unique to this branch"
   Output = ""
   Tag = []
   command = "git log --oneline --no-merges --cherry-mark $(git merge-base main HEAD)..HEAD\\n"
 
 [[Snippets]]
-  Description = "show git branch history including parent commit"
+  Description = "git: branch history graph with parents"
   Output = ""
   Tag = []
   command = "git log --graph --oneline --decorate --all --simplify-by-decoration --parents"
 
 [[Snippets]]
-  Description = "check what open ai models are available via api"
+  Description = "curl: list available openai models"
   Output = ""
   Tag = []
   command = "curl https://api.openai.com/v1/models -H \"Authorization: Bearer $OPENAI_API_KEY\""
 
 [[Snippets]]
-  Description = "useful when temporarily bringing changes from another branch git merge"
+  Description = "git: pull changes from another branch"
   Output = ""
   Tag = []
   command = "git checkout branch -- "
 
 [[Snippets]]
-  Description = "find all files with certain extension like mdx and concatenate the content"
+  Description = "fd: concatenate files of one extension"
   Output = ""
   Tag = ["web"]
   command = "fd --type=file --extension=NAME --exec bat ?"
 
 [[Snippets]]
-  Description = "upgrade fabric to latest version"
+  Description = "go: reinstall fabric at the latest tag"
   Output = ""
   Tag = ["cli"]
   command = "cd ~/dev/fabric && go install -ldflags \"-X main.version=$(git describe --tags --always)\" github.com/danielmiessler/fabric@latest"
 
 [[Snippets]]
-  Description = "list all zsh ohmyzsh funcitons zsh shell"
+  Description = "zsh: list all loaded functions"
   Output = ""
   Tag = []
   command = "print -l ${(ok)functions}"
 
 [[Snippets]]
-  Description = "find out first commit of the current branch git"
+  Description = "git: first commit on the current branch"
   Output = ""
   Tag = []
   command = "git log --oneline $(git merge-base $(git rev-parse --abbrev-ref HEAD) $(git rev-parse --abbrev-ref HEAD@{u}))..HEAD | tail -n 1"
 
 [[Snippets]]
-  Description = "Copy allow edits by maintainers"
+  Description = "gh: paste the allow-edits request text"
   Output = ""
   Tag = []
   command = "echo \"Could you please [allow edits by maintainers](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork), so I can help you with \\`vale\\`?.\" C"
 
 [[Snippets]]
-  Description = "export default gpg key for example for github"
+  Description = "gpg: export the public key for github"
   Output = ""
   Tag = []
   command = "gpg --armor --export piotrzan@gmail.com W"
 
 [[Snippets]]
-  Description = "show manually installed packages with apt and nala"
+  Description = "apt: manually installed packages from logs"
   Output = ""
   Tag = []
   command = "zcat /var/log/apt/history.log.*.gz 2>/dev/null | cat - /var/log/apt/history.log | grep -Po '^Commandline:(?= apt(-get)?| nala)(?=.* install ) \\K.*' | tr ' ' '\\n' | sort -u | grep -v '^-'"
 
 [[Snippets]]
-  Description = "mount google drive gdrive with rclone"
+  Description = "rclone: mount google drive at /mnt/gdrive"
   Output = ""
   Tag = []
   command = "rclone mount --daemon --vfs-cache-mode full googledrive: /mnt/gdrive"
 
 [[Snippets]]
-  Description = "Install latest versions of nodejs and npm from deb repositories"
+  Description = "apt: install nodejs 20 and npm"
   Output = ""
   Tag = []
   command = "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash - && sudo apt-get install -y nodejs"
 
 [[Snippets]]
-  Description = "remove all restic snapshots to start fresh"
+  Description = "restic: drop every snapshot, start over"
   Output = ""
   Tag = []
   command = "restic forget --keep-tag=SomeUnusedTag -vv"
 
 [[Snippets]]
-  Description = "pull open prs authored by me, markdown"
+  Description = "gh: open prs authored by me, markdown"
   Output = ""
   Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --author \"@me\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
-  Description = "pull open prs authored by me and already approved, markdown"
+  Description = "gh: my open prs already approved"
   Output = ""
   Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --author \"@me\" --state \"open\" --review \"approved\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
-  Description = "pull open prs in loft-sh/vcluster-docs, markdown"
+  Description = "gh: open prs in loft-sh/vcluster-docs"
   Output = ""
   Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --repo \"loft-sh/vcluster-docs\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
-  Description = "start tailscale with a key so no need to login"
+  Description = "tailscale: connect with an auth key"
   Output = ""
   Tag = []
   command = "sudo tailscale up --authkey=$TAILSCALE_KEY --accept-routes --operator=$USER"
 
 [[Snippets]]
-  Description = "check how much space current folder takes"
+  Description = "du: size of the current folder"
   Output = ""
   Tag = []
   command = "du -sh ."
 
 [[Snippets]]
-  Description = "kubectl show how many running pods per node"
+  Description = "kubectl: count running pods per node"
   Output = ""
   Tag = []
   command = "kubectl get pod -o wide -A | awk 'NR>1 {pods_per_node[$(NF-2)]++} END { for (k in pods_per_node) printf \"%-30s => %3d\\n\", k, pods_per_node[k] }'"
 
 [[Snippets]]
-  Description = "nvim remove shada files to clear shada erros"
+  Description = "nvim: delete shada files to clear errors"
   Output = ""
   Tag = []
   command = "rm /home/decoder/.local/state/nvim/shada/*"
 
 [[Snippets]]
-  Description = "git push without evaluating global and local hooks this will push to main use with caution"
+  Description = "git: push skipping all hooks, careful"
   Output = ""
   Tag = []
   command = "git push --no-verify"
 
 [[Snippets]]
-  Description = "Sync and expunge private emails"
+  Description = "mbsync: sync and expunge private mail"
   Output = ""
   Tag = []
   command = "mbsync --delete --expunge --verbose piotrzan@gmail.com"
 
 [[Snippets]]
-  Description = "get team slugs from github api"
+  Description = "gh: list loft-sh team slugs"
   Output = ""
   Tag = []
   command = "gh api orgs/loft-sh/teams --paginate | jq '.[].slug'"
 
 [[Snippets]]
-  Description = "pull open prs involving me as author reviewer or mentioned, markdown"
+  Description = "gh: open prs involving me in any role"
   Output = ""
   Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --involves \"@me\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
-  Description = "check weather in frankfurt"
+  Description = "curl: weather in frankfurt"
   Output = ""
   Tag = []
   command = "curl wttr.in Frankfurt"
 
 [[Snippets]]
-  Description = "pull label ids from linear api"
+  Description = "curl: linear label ids via graphql"
   Output = ""
   Tag = []
   command = "curl -s -X POST -H \"Content-Type: application/json\" -H \"Authorization: $LINEAR_API_KEY\" --data '{\"query\": \"query { team(id: \\\"eb475b2d-c6ea-46f6-9725-deaa66415cb6\\\") { id name labels { nodes { id name color description } } } }\"}' https://api.linear.app/graphql | jq ."
 
 [[Snippets]]
-  Description = "cd to steam eve online directory"
+  Description = "cd: the eve online steam directory"
   Output = ""
   Tag = []
   command = "cd /home/decoder/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/8500/pfx/drive_c/users/steamuser/AppData/Local/CCP/EVE/"
 
 [[Snippets]]
-  Description = "create tmux demo session"
+  Description = "tmux: create a detached demo session"
   Output = ""
   Tag = []
   command = "tmux new-session -d -s demo"
 
 [[Snippets]]
-  Description = "list new versions of go modules for upgrade"
+  Description = "go: list module updates available"
   Output = ""
   Tag = []
   command = "go list -mod=mod -m -json all | jq .Update.Major"
 
 [[Snippets]]
-  Description = "share terminal on the web securely"
+  Description = "sshx: share the terminal on the web"
   Output = ""
   Tag = ["terminal"]
   command = "curl -sSf https://sshx.io/get | sh -s run"
 
 [[Snippets]]
-  Description = "create local vcluster on kind in one command"
+  Description = "vcluster: kind cluster plus a vcluster"
   Output = ""
   Tag = ["vcluster", "kubernetes"]
   command = "kind create cluster && vcluster create testme"
 
 [[Snippets]]
-  Description = "Get available Claude models from Anthropic API"
+  Description = "curl: list available claude models"
   Output = ""
   Tag = ["web", "api"]
   command = "curl -H \"Content-Type: application/json\" -H \"x-api-key: $ANTHROPIC_API_KEY\" -H \"anthropic-version: 2023-06-01\" https://api.anthropic.com/v1/models | jq"
 
 [[Snippets]]
-  Description = "Update next branch from main excluding private nodes deletion commit"
+  Description = "git: replay main onto next, skip a commit"
   Output = ""
   Tag = ["git", "vcluster"]
   command = "git log --oneline main \"^next\" --reverse | grep -v fea16dbc | cut -d' ' -f1 | xargs git cherry-pick"
 
 [[Snippets]]
-  Description = "remove claude projects settings to prevent file from growth"
+  Description = "jq: strip projects from claude.json"
   Output = ""
   Tag = []
   command = "jq 'del(.projects)' /home/decoder/.claude.json > /home/decoder/.claude.json.tmp && mv /home/decoder/.claude.json.tmp /home/decoder/.claude.json"
 
 [[Snippets]]
-  Description = "check features in vcluster platform license"
+  Description = "jq: decode a vcluster platform license"
   Output = ""
   Tag = []
   command = "cat license.txt| jq -R 'split(\".\") | .[0],.[1] | @base64d | fromjson'"
 
 [[Snippets]]
-  Description = "git list unique author names in a repository useful for tig pipe"
+  Description = "git: unique author names in the repo"
   Output = ""
   Tag = []
   command = "git log --all --format='%an' | sort -u"
 
 [[Snippets]]
-  Description = "ssh into standalone vcluster"
+  Description = "gcloud: ssh into the standalone vcluster"
   Output = ""
   Tag = []
   command = "gcloud compute ssh vcluster-standalone-cp --zone=us-central1-a --project loft-prod"
 
 [[Snippets]]
-  Description = "List GitHub repos matching pattern"
+  Description = "gh: repos matching a name pattern"
   Output = "Filtered list of repo names and URLs"
   Tag = ["github", "gh", "repos", "search"]
   command = "gh repo list <owner=Piotr1215> --json name,url | jq -r '.[] | select(.name | test(\"<pattern>\"; \"i\")) | \"\\(.name): \\(.url)\"'"
 
 [[Snippets]]
-  Description = "Add token for user in vcluster memory server mcp"
+  Description = "kubectl: add an agent-memory api token"
   Output = ""
   Tag = []
   command = "kubectl exec deploy/agent-memory-api -n agent-memory -- agent-memory token add --description \"name\" --expires-days 365"
 
 [[Snippets]]
-  Description = "check top claude code usage sessions"
+  Description = "npx: top claude code usage sessions"
   Output = ""
   Tag = ["claude,", "ai"]
   command = "npx ccusage@latest session --json -o desc | jq '.sessions[0:5] | .[] | {sessionId, totalCost, inputTokens, cacheCreationTokens, cacheReadTokens}'"
 
 [[Snippets]]
-  Description = "Copy YubiKey TOTP code for an account to clipboard (touch accounts pause for a tap)"
+  Description = "ykman: copy a totp code to clipboard"
   Output = ""
   Tag = ["totp", "yubikey", "ykman", "2fa"]
   command = "ykman oath accounts code -s \"NAME\" | grep -oE '[0-9]{6,8}' | tail -1 | tr -d '\\n' | xclip -selection clipboard ?rep"
 
 [[Snippets]]
-  Description = "Get platform url for config"
+  Description = "kubectl: current cluster api url"
   Output = ""
   Tag = ["loft"]
   command = "kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}{\"\\n\"}'"
 
 [[Snippets]]
-  Description = "Resume the EVE multibox stutter session (CPU ceiling leak, DXVK frame cap, VRAM findings, 2026-09-03)"
+  Description = "claude: resume the eve stutter session"
   Output = ""
   Tag = ["claude", "eve", "session"]
   command = "cd /home/decoder/dev && claude -r cf2d4572-610b-4c64-b3ef-383efaff0836"
