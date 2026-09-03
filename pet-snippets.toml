@@ -60,12 +60,6 @@
   command = "xclip -selection clipboard -t image/png -i <NAME>"
 
 [[Snippets]]
-  Description = "Convert asciinema recording to high-quality GIF"
-  Output = ""
-  Tag = ["terminal", "recording", "gif"]
-  command = "agg NAME output.gif --theme dracula --font-family \"JetBrainsMono Nerd Font,Noto Color Emoji,Symbola\" --font-size 14 --speed 1.5 ?"
-
-[[Snippets]]
   Description = "Git find deleted files and show their commits. Helpful when need to undelete a file."
   Output = ""
   Tag = ["git"]
@@ -82,12 +76,6 @@
   Output = ""
   Tag = ["kubernetes"]
   command = "xclip -o -sel clipboard | kubectl apply -f -"
-
-[[Snippets]]
-  Description = "Fix git gpg failed to sign data on mac"
-  Output = ""
-  Tag = ["mac"]
-  command = "export GPG_TTY=$(tty)"
 
 [[Snippets]]
   Description = "Search git commit history content"
@@ -114,22 +102,10 @@
   command = "apg -M SNCL -m 22 | fzf | xsel -ib"
 
 [[Snippets]]
-  Description = "Vim generate ctags exuberant tags"
-  Output = ""
-  Tag = ["nvim"]
-  command = "ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log ."
-
-[[Snippets]]
   Description = "SSH generate ecdsa key in the ssh folder"
   Output = ""
   Tag = []
   command = "ssh-keygen -t ecdsa -f ~/.ssh/NAME ?rep"
-
-[[Snippets]]
-  Description = "Fix sealed secret error cannot fetch certificate"
-  Output = ""
-  Tag = ["kubernetes"]
-  command = "kubectl -n kube-system patch svc sealed-secrets-controller --type='json' -p='[{\"op\": \"remove\", \"path\": \"/spec/ports/0/name\"}, {\"op\": \"replace\", \"path\": \"/spec/ports/0/targetPort\", \"value\":8080}]'"
 
 [[Snippets]]
   Description = "Git copy file from source branch to current branch"
@@ -142,12 +118,6 @@
   Output = ""
   Tag = ["nvim"]
   command = "sudo apt install -y lldb-11 && sudo ln -s /usr/bin/lldb-vscode-11 /usr/bin/lldb-vscode"
-
-[[Snippets]]
-  Description = "Increase instances of allowed max user_instances open files for the file watcher"
-  Output = ""
-  Tag = ["linux"]
-  command = "sudo sysctl fs.inotify.max_user_instances=8192"
 
 [[Snippets]]
   Description = "Launch program on file change. In this case kubectl apply"
@@ -180,34 +150,16 @@
   command = "git merge upstream/master"
 
 [[Snippets]]
-  Description = "interactive svg reference"
-  Output = ""
-  Tag = ["web"]
-  command = "xgd-open https://fffuel.co/sssvg/"
-
-[[Snippets]]
   Description = "cleanup journalctl old logs"
   Output = ""
   Tag = []
   command = "sudo journalctl --vacuum-size=10M"
 
 [[Snippets]]
-  Description = "Add current directory to LXC container mount directory"
-  Output = ""
-  Tag = ["docker", "linux"]
-  command = "lxc config device add ubuntu src disk source=$(pwd) path=/src"
-
-[[Snippets]]
   Description = "copy your public key to your server"
   Output = ""
   Tag = ["linux"]
   command = "ssh-copy-id remote_username@server_ip_address"
-
-[[Snippets]]
-  Description = "transpose text"
-  Output = ""
-  Tag = []
-  command = "datamash"
 
 [[Snippets]]
   Description = "Alacritty, show key code for setting up alacritty key mappings"
@@ -232,12 +184,6 @@
   Output = ""
   Tag = []
   command = "dkms status | grep -i nvidia"
-
-[[Snippets]]
-  Description = "Swap to nvidia graphics mode after nvidia driver update when the update was wrong"
-  Output = ""
-  Tag = []
-  command = "sudo system76-power graphics"
 
 [[Snippets]]
   Description = "Compare diff files listing ls between two folders"
@@ -292,12 +238,6 @@
   Output = ""
   Tag = ["cli"]
   command = "task rc.debug.hooks=2"
-
-[[Snippets]]
-  Description = "Get all package pkg type resources and print kubeclt get"
-  Output = ""
-  Tag = ["kubernetes"]
-  command = "for resource in $(kubectl api-resources | grep pkg | awk '{print $1}'); do echo \"Resource: $resource\"; kubectl get \"$resource\"; echo; done"
 
 [[Snippets]]
   Description = "Show charecter codes for each key press"
@@ -378,12 +318,6 @@
   command = "watch -t -n 1 xdotool getmouselocation"
 
 [[Snippets]]
-  Description = "get kubectl connection to MCP by number"
-  Output = ""
-  Tag = ["linux", "kubernetes"]
-  command = "kubectl get secret kubeconfig-ctpNAME -n default -o jsonpath='{.data.kubeconfig}' | base64 -d > /tmp/ctpNAME.yaml ?"
-
-[[Snippets]]
   Description = "Display fancy kubectl kubernetes status"
   Output = ""
   Tag = []
@@ -408,28 +342,10 @@
   command = "{ printf \"===Neofetch Info===\"; neofetch --stdout; echo \"\\n===Kernel Information===\"; uname -a; echo \"\\n===CPU Information===\"; lscpu; echo \"\\n===Memory Information===\"; free -m; echo \"\\n===Disk Usage Information===\"; df -h; echo \"\\n===PCI Devices===\"; lspci; echo \"\\n===USB Devices===\"; lsusb; } W"
 
 [[Snippets]]
-  Description = "Example kail log with jq filtering"
-  Output = ""
-  Tag = []
-  command = "kail -p shell-operator -n example-monitor-pods -o json-pretty | jq '. | select(.message.output==\"stdout\") | .message.msg'\\n"
-
-[[Snippets]]
   Description = "launch helm dashboard on 8080"
   Output = ""
   Tag = ["kubernetes"]
   command = "helm dashboard"
-
-[[Snippets]]
-  Description = "clenup devbox packages"
-  Output = ""
-  Tag = []
-  command = "devbox run -- nix store gc"
-
-[[Snippets]]
-  Description = "cleanup nix store packages"
-  Output = ""
-  Tag = ["linux"]
-  command = "nix store gc"
 
 [[Snippets]]
   Description = "nslookup and dig records for my site"
@@ -462,22 +378,10 @@
   command = "gpg -d NAME.tar.gz.gpg > NAME.tar.gz ?rep"
 
 [[Snippets]]
-  Description = "run internet speed test from command line"
-  Output = ""
-  Tag = ["cli"]
-  command = "speedtest-cli"
-
-[[Snippets]]
   Description = "copy file name with extension to clipboard use alt F to find"
   Output = ""
   Tag = []
   command = "xsel --clipboard --input < <(basename "
-
-[[Snippets]]
-  Description = "convert medium blog to usable markdown"
-  Output = ""
-  Tag = []
-  command = "mediumexporter URL > output.md"
 
 [[Snippets]]
   Description = "pandoc convert indented code into fenced code in markdown file using lua filter"
@@ -490,18 +394,6 @@
   Output = ""
   Tag = []
   command = "pactl set-default-source alsa_input.usb-Generic_Blue_Microphones_2147BAH02Z78-00.iec958-stereo\\n"
-
-[[Snippets]]
-  Description = "fix error 13 permissions error when installing pytnon packages"
-  Output = ""
-  Tag = []
-  command = "sudo chown -R $(whoami) /usr/local/bin/"
-
-[[Snippets]]
-  Description = "Fix issues with mount that prevent incus to start"
-  Output = ""
-  Tag = []
-  command = "__umount_mullavad_cls.sh"
 
 [[Snippets]]
   Description = "Installing nerdfonts with the getnf utility"
@@ -618,12 +510,6 @@
   command = "zcat /var/log/apt/history.log.*.gz 2>/dev/null | cat - /var/log/apt/history.log | grep -Po '^Commandline:(?= apt(-get)?| nala)(?=.* install ) \\K.*' | tr ' ' '\\n' | sort -u | grep -v '^-'"
 
 [[Snippets]]
-  Description = "mount google drive"
-  Output = ""
-  Tag = []
-  command = "ls gdrive"
-
-[[Snippets]]
   Description = "mount google drive gdrive with rclone"
   Output = ""
   Tag = []
@@ -655,12 +541,6 @@
 
 [[Snippets]]
   Description = "pull all opened prs in vcluster-docs repo git"
-  Output = ""
-  Tag = []
-  command = "gh search prs --repo \"loft-sh/vcluster-docs\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
-
-[[Snippets]]
-  Description = "pull all open prs from docs repo and format in markdown"
   Output = ""
   Tag = []
   command = "gh search prs --repo \"loft-sh/vcluster-docs\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
@@ -784,12 +664,6 @@
   Output = ""
   Tag = []
   command = "git log --all --format='%an' | sort -u"
-
-[[Snippets]]
-  Description = ""
-  Output = ""
-  Tag = []
-  command = ""
 
 [[Snippets]]
   Description = "ssh into standalone vcluster"
