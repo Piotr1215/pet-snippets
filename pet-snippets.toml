@@ -1,11 +1,5 @@
 
 [[Snippets]]
-  Description = "Check what listenes on a port netstat"
-  Output = ""
-  Tag = []
-  command = "sudo netstat -pnltu | fzf"
-
-[[Snippets]]
   Description = "Docker watchtower to update images or all running contianers to their newest versions"
   Output = ""
   Tag = []
@@ -294,9 +288,9 @@
   command = "nvim +29 /home/decoder/.local/share/nvim/site/pack/packer/start/obsidian.nvim/lua/obsidian/client.lua"
 
 [[Snippets]]
-  Description = "Check what's listening on specific port and kill it"
+  Description = "Check what's listening on a port and kill the selected one"
   Output = ""
-  Tag = []
+  Tag = ["network", "process", "kill"]
   command = "sudo netstat -tulnp | fzf --height 40% --layout=reverse --prompt=\"Select a port: \" | awk '{print $7}' | cut -d'/' -f1 | xargs -r sudo kill"
 
 [[Snippets]]
@@ -528,21 +522,21 @@
   command = "restic forget --keep-tag=SomeUnusedTag -vv"
 
 [[Snippets]]
-  Description = "pull all my open prs in markdown format"
+  Description = "pull open prs authored by me, markdown"
   Output = ""
-  Tag = []
+  Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --author \"@me\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
-  Description = "pull all my open and approved prs in markdown format"
+  Description = "pull open prs authored by me and already approved, markdown"
   Output = ""
-  Tag = []
+  Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --author \"@me\" --state \"open\" --review \"approved\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
-  Description = "pull all opened prs in vcluster-docs repo git"
+  Description = "pull open prs in loft-sh/vcluster-docs, markdown"
   Output = ""
-  Tag = []
+  Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --repo \"loft-sh/vcluster-docs\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
@@ -588,9 +582,9 @@
   command = "gh api orgs/loft-sh/teams --paginate | jq '.[].slug'"
 
 [[Snippets]]
-  Description = "pull all open prs involving me in markdown format"
+  Description = "pull open prs involving me as author reviewer or mentioned, markdown"
   Output = ""
-  Tag = []
+  Tag = ["gh", "pr", "markdown"]
   command = "gh search prs --involves \"@me\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
