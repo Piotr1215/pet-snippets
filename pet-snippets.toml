@@ -3,7 +3,7 @@
   Description = "Check what listenes on a port netstat"
   Output = ""
   Tag = []
-  command = "sudo netstat -pnltu | grep PORT?"
+  command = "sudo netstat -pnltu | fzf"
 
 [[Snippets]]
   Description = "Docker watchtower to update images or all running contianers to their newest versions"
@@ -14,38 +14,26 @@
 [[Snippets]]
   Description = "Get encoded csr in a proper format"
   Output = "Token ready to be pasted in the token field of Kubernetes dashboard for example."
-  Tag = ["kubernetes", "kubectl"]
-  command = "cat <csr=myuser.csr> | base64 | tr -d \"\\n\""
+  Tag = ["kubernetes"]
+  command = "cat NAME | base64 | tr -d \"\\n\" ?fil"
 
 [[Snippets]]
   Description = "Upgrade single package to newest version"
   Output = ""
-  Tag = ["linux,", "apt,", "upgrade"]
-  command = "sudo apt --only-upgrade install <package>"
+  Tag = ["linux"]
+  command = "sudo apt --only-upgrade install NAME ?rep"
 
 [[Snippets]]
   Description = "Git show all changes commits to a file, helpful for tracking changes"
   Output = ""
-  Tag = ["git,", "commit"]
+  Tag = ["git"]
   command = "git log --follow --stat -p -- "
 
 [[Snippets]]
   Description = "Check if branch is eligible for merge"
   Output = ""
   Tag = ["git"]
-  command = "git merge --no-commit --no-ff <branch> && echo $? && git merge --abort"
-
-[[Snippets]]
-  Description = "Check git status of every directory in repos folder, assuming every directory is a git repo"
-  Output = "If a directory is not a git repo, it will be ignored with a warrning and command will continue."
-  Tag = ["git"]
-  command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git fetch origin && git status -s && echo)' \\;"
-
-[[Snippets]]
-  Description = "Git check unpushed commits in every local repo folder in dev"
-  Output = ""
-  Tag = ["git"]
-  command = "find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git log --branches --not --remotes && echo)' \\;"
+  command = "git merge --no-commit --no-ff NAME && echo $? && git merge --abort ?rep"
 
 [[Snippets]]
   Description = "Git list branches not merged with origin main"
@@ -58,6 +46,24 @@
   Output = ""
   Tag = ["linux"]
   command = "sudo dpkg --configure -a"
+
+[[Snippets]]
+  Description = "Paste image from clipboard to file"
+  Output = ""
+  Tag = ["linux", "clipboard"]
+  command = "xclip -selection clipboard -t image/png -o > <NAME>.png"
+
+[[Snippets]]
+  Description = "Copy image file to clipboard"
+  Output = ""
+  Tag = ["linux", "clipboard"]
+  command = "xclip -selection clipboard -t image/png -i <NAME>"
+
+[[Snippets]]
+  Description = "Convert asciinema recording to high-quality GIF"
+  Output = ""
+  Tag = ["terminal", "recording", "gif"]
+  command = "agg NAME output.gif --theme dracula --font-family \"JetBrainsMono Nerd Font,Noto Color Emoji,Symbola\" --font-size 14 --speed 1.5 ?"
 
 [[Snippets]]
   Description = "Git find deleted files and show their commits. Helpful when need to undelete a file."
@@ -74,13 +80,13 @@
 [[Snippets]]
   Description = "Paste yaml from clipboard and apply with kubectl"
   Output = ""
-  Tag = ["kubectl"]
+  Tag = ["kubernetes"]
   command = "xclip -o -sel clipboard | kubectl apply -f -"
 
 [[Snippets]]
   Description = "Fix git gpg failed to sign data on mac"
   Output = ""
-  Tag = ["gpg"]
+  Tag = ["mac"]
   command = "export GPG_TTY=$(tty)"
 
 [[Snippets]]
@@ -93,25 +99,13 @@
   Description = "Reformat a file with 1 space between words and 2 spaces between paragraphs. Helpful when limiting text width to 80 for PR reviews"
   Output = ""
   Tag = []
-  command = "fmt -u FILE?"
-
-[[Snippets]]
-  Description = "Link to SSH Cheat Sheet"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
-
-[[Snippets]]
-  Description = "Link to Vim fix for go files when folds are closed on save"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open https://stackoverflow.com/a/55327996"
+  command = "fmt -u NAME ?fil"
 
 [[Snippets]]
   Description = "Apt ubuntu remove ppa from the repositories"
   Output = ""
   Tag = ["linux"]
-  command = "sudo add-apt-repository --remove ppa:NAME?"
+  command = "sudo add-apt-repository --remove ppa:NAME ?rep"
 
 [[Snippets]]
   Description = "Generate random password and copy to clipboard"
@@ -126,30 +120,6 @@
   command = "ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log ."
 
 [[Snippets]]
-  Description = "Link to At reminder times table, formats execution"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-schedule-jobs-in-linux-at-and-crontab-commands-255842/\\#:\\~:text\\=Formats%20for%20the%20at%20Command%20for%20the%20Time%20of%20Execution"
-
-[[Snippets]]
-  Description = "Link to Modify access for a specific user to a file or folder using ACL access control list, setfacl"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open https://superuser.com/a/145007"
-
-[[Snippets]]
-  Description = "Link to nvim lua guide"
-  Output = ""
-  Tag = ["link", "nvim"]
-  command = "xdg-open https://github.com/nanotee/nvim-lua-guide"
-
-[[Snippets]]
-  Description = "Link to neovim folder structure"
-  Output = ""
-  Tag = ["link", "nvim"]
-  command = "xdg-open https://github.com/nanotee/nvim-lua-guide#runtime-files"
-
-[[Snippets]]
   Description = "Link to bash conditional operators"
   Output = ""
   Tag = ["link", "nvim"]
@@ -159,42 +129,24 @@
   Description = "SSH generate ecdsa key in the ssh folder"
   Output = ""
   Tag = []
-  command = "ssh-keygen -t ecdsa -f ~/.ssh/<key=>"
+  command = "ssh-keygen -t ecdsa -f ~/.ssh/NAME ?rep"
 
 [[Snippets]]
   Description = "Fix sealed secret error cannot fetch certificate"
   Output = ""
-  Tag = ["kubectl"]
+  Tag = ["kubernetes"]
   command = "kubectl -n kube-system patch svc sealed-secrets-controller --type='json' -p='[{\"op\": \"remove\", \"path\": \"/spec/ports/0/name\"}, {\"op\": \"replace\", \"path\": \"/spec/ports/0/targetPort\", \"value\":8080}]'"
-
-[[Snippets]]
-  Description = "Link to the taskwarrior possible due date fields"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
-
-[[Snippets]]
-  Description = "Install newest version of up CLI"
-  Output = ""
-  Tag = ["upbound,", "cli"]
-  command = "curl -sL \"https://cli.upbound.io\" | sh && sudo mv up /usr/local/bin/"
 
 [[Snippets]]
   Description = "Git copy file from source branch to current branch"
   Output = ""
   Tag = ["git"]
-  command = "git checkout ?SOURCE_BRANCH ?PATH_TO_FILE"
-
-[[Snippets]]
-  Description = "Add GCP official provider to providers cache for LSP to work. Crossplane.yaml must be in the same folder as composition/definition or in the root of the repo."
-  Output = ""
-  Tag = ["crossplane"]
-  command = "up xpkg dep xpkg.upbound.io/upbound/provider-gcp"
+  command = "git checkout NAME NAME ?rep"
 
 [[Snippets]]
   Description = "Enable debugging in neovim for rust and go"
   Output = ""
-  Tag = ["nvim,"]
+  Tag = ["nvim"]
   command = "sudo apt install -y lldb-11 && sudo ln -s /usr/bin/lldb-vscode-11 /usr/bin/lldb-vscode"
 
 [[Snippets]]
@@ -206,7 +158,7 @@
 [[Snippets]]
   Description = "Launch program on file change. In this case kubectl apply"
   Output = ""
-  Tag = ["kubectl", "linux"]
+  Tag = ["kubernetes", "linux"]
   command = "/usr/bin/ls *.yaml | entr -s kubectl apply -f"
 
 [[Snippets]]
@@ -222,28 +174,10 @@
   command = "git log --pretty=\"- %s\" | grep -v Merge"
 
 [[Snippets]]
-  Description = "sound setup"
-  Output = ""
-  Tag = []
-  command = "alsamixer"
-
-[[Snippets]]
-  Description = "Link to gifcap record gifs from screen"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open https://gifcap.dev/"
-
-[[Snippets]]
   Description = "Copy files found in a directory tree to another directory including subdirectories"
   Output = ""
-  Tag = ["linux,", "terminal"]
-  command = "fd <file=README.md> | cpio -pdm <destination=~/dev>"
-
-[[Snippets]]
-  Description = "Update all global cargo and go packages"
-  Output = ""
-  Tag = ["rust", "go", "linux"]
-  command = "__global_updates.sh"
+  Tag = ["linux", "terminal"]
+  command = "fd NAME | cpio -pdm NAME ?"
 
 [[Snippets]]
   Description = "git synchronize local fork origin with remote upstream"
@@ -252,34 +186,10 @@
   command = "git merge upstream/master"
 
 [[Snippets]]
-  Description = "Link to chrontab expression generator"
-  Output = ""
-  Tag = ["chron", "link", "linux"]
-  command = "xdg-open https://crontab-generator.org/"
-
-[[Snippets]]
   Description = "interactive svg reference"
   Output = ""
-  Tag = ["web,", "svg"]
+  Tag = ["web"]
   command = "xgd-open https://fffuel.co/sssvg/"
-
-[[Snippets]]
-  Description = "Update managed resources deletion policy to orphan on an active cluster"
-  Output = ""
-  Tag = ["kubectl,", "crossplane"]
-  command = "kubectl patch $(kubectl get managed -o name) -p '{\"spec\": {\"deletionPolicy\":\"Orphan\"}}' --type=merge"
-
-[[Snippets]]
-  Description = "Link to resolving issue when the gcloud user does not have access to service account ..."
-  Output = ""
-  Tag = ["gcloud", "gcp", "link"]
-  command = "xdg-open https://stackoverflow.com/questions/40367866/gcloud-the-user-does-not-have-access-to-service-account-default"
-
-[[Snippets]]
-  Description = "List configuration file of a service"
-  Output = ""
-  Tag = ["linux,", "systemd,", "service"]
-  command = "systemctl cat SVC"
 
 [[Snippets]]
   Description = "cleanup journalctl old logs"
@@ -288,21 +198,15 @@
   command = "sudo journalctl --vacuum-size=10M"
 
 [[Snippets]]
-  Description = "Link to bash pitfalls"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open http://mywiki.wooledge.org/BashPitfalls"
-
-[[Snippets]]
   Description = "Add current directory to LXC container mount directory"
   Output = ""
-  Tag = ["LXC,", "linux"]
+  Tag = ["docker", "linux"]
   command = "lxc config device add ubuntu src disk source=$(pwd) path=/src"
 
 [[Snippets]]
   Description = "copy your public key to your server"
   Output = ""
-  Tag = ["linux,", "ssh"]
+  Tag = ["linux"]
   command = "ssh-copy-id remote_username@server_ip_address"
 
 [[Snippets]]
@@ -330,24 +234,6 @@
   command = "nvim /home/decoder/.oh-my-zsh/plugins/tmuxinator/_tmuxinator"
 
 [[Snippets]]
-  Description = "Link to ec2 instances"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open https://aws.amazon.com/ec2/instance-types/"
-
-[[Snippets]]
-  Description = "Link to Vim/Nvim power of g"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://vim.fandom.com/wiki/Power_of_g\""
-
-[[Snippets]]
-  Description = "Link to write blogs with AI"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://cowriter.org/\""
-
-[[Snippets]]
   Description = "Show currently installed nvida graphics driver"
   Output = ""
   Tag = []
@@ -358,12 +244,6 @@
   Output = ""
   Tag = []
   command = "sudo system76-power graphics"
-
-[[Snippets]]
-  Description = "Link to youtbe"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://www.youtube.com/\""
 
 [[Snippets]]
   Description = "Compare diff files listing ls between two folders"
@@ -378,22 +258,10 @@
   command = "type -a funcion"
 
 [[Snippets]]
-  Description = "Link to Mason registry of LSPs, DAPs, etc"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://mason-registry.dev/registry/list\""
-
-[[Snippets]]
   Description = "List all pending tasks from taskwarrior for a given project"
   Output = ""
   Tag = []
-  command = "task project.is:<project=perf> status:pending export | jq -r '.[] | \"- [ ] \" + .description'"
-
-[[Snippets]]
-  Description = "Link to taskwarrior using dates effectively"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://taskwarrior.org/docs/using_dates/\""
+  command = "task project.is:NAME status:pending export | jq -r '.[] | \"- [ ] \" + .description' ?rep"
 
 [[Snippets]]
   Description = "List all registered zle commands zsh shell"
@@ -402,46 +270,10 @@
   command = "zle -al"
 
 [[Snippets]]
-  Description = "Extract kubeconfig from secret"
-  Output = ""
-  Tag = ["kubectl"]
-  command = "KUBECONFIG=$(kubectl get secret <secret=3d82d95e-a985-4a2c-81a6-4b5bb2b2571f-aks> -n upbound-system -o jsonpath='{.data.kubeconfig}' | base64 --decode)"
-
-[[Snippets]]
-  Description = "Link to call <plug> command from lua"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://www.reddit.com/r/neovim/comments/t9l75z/call_plugcommands_with_luaapi/\""
-
-[[Snippets]]
-  Description = "Link to Github actions built in variables"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables\""
-
-[[Snippets]]
   Description = "Git find commit where branch was created from main"
   Output = ""
   Tag = []
   command = "git merge-base main HEAD"
-
-[[Snippets]]
-  Description = "Link to AutoKey Wiki Documentation"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://github.com/autokey/autokey/wiki\""
-
-[[Snippets]]
-  Description = "Link to Rust and Neovim - A Thorough Guide and Walkthrough"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
-
-[[Snippets]]
-  Description = "Link to Conditionally show function in shell only if in git repo"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://gist.github.com/Piotr1215/41c4670cd9d282683613a3338123f3c4\""
 
 [[Snippets]]
   Description = "Print out all the shell commands, zsh, commands."
@@ -456,39 +288,27 @@
   command = "sudo update-alternatives --get-selections"
 
 [[Snippets]]
-  Description = "Link to FL0 Deploy backend applications and databases in minutes"
-  Output = ""
-  Tag = ["deploy", "backend", "databases", "link"]
-  command = "xdg-open \"https://www.fl0.com/?ref=producthunt\""
-
-[[Snippets]]
   Description = "Create file and direcotry structure in the same time"
   Output = ""
   Tag = ["linux"]
   command = "install -D /dev/null path/to/file"
 
 [[Snippets]]
-  Description = "Link to MPV Keyboard Shortcuts - Make Tech Easier — Mozilla Firefox"
-  Output = ""
-  Tag = ["mpv", "media", "linux", "link"]
-  command = "xdg-open \"https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/\""
-
-[[Snippets]]
   Description = "up cli build xpkg package ignoring workflow files"
   Output = ""
-  Tag = ["up", "cli"]
+  Tag = ["network", "cli"]
   command = "up xpkg build --ignore=\".github/workflows/*.yaml,.github/workflows/*.yml,examples/*.yaml,.work/uptest-datasource.yaml\""
 
 [[Snippets]]
   Description = "taskwarrior run task action with debugging when developing hooks"
   Output = ""
-  Tag = ["taskwarrior"]
+  Tag = ["cli"]
   command = "task rc.debug.hooks=2"
 
 [[Snippets]]
   Description = "Get all package pkg type resources and print kubeclt get"
   Output = ""
-  Tag = ["kubectl"]
+  Tag = ["kubernetes"]
   command = "for resource in $(kubectl api-resources | grep pkg | awk '{print $1}'); do echo \"Resource: $resource\"; kubectl get \"$resource\"; echo; done"
 
 [[Snippets]]
@@ -498,94 +318,40 @@
   command = "xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\\n\", $5, $8 }'"
 
 [[Snippets]]
-  Description = "Link to Activate Azure global admin role"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://portal.azure.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles\""
-
-[[Snippets]]
-  Description = "Link to PlantUML Themes"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://plantuml.com/theme\""
-
-[[Snippets]]
-  Description = "Link to Nix package versions when needing specific version of the package"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://lazamar.co.uk/nix-versions/\""
-
-[[Snippets]]
-  Description = "crossplane functions remove development annotation from selected function"
-  Output = ""
-  Tag = []
-  command = "yq eval -i 'select(.kind == \"Function\" and .metadata.name == \"<function-name=function-auto-ready>\").metadata.annotations |= del(.[\"render.crossplane.io/runtime\"])' <function-file=functions.yaml>"
-
-[[Snippets]]
-  Description = "crossplane funcions add development annotation to a funcion"
-  Output = ""
-  Tag = []
-  command = "yq eval -i '(select(.kind == \"Function\" and .metadata.name == \"<function-name=function-auto-ready>\").metadata.annotations.\"render.crossplane.io/runtime\") = \"Development\"' <function-file=functions.yaml>"
-
-[[Snippets]]
-  Description = "Link to P&T as a Function Gdoc"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/863ff6c2f53af47424dab941dbef83ca12e7d74f/design/design-doc-composition-functions.md#patch-and-transform-as-a-function\""
-
-[[Snippets]]
-  Description = "Link to Writing Crossplane Composition Function"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://youtu.be/otwg-bO757A\""
-
-[[Snippets]]
-  Description = "Link to Write Go Function"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://docs.crossplane.io/knowledge-base/guides/write-a-composition-function-in-go/\""
-
-[[Snippets]]
   Description = "killercoda concatenate all workshop files into single content sorted markdown file"
   Output = ""
-  Tag = ["killercoda"]
+  Tag = ["kubernetes"]
   command = "(cat intro.md; find . -maxdepth 2 -name 'step*.md' | sort -V | xargs cat; cat finish.md) > workshop.md"
 
 [[Snippets]]
   Description = "kubectl get all latest events sorted by timestamp and with custom columns"
   Output = ""
-  Tag = ["kubernetes", "kubectl"]
+  Tag = ["kubernetes"]
   command = "kubectl get events --all-namespaces --field-selector type=Warning -o custom-columns=TIME:.lastTimestamp,NAMESPACE:.metadata.namespace,NAME:.involvedObject.name,KIND:.involvedObject.kind,NODE:.source.host,REASON:.reason,MESSAGE:.message | { read -r header; echo \"$header\"; sort -t ',' -k1,1 }"
 
 [[Snippets]]
   Description = "kubectl get top nodes sorted by cpu utilization"
   Output = ""
-  Tag = ["kubernetes", "kubectl"]
+  Tag = ["kubernetes"]
   command = "kubectl top nodes | { read -r header; echo \"$header\"; sort -k3,3nr; }"
 
 [[Snippets]]
   Description = "Show all non running pods kubectl kubernetes"
   Output = ""
-  Tag = ["kubernetes", "kubectl"]
+  Tag = ["kubernetes"]
   command = "kubectl get pods --all-namespaces --field-selector 'status.phase!=Running' | grep -vi completed"
 
 [[Snippets]]
   Description = "kubectl top usabe by cpu per pod per container kubernetes"
   Output = ""
-  Tag = ["kubernetes", "kubectl"]
+  Tag = ["kubernetes"]
   command = "kubectl top pod --sort-by cpu --containers -A L"
 
 [[Snippets]]
   Description = "docker build image with buildx and load to local images from cache"
   Output = ""
-  Tag = ["docker", "buildx"]
-  command = "docker build . --progress=plain --tag <tag=runtime> --load"
-
-[[Snippets]]
-  Description = "Link to My killercoda, katacoda scenarios"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://killercoda.com/creator/scenarios\""
+  Tag = ["docker"]
+  command = "docker build . --progress=plain --tag NAME --load ?rep"
 
 [[Snippets]]
   Description = "copy openai API key"
@@ -594,34 +360,10 @@
   command = "printenv G OPEN | cut -d = -f2 | tr -d '\\n' C"
 
 [[Snippets]]
-  Description = "Link to Crossplane Local Development Instructions"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/master/contributing/README.md#establishing-a-development-environment\""
-
-[[Snippets]]
   Description = "swap to quiet all the obsidian notifications"
   Output = ""
   Tag = []
   command = "nvim +29 /home/decoder/.local/share/nvim/site/pack/packer/start/obsidian.nvim/lua/obsidian/client.lua"
-
-[[Snippets]]
-  Description = "Link to ollama models"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://ollama.ai/library\""
-
-[[Snippets]]
-  Description = "Link to client-go-examples for kubectl"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/iximiuz/client-go-examples\""
-
-[[Snippets]]
-  Description = "Link to ngrok dashboard"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://dashboard.ngrok.com/\""
 
 [[Snippets]]
   Description = "Check what's listening on specific port and kill it"
@@ -638,14 +380,8 @@
 [[Snippets]]
   Description = "run debug container and attach to a pod's container"
   Output = ""
-  Tag = ["kubernetes,", "kubectl,", "debug"]
-  command = "kubectl -n <namespace=upbound-system> debug -it <pod> --image=ghcr.io/superbrothers/debug --target=<container>"
-
-[[Snippets]]
-  Description = "Link to Levels FYI - Job board"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://www.levels.fyi/profile\""
+  Tag = ["kubernetes", "git"]
+  command = "kubectl -n NAME debug -it NAME --image=ghcr.io/superbrothers/debug --target=NAME ?rep"
 
 [[Snippets]]
   Description = "dynamically detec and track mouse position"
@@ -654,16 +390,10 @@
   command = "watch -t -n 1 xdotool getmouselocation"
 
 [[Snippets]]
-  Description = "Link to Developer Conferences Agenda"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://developers.events/\""
-
-[[Snippets]]
   Description = "get kubectl connection to MCP by number"
   Output = ""
-  Tag = ["linux", "kubectl"]
-  command = "kubectl get secret kubeconfig-ctp<ctp_num=1> -n default -o jsonpath='{.data.kubeconfig}' | base64 -d > /tmp/ctp<ctp_num=1>.yaml"
+  Tag = ["linux", "kubernetes"]
+  command = "kubectl get secret kubeconfig-ctpNAME -n default -o jsonpath='{.data.kubeconfig}' | base64 -d > /tmp/ctpNAME.yaml ?"
 
 [[Snippets]]
   Description = "Display fancy kubectl kubernetes status"
@@ -672,64 +402,16 @@
   command = "{ clear && echo -e \"\\n=== Kubernetes Status ===\\n\" && kubectl get --raw '/healthz?verbose' && kubectl version && kubectl get nodes && kubectl cluster-info; } | grep -z 'Ready\\| ok\\|passed\\|running'"
 
 [[Snippets]]
-  Description = "Link to Resolve Git Merge Conflicts with Neovim and Fugitive!"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://www.youtube.com/watch?v=vpwJ7fqD1CE\""
-
-[[Snippets]]
-  Description = "Link to Upbound marketplace"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://marketplace.upbound.io/\""
-
-[[Snippets]]
   Description = "Select header row and regular expression for data rows with awk"
   Output = ""
   Tag = []
   command = " | awk 'NR == 1 || /REGEX/'"
 
 [[Snippets]]
-  Description = "Install latest crossplane CLI"
-  Output = ""
-  Tag = []
-  command = "curl -sL \"https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh\" | sh"
-
-[[Snippets]]
-  Description = "Build statically linked crossplane-cli for killercoda scenario"
-  Output = ""
-  Tag = ["go,", "crossplane"]
-  command = "CGO_ENABLED=0 go build -a -installsuffix cgo -o crossplane-cli ."
-
-[[Snippets]]
   Description = "Show my public IP address"
   Output = ""
-  Tag = ["IP,", "linux,", "curl"]
+  Tag = ["network", "linux", "curl"]
   command = "curl ifconfig.me"
-
-[[Snippets]]
-  Description = "List all kubernetes object of an mcp mxe mxp control plane"
-  Output = ""
-  Tag = []
-  command = "kubectl get object -l crossplane.io/composite=$MCPID -o 'custom-columns=NAME:.metadata.name,FOR:.metadata.annotations.crossplane\\.io/composition-resource-name,SYNCED:.status.conditions[?(@.type==\"Synced\")].status,READY:.status.conditions[?(@.type==\"Ready\")].status'"
-
-[[Snippets]]
-  Description = "List all helm releases of an mcp mxe mxp control plane"
-  Output = ""
-  Tag = []
-  command = "kubectl get release -l crossplane.io/composite=$MCPID -o 'custom-columns=NAME:.metadata.name,FOR:.metadata.annotations.crossplane\\.io/composition-resource-name,SYNCED:.status.conditions[?(@.type==\"Synced\")].status,READY:.status.conditions[?(@.type==\"Ready\")].status'"
-
-[[Snippets]]
-  Description = "Link to List of neovim nvim text objects"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://github.com/chrisgrieser/nvim-various-textobjs?tab=readme-ov-file#list-of-text-objects\""
-
-[[Snippets]]
-  Description = "Link to ugrep grep replacement"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://ugrep.com/?ref=console.dev#TUI\""
 
 [[Snippets]]
   Description = "List system info neofetch uname lscpu df"
@@ -746,26 +428,8 @@
 [[Snippets]]
   Description = "launch helm dashboard on 8080"
   Output = ""
-  Tag = ["helm,", "dashboard"]
+  Tag = ["kubernetes"]
   command = "helm dashboard"
-
-[[Snippets]]
-  Description = "Link to brev portal"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://console.brev.dev/\""
-
-[[Snippets]]
-  Description = "Link to Devbox tools per shell"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://www.jetpack.io/devbox/docs/\""
-
-[[Snippets]]
-  Description = "Link to Certificates tracing tool"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://crt.sh/\""
 
 [[Snippets]]
   Description = "clenup devbox packages"
@@ -776,80 +440,26 @@
 [[Snippets]]
   Description = "cleanup nix store packages"
   Output = ""
-  Tag = ["nix"]
+  Tag = ["linux"]
   command = "nix store gc"
-
-[[Snippets]]
-  Description = "Link to Algolia dashboard github login"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://dashboard.algolia.com/apps/YVUCIOP9V7/explorer/browse/itcertificationsguide?searchMode=search\""
-
-[[Snippets]]
-  Description = "Link to dca build pipeline on netlify"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://app.netlify.com/teams/piotr1215/builds\""
-
-[[Snippets]]
-  Description = "Link to helm charts repository artifacthub"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://artifacthub.io/\""
 
 [[Snippets]]
   Description = "nslookup and dig records for my site"
   Output = "DNS records"
   Tag = []
-  command = "nslookup -type=<record=ns> <subdomain=app.>cloudrumble.net; dig <record=ns> <subdomain=app.>cloudrumble.net"
-
-[[Snippets]]
-  Description = "Link to local development certificates anchor"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://anchor.dev/\""
-
-[[Snippets]]
-  Description = "Link to software licenses expalined in plain english, FOSSA"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://www.tldrlegal.com/\""
-
-[[Snippets]]
-  Description = "Link to zenity autokey implementaton"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://autokey.github.io/api.html\""
-
-[[Snippets]]
-  Description = "Link to def list_menu_multi"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://autokey.github.io/_modules/autokey/scripting/dialog_gtk.html#GtkDialog.list_menu_multi\""
-
-[[Snippets]]
-  Description = "Link to fiverr find web page developers and designers"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://www.fiverr.com/\""
+  command = "nslookup -type=NAME NAME.cloudrumble.net; dig NAME NAME.cloudrumble.net ?rep"
 
 [[Snippets]]
   Description = "taskwarrior search for anything in all tasks"
   Output = ""
   Tag = []
-  command = "task <search=pattern> all"
-
-[[Snippets]]
-  Description = "Link to test regular expressions regex tester"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://regex101.com/\""
+  command = "task NAME all ?rep"
 
 [[Snippets]]
   Description = "git stage only certain hunks in a file"
   Output = ""
   Tag = []
-  command = "git add -p FILE"
+  command = "git add -p NAME ?rep"
 
 [[Snippets]]
   Description = "git show staged changes to be commited"
@@ -861,7 +471,7 @@
   Description = "Decrypt archive into new archive of the same name"
   Output = ""
   Tag = []
-  command = "gpg -d \\<file>.tar.gz.gpg > \\<file>.tar.gz"
+  command = "gpg -d NAME.tar.gz.gpg > NAME.tar.gz ?rep"
 
 [[Snippets]]
   Description = "run internet speed test from command line"
@@ -874,18 +484,6 @@
   Output = ""
   Tag = []
   command = "xsel --clipboard --input < <(basename "
-
-[[Snippets]]
-  Description = "Link to eraser.io AI generated diagrams, really handy for systems design"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://app.eraser.io\""
-
-[[Snippets]]
-  Description = "Link to ttl.sh | An anonymous & ephemeral (and free) Docker image registry — Mozilla Firefox"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"http://ttl.sh/\""
 
 [[Snippets]]
   Description = "convert medium blog to usable markdown"
@@ -912,52 +510,10 @@
   command = "sudo chown -R $(whoami) /usr/local/bin/"
 
 [[Snippets]]
-  Description = "Link to image.nvim discord server"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://discord.com/channels/1178095355548680222/1178098370468921465\""
-
-[[Snippets]]
   Description = "Fix issues with mount that prevent incus to start"
   Output = ""
   Tag = []
   command = "__umount_mullavad_cls.sh"
-
-[[Snippets]]
-  Description = "Link to Incus system container and vm manager"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://linuxcontainers.org/incus/docs/main/\""
-
-[[Snippets]]
-  Description = "Link to bash hacker wiki"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://flokoe.github.io/bash-hackers-wiki/#how-to\""
-
-[[Snippets]]
-  Description = "Link to zsh-tips-tricks"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://strcat.de/zsh/#tipps\""
-
-[[Snippets]]
-  Description = "Link to None"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://www.youtube.com/watch?v=oh4N2wBJCc8\""
-
-[[Snippets]]
-  Description = "Link to gamma presentations"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://gamma.app/settings#\""
-
-[[Snippets]]
-  Description = "Link to linux vms in browser"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"http://copy.sh/v86/\""
 
 [[Snippets]]
   Description = "Installing nerdfonts with the getnf utility"
@@ -966,16 +522,10 @@
   command = "curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash && getnf"
 
 [[Snippets]]
-  Description = "Link to Really cool blog valuable dev"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://thevaluable.dev/post/\""
-
-[[Snippets]]
   Description = "output any man page as markdown"
   Output = ""
-  Tag = ["man"]
-  command = "man <tool> | col -b W"
+  Tag = ["linux"]
+  command = "man NAME | col -b W ?rep"
 
 [[Snippets]]
   Description = "show manually installed linux packages"
@@ -1008,34 +558,10 @@
   command = "task end:yesterday completed"
 
 [[Snippets]]
-  Description = "Link to devcontainer add your own feature"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/devcontainers/feature-starter\""
-
-[[Snippets]]
-  Description = "Link to netflix"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://www.netflix.com/browse\""
-
-[[Snippets]]
-  Description = "Link to loft content strategy"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://docs.google.com/spreadsheets/d/1PVLQFsa4lPW-8aT2LUkgTTNKTLeBm5UJp44vjDGOHXg/edit?gid=1737628795#gid=1737628795\""
-
-[[Snippets]]
   Description = "copy absolute path to file"
   Output = ""
   Tag = []
   command = "realpath"
-
-[[Snippets]]
-  Description = "Link to timewarrior cheatsheet"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/mkluge/timewcs\""
 
 [[Snippets]]
   Description = "Only show git commits in the current branch"
@@ -1048,12 +574,6 @@
   Output = ""
   Tag = []
   command = "git log --graph --oneline --decorate --all --simplify-by-decoration --parents"
-
-[[Snippets]]
-  Description = "Link to dracula  tmux config"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://draculatheme.com/tmux\""
 
 [[Snippets]]
   Description = "check what open ai models are available via api"
@@ -1070,13 +590,13 @@
 [[Snippets]]
   Description = "find all files with certain extension like mdx and concatenate the content"
   Output = ""
-  Tag = ["mdx"]
-  command = "fd --type=file --extension=<extension:mdx> --exec bat"
+  Tag = ["web"]
+  command = "fd --type=file --extension=NAME --exec bat ?"
 
 [[Snippets]]
   Description = "upgrade fabric to latest version"
   Output = ""
-  Tag = ["fabric"]
+  Tag = ["cli"]
   command = "cd ~/dev/fabric && go install -ldflags \"-X main.version=$(git describe --tags --always)\" github.com/danielmiessler/fabric@latest"
 
 [[Snippets]]
@@ -1086,52 +606,10 @@
   command = "print -l ${(ok)functions}"
 
 [[Snippets]]
-  Description = "Link to gptscript builtin tools"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/gptscript-ai/gptscript/blob/6ec5178d9d26d21114f992e1da1b794ee27e440e/pkg/builtin/builtin.go\""
-
-[[Snippets]]
   Description = "find out first commit of the current branch git"
   Output = ""
   Tag = []
   command = "git log --oneline $(git merge-base $(git rev-parse --abbrev-ref HEAD) $(git rev-parse --abbrev-ref HEAD@{u}))..HEAD | tail -n 1"
-
-[[Snippets]]
-  Description = "Link to Fast, Declarative, Reproducible, and Composable Developer Environments - devenv in nix"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://devenv.sh/\""
-
-[[Snippets]]
-  Description = "Link to good kubernetes controllers tutorial operators custom resources"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/gianlucam76/kubernetes-controller-tutorial/blob/main/docs/custom-resources.md\""
-
-[[Snippets]]
-  Description = "Link to Public Domain Pictures"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://public.work/\""
-
-[[Snippets]]
-  Description = "Link to Kubernetes CRD generation pitfalls"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://ahmet.im/blog/crd-generation-pitfalls/\""
-
-[[Snippets]]
-  Description = "Link to go app service blueprint"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/Melkeydev/go-blueprint\""
-
-[[Snippets]]
-  Description = "Link to github large runners pricing"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates-for-x64-powered-larger-runners\""
 
 [[Snippets]]
   Description = "Copy allow edits by maintainers"
@@ -1140,70 +618,16 @@
   command = "echo \"Could you please [allow edits by maintainers](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork), so I can help you with \\`vale\\`?.\" C"
 
 [[Snippets]]
-  Description = "Link to docusaurus scss variables"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://gist.githubusercontent.com/abhigyantrips/b828ca46b2460c6699c73e0162f6be80/raw/3a1a6625e9dc92fa235b07a186bce8cc0a69f384/docusaurus-css-variables.css\""
-
-[[Snippets]]
-  Description = "Link to all hands november loft"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://docs.google.com/presentation/d/1yYxcWC7uYCOkrfkwktkHCmJeASaUTp8keJkADnkZ8lI/edit#slide=id.g3124b87c8d1_0_1125\""
-
-[[Snippets]]
-  Description = "Link to weekly engineering sync slides loft"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://drive.google.com/drive/folders/16RirnEug8fA2WztbbSiVS-0x_vXQpxGO\""
-
-[[Snippets]]
-  Description = "Link to canva youtube and blog content"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://www.canva.com/\""
-
-[[Snippets]]
-  Description = "Link to eksctl config file schema eks aws"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://eksctl.io/usage/schema/\""
-
-[[Snippets]]
-  Description = "Link to list of azure locations up to date regions"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://gist.github.com/ausfestivus/04e55c7d80229069bf3bc75870630ec8\""
-
-[[Snippets]]
   Description = "export default gpg key for example for github"
   Output = ""
   Tag = []
   command = "gpg --armor --export piotrzan@gmail.com W"
 
 [[Snippets]]
-  Description = "Link to Installed Extensions - GNOME Shell Extensions — Mozilla Firefox"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://extensions.gnome.org/local/\""
-
-[[Snippets]]
   Description = "show manually installed packages with apt and nala"
   Output = ""
   Tag = []
   command = "zcat /var/log/apt/history.log.*.gz 2>/dev/null | cat - /var/log/apt/history.log | grep -Po '^Commandline:(?= apt(-get)?| nala)(?=.* install ) \\K.*' | tr ' ' '\\n' | sort -u | grep -v '^-'"
-
-[[Snippets]]
-  Description = "Link to restic backup cli"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://restic.readthedocs.io/en/stable/010_introduction.html\""
-
-[[Snippets]]
-  Description = "Link to 12 antipatterns o iac"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://itnext.io/the-12-anti-factors-of-infrastructure-as-code-acb52fba3ae0\""
 
 [[Snippets]]
   Description = "mount google drive"
@@ -1224,18 +648,6 @@
   command = "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash - && sudo apt-get install -y nodejs"
 
 [[Snippets]]
-  Description = "Link to available gcp regions and zones google cloud"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://cloud.google.com/compute/docs/regions-zones\""
-
-[[Snippets]]
-  Description = "Link to web-search oh my zsh search engines list"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search#:~:text=Available%20search%20contexts%20are:\""
-
-[[Snippets]]
   Description = "remove all restic snapshots to start fresh"
   Output = ""
   Tag = []
@@ -1252,18 +664,6 @@
   Output = ""
   Tag = []
   command = "gh search prs --author \"@me\" --state \"open\" --review \"approved\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
-
-[[Snippets]]
-  Description = "Link to taskwarrior virtual tags"
-  Output = ""
-  Tag = ["link"]
-  command = "xdg-open \"https://taskwarrior.org/docs/tags/#:~:text=conditions%2C%20for%20convenience.-,Supported%20Virtual%20Tags,-Since%20version%202.2.0%2C\""
-
-[[Snippets]]
-  Description = "Link to github runner base images ubuntu runner-images"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/actions/runner-images\""
 
 [[Snippets]]
   Description = "pull all opened prs in vcluster-docs repo git"
@@ -1290,24 +690,6 @@
   command = "du -sh ."
 
 [[Snippets]]
-  Description = "Link to How platform teams get stuff done — Mozilla Firefox"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://martinfowler.com/articles/platform-teams-stuff-done.html\""
-
-[[Snippets]]
-  Description = "Link to artifacthub loft packages"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://artifacthub.io/packages/helm/loft/loft\""
-
-[[Snippets]]
-  Description = "Link to typ.ing — Mozilla Firefox"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://typ.ing/\""
-
-[[Snippets]]
   Description = "kubectl show how many running pods per node"
   Output = ""
   Tag = []
@@ -1318,12 +700,6 @@
   Output = ""
   Tag = []
   command = "rm /home/decoder/.local/state/nvim/shada/*"
-
-[[Snippets]]
-  Description = "Link to Workflow syntax for GitHub Actions - GitHub Docs — Mozilla Firefox"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows\""
 
 [[Snippets]]
   Description = "git push without evaluating global and local hooks this will push to main use with caution"
@@ -1350,40 +726,10 @@
   command = "gh search prs --involves \"@me\" --state \"open\" --json url,title | jq -r '.[] | \"* [\" + .title + \"](\" + .url + \")\"'"
 
 [[Snippets]]
-  Description = "Link to install claude desktop on linux"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/aaddrick/claude-desktop-debian?tab=readme-ov-file#1-debian-package-new\""
-
-[[Snippets]]
-  Description = "Link to bad nauchein thermen Aktuelle Auslastung"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://sprudelhoftherme.de/\""
-
-[[Snippets]]
   Description = "check weather in frankfurt"
   Output = ""
   Tag = []
   command = "curl wttr.in Frankfurt"
-
-[[Snippets]]
-  Description = "Link to engineering slides link"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://drive.google.com/drive/folders/1w1l6B9-3jU4-dz1O2eod0wUiSPuzE1Oj\""
-
-[[Snippets]]
-  Description = "Link to Tide Mende | Character | zKillboard — Mozilla Firefox"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://zkillboard.com/character/1216590223/\""
-
-[[Snippets]]
-  Description = "Link to slack loft release bot app"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://api.slack.com/apps/A08D0T15MRC/incoming-webhooks?\""
 
 [[Snippets]]
   Description = "pull label ids from linear api"
@@ -1392,52 +738,16 @@
   command = "curl -s -X POST -H \"Content-Type: application/json\" -H \"Authorization: $LINEAR_API_KEY\" --data '{\"query\": \"query { team(id: \\\"eb475b2d-c6ea-46f6-9725-deaa66415cb6\\\") { id name labels { nodes { id name color description } } } }\"}' https://api.linear.app/graphql | jq ."
 
 [[Snippets]]
-  Description = "Link to github require status checks to pass before merging"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks\""
-
-[[Snippets]]
-  Description = "show current directory size"
-  Output = ""
-  Tag = []
-  command = "du -sh ."
-
-[[Snippets]]
-  Description = "Link to nginx compatibility chart kubernetes"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/kubernetes/ingress-nginx?tab=readme-ov-file#supported-versions-table\""
-
-[[Snippets]]
   Description = "cd to steam eve online directory"
   Output = ""
   Tag = []
   command = "cd /home/decoder/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/8500/pfx/drive_c/users/steamuser/AppData/Local/CCP/EVE/"
 
 [[Snippets]]
-  Description = "Link to custom terraform functions"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/valentindeaconu/terraform-provider-func\""
-
-[[Snippets]]
-  Description = "Link to good awk overview tutorial"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/vivus-ignis/the-art-of-the-terminal/tree/master/awksome\""
-
-[[Snippets]]
   Description = "create tmux demo session"
   Output = ""
   Tag = []
   command = "tmux new-session -d -s demo"
-
-[[Snippets]]
-  Description = "Link to vcluster and platform release dates"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://www.notion.so/loftsh/Release-Dates-12e10940806980ac925ee70613c6a14f\""
 
 [[Snippets]]
   Description = "list new versions of go modules for upgrade"
@@ -1454,53 +764,269 @@
 [[Snippets]]
   Description = "create local vcluster on kind in one command"
   Output = ""
-  Tag = ["vcluster,", "kind"]
+  Tag = ["vcluster", "kubernetes"]
   command = "kind create cluster && vcluster create testme"
-
-[[Snippets]]
-  Description = "Link to pure bash bible"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/dylanaraps/pure-sh-bible\""
-
-[[Snippets]]
-  Description = "Link to pure bash bible guide"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/dylanaraps/pure-bash-bible\""
-
-[[Snippets]]
-  Description = "Link to Introduction - Model Context Protocol Specification"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://modelcontextprotocol.io/introduction\""
-
-[[Snippets]]
-  Description = "Link to claude awesome mcp servers"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/punkpeye/awesome-mcp-servers\""
-
-[[Snippets]]
-  Description = "Link to mcp servers official website"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://mcpservers.org/\""
-
-[[Snippets]]
-  Description = "Link to official mcp servers list original github"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://github.com/modelcontextprotocol/servers\""
-
-[[Snippets]]
-  Description = "Link to build mcp server with llm claude"
-  Output = ""
-  Tag = ["web", "link"]
-  command = "xdg-open \"https://modelcontextprotocol.io/tutorials/building-mcp-with-llms\""
 
 [[Snippets]]
   Description = "Get available Claude models from Anthropic API"
   Output = ""
-  Tag = ["anthropic", "api", "models", "claude"]
+  Tag = ["web", "api"]
   command = "curl -H \"Content-Type: application/json\" -H \"x-api-key: $ANTHROPIC_API_KEY\" -H \"anthropic-version: 2023-06-01\" https://api.anthropic.com/v1/models | jq"
+
+[[Snippets]]
+  Description = "Update next branch from main excluding private nodes deletion commit"
+  Output = ""
+  Tag = ["git", "vcluster"]
+  command = "git log --oneline main \"^next\" --reverse | grep -v fea16dbc | cut -d' ' -f1 | xargs git cherry-pick"
+
+[[Snippets]]
+  Description = "remove claude projects settings to prevent file from growth"
+  Output = ""
+  Tag = []
+  command = "jq 'del(.projects)' /home/decoder/.claude.json > /home/decoder/.claude.json.tmp && mv /home/decoder/.claude.json.tmp /home/decoder/.claude.json"
+
+[[Snippets]]
+  Description = "check features in vcluster platform license"
+  Output = ""
+  Tag = []
+  command = "cat license.txt| jq -R 'split(\".\") | .[0],.[1] | @base64d | fromjson'"
+
+[[Snippets]]
+  Description = "git list unique author names in a repository useful for tig pipe"
+  Output = ""
+  Tag = []
+  command = "git log --all --format='%an' | sort -u"
+
+[[Snippets]]
+  Description = "[10-oneliners] Summarize webpage with AI"
+  Output = ""
+  Tag = ["10-oneliners", "ai", "fabric"]
+  command = "curl -s https://NAME | fabric --pattern summarize --model o3-mini ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Extract wisdom from notes"
+  Output = ""
+  Tag = ["10-oneliners", "ai", "fabric"]
+  command = "cat NAME | fabric --pattern extract_wisdom --model o3-mini ?fil"
+
+[[Snippets]]
+  Description = ""
+  Output = ""
+  Tag = []
+  command = ""
+
+[[Snippets]]
+  Description = "[10-oneliners] Share files via HTTP + ngrok"
+  Output = ""
+  Tag = ["10-oneliners", "share", "network"]
+  command = "pkill -f ngrok 2>/dev/null; lsof -ti:8080 | xargs -r kill -9 2>/dev/null; python3 -m http.server 8080 & sleep 1 && ngrok http 8080"
+
+[[Snippets]]
+  Description = "[10-oneliners] Share a file"
+  Output = ""
+  Tag = ["10-oneliners", "share", "age"]
+  command = "curl -F'file=@NAME' https://tmpfiles.org/api/v1/upload ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] Share encrypted file"
+  Output = ""
+  Tag = ["10-oneliners", "share", "encryption", "age"]
+  command = "age -p NAME > NAME.age && curl -F'file=@NAME.age' https://tmpfiles.org/api/v1/upload ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] Task from current directory"
+  Output = ""
+  Tag = ["10-oneliners", "task", "taskwarrior"]
+  command = "task add project:${PWD##*/} NAME ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Task from git branch"
+  Output = ""
+  Tag = ["10-oneliners", "task", "taskwarrior", "git"]
+  command = "task add project:$(git branch --show-current) NAME ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Task with tomorrow deadline"
+  Output = ""
+  Tag = ["10-oneliners", "task", "taskwarrior"]
+  command = "task add NAME due:tomorrow+17h ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Kill process on port"
+  Output = ""
+  Tag = ["10-oneliners", "process", "kill"]
+  command = "lsof -ti :NAME | xargs -r kill -9 ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Interactive process killer"
+  Output = ""
+  Tag = ["10-oneliners", "process", "kill", "fzf"]
+  command = "ps aux | fzf -m | awk '{print $2}' | xargs -r kill -9"
+
+[[Snippets]]
+  Description = "[10-oneliners] Kill biggest CPU hog"
+  Output = ""
+  Tag = ["10-oneliners", "process", "kill", "cpu"]
+  command = "ps aux | sort -nrk 3 | head -1 | awk '{print $2}' | xargs kill -9"
+
+[[Snippets]]
+  Description = "[10-oneliners] Disk usage sorted"
+  Output = ""
+  Tag = ["10-oneliners", "disk", "usage"]
+  command = "du -sh * | sort -hr | head -10"
+
+[[Snippets]]
+  Description = "[10-oneliners] Interactive disk explorer"
+  Output = ""
+  Tag = ["10-oneliners", "disk", "ncdu"]
+  command = "ncdu --color dark"
+
+[[Snippets]]
+  Description = "[10-oneliners] Find big files"
+  Output = ""
+  Tag = ["10-oneliners", "disk", "find"]
+  command = "fd -t f -x du -h {} | sort -hr | head -20"
+
+[[Snippets]]
+  Description = "[10-oneliners] Queue command with pueue"
+  Output = ""
+  Tag = ["10-oneliners", "schedule", "pueue"]
+  command = "pueue add -- NAME ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Run after another command"
+  Output = ""
+  Tag = ["10-oneliners", "schedule", "pueue"]
+  command = "pueue add --after NAME -- COMMAND ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Schedule command for later"
+  Output = ""
+  Tag = ["10-oneliners", "schedule", "at"]
+  command = "echo COMMAND | at now + NAME ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Encrypt with password"
+  Output = ""
+  Tag = ["10-oneliners", "encryption", "age"]
+  command = "age -p NAME > NAME.age ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] Encrypt for recipient"
+  Output = ""
+  Tag = ["10-oneliners", "encryption", "age"]
+  command = "age -r RECIPIENT NAME > NAME.age ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] Encrypt and upload"
+  Output = ""
+  Tag = ["10-oneliners", "encryption", "age", "share"]
+  command = "tar czf - NAME | age -p > /tmp/NAME.age && curl -F'file=@/tmp/NAME.age' https://tmpfiles.org/api/v1/upload ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] Undo last commit but keep changes"
+  Output = ""
+  Tag = ["10-oneliners", "git", "undo"]
+  command = "git reset --soft HEAD~1"
+
+[[Snippets]]
+  Description = "[10-oneliners] Show files changed in last N commits"
+  Output = ""
+  Tag = ["10-oneliners", "git", "diff"]
+  command = "git diff --name-only HEAD~NAME..HEAD ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] Quick commit with all changes"
+  Output = ""
+  Tag = ["10-oneliners", "git", "commit"]
+  command = "git add -A && git commit -m \"NAME\" ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Compare two directories interactively"
+  Output = ""
+  Tag = ["10-oneliners", "diff", "compare", "fzf"]
+  command = "diff <(ls $(fd -t d | fzf --header \"Select first directory\")) <(ls $(fd -t d | fzf --header \"Select second directory\"))"
+
+[[Snippets]]
+  Description = "[10-oneliners] Compare file with clipboard"
+  Output = ""
+  Tag = ["10-oneliners", "diff", "clipboard"]
+  command = "diff NAME <(xclip -o) ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] See git stash changes interactively"
+  Output = ""
+  Tag = ["10-oneliners", "git", "stash", "diff", "fzf"]
+  command = "git stash list | fzf --preview 'git stash show -p {1}' | awk '{print $1}' | xargs git stash show -p"
+
+[[Snippets]]
+  Description = "[10-oneliners] Find file and copy path"
+  Output = ""
+  Tag = ["10-oneliners", "find", "clipboard", "path"]
+  command = "fd . | fzf | xargs realpath | xclip -selection clipboard"
+
+[[Snippets]]
+  Description = "[10-oneliners] Search content and copy path"
+  Output = ""
+  Tag = ["10-oneliners", "search", "clipboard", "path"]
+  command = "rg -l NAME | fzf | xargs realpath | xclip ?"
+
+[[Snippets]]
+  Description = "[10-oneliners] Recent files copy path"
+  Output = ""
+  Tag = ["10-oneliners", "find", "clipboard", "recent"]
+  command = "fd . -t f --changed-within 1d | fzf | xclip"
+
+[[Snippets]]
+  Description = "[10-oneliners] Decrypt downloaded file"
+  Output = ""
+  Tag = ["10-oneliners", "encryption", "age", "decrypt"]
+  command = "age -d NAME > NAME ?rep"
+
+[[Snippets]]
+  Description = "[10-oneliners] Build and push Docker image to ttl.sh"
+  Output = ""
+  Tag = ["10-oneliners", "docker", "share", "ttl.sh"]
+  command = "docker build -t NAME . && docker tag NAME ttl.sh/NAME:1h && docker push ttl.sh/NAME:1h ?rep"
+
+[[Snippets]]
+  Description = "ssh into standalone vcluster"
+  Output = ""
+  Tag = []
+  command = "gcloud compute ssh vcluster-standalone-cp --zone=us-central1-a --project loft-prod"
+
+[[Snippets]]
+  Description = "List GitHub repos matching pattern"
+  Output = "Filtered list of repo names and URLs"
+  Tag = ["github", "gh", "repos", "search"]
+  command = "gh repo list <owner=Piotr1215> --json name,url | jq -r '.[] | select(.name | test(\"<pattern>\"; \"i\")) | \"\\(.name): \\(.url)\"'"
+
+[[Snippets]]
+  Description = "Add token for user in vcluster memory server mcp"
+  Output = ""
+  Tag = []
+  command = "kubectl exec deploy/agent-memory-api -n agent-memory -- agent-memory token add --description \"name\" --expires-days 365"
+
+[[Snippets]]
+  Description = "check top claude code usage sessions"
+  Output = ""
+  Tag = ["claude,", "ai"]
+  command = "npx ccusage@latest session --json -o desc | jq '.sessions[0:5] | .[] | {sessionId, totalCost, inputTokens, cacheCreationTokens, cacheReadTokens}'"
+
+[[Snippets]]
+  Description = "Copy YubiKey TOTP code for an account to clipboard (touch accounts pause for a tap)"
+  Output = ""
+  Tag = ["totp", "yubikey", "ykman", "2fa"]
+  command = "ykman oath accounts code -s \"NAME\" | grep -oE '[0-9]{6,8}' | tail -1 | tr -d '\\n' | xclip -selection clipboard ?rep"
+
+[[Snippets]]
+  Description = "Get platform url for config"
+  Output = ""
+  Tag = ["loft"]
+  command = "kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}{\"\\n\"}'"
+
+[[Snippets]]
+  Description = "Resume the EVE multibox stutter session (CPU ceiling leak, DXVK frame cap, VRAM findings, 2026-09-03)"
+  Output = ""
+  Tag = ["claude", "eve", "session"]
+  command = "cd /home/decoder/dev && claude -r cf2d4572-610b-4c64-b3ef-383efaff0836"
