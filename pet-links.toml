@@ -1,0 +1,864 @@
+
+[[Snippets]]
+  Description = "Link to SSH Cheat Sheet"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://www.marcobehler.com/guides/ssh-cheat-sheet"
+
+[[Snippets]]
+  Description = "Link to Vim fix for go files when folds are closed on save"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://stackoverflow.com/a/55327996"
+
+[[Snippets]]
+  Description = "Link to At reminder times table, formats execution"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-schedule-jobs-in-linux-at-and-crontab-commands-255842/\\#:\\~:text\\=Formats%20for%20the%20at%20Command%20for%20the%20Time%20of%20Execution"
+
+[[Snippets]]
+  Description = "Link to Modify access for a specific user to a file or folder using ACL access control list, setfacl"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://superuser.com/a/145007"
+
+[[Snippets]]
+  Description = "Link to nvim lua guide"
+  Output = ""
+  Tag = ["link", "nvim"]
+  command = "xdg-open https://github.com/nanotee/nvim-lua-guide"
+
+[[Snippets]]
+  Description = "Link to neovim folder structure"
+  Output = ""
+  Tag = ["link", "nvim"]
+  command = "xdg-open https://github.com/nanotee/nvim-lua-guide#runtime-files"
+
+[[Snippets]]
+  Description = "Link to the taskwarrior possible due date fields"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://taskwarrior.org/docs/dates/\\#:\\~:text\\=here%20are%20the%20possible%20elements%20of%20rc.dateformat%3A"
+
+[[Snippets]]
+  Description = "Link to gifcap record gifs from screen"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://gifcap.dev/"
+
+[[Snippets]]
+  Description = "Link to chrontab expression generator"
+  Output = ""
+  Tag = ["linux", "link"]
+  command = "xdg-open https://crontab-generator.org/"
+
+[[Snippets]]
+  Description = "Link to resolving issue when the gcloud user does not have access to service account ..."
+  Output = ""
+  Tag = ["gcp", "link"]
+  command = "xdg-open https://stackoverflow.com/questions/40367866/gcloud-the-user-does-not-have-access-to-service-account-default"
+
+[[Snippets]]
+  Description = "Link to bash pitfalls"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open http://mywiki.wooledge.org/BashPitfalls"
+
+[[Snippets]]
+  Description = "Link to ec2 instances"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://aws.amazon.com/ec2/instance-types/"
+
+[[Snippets]]
+  Description = "Link to Vim/Nvim power of g"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://vim.fandom.com/wiki/Power_of_g\""
+
+[[Snippets]]
+  Description = "Link to write blogs with AI"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://cowriter.org/\""
+
+[[Snippets]]
+  Description = "Link to youtbe"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://www.youtube.com/\""
+
+[[Snippets]]
+  Description = "Link to Mason registry of LSPs, DAPs, etc"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://mason-registry.dev/registry/list\""
+
+[[Snippets]]
+  Description = "Link to taskwarrior using dates effectively"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://taskwarrior.org/docs/using_dates/\""
+
+[[Snippets]]
+  Description = "Link to call <plug> command from lua"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://www.reddit.com/r/neovim/comments/t9l75z/call_plugcommands_with_luaapi/\""
+
+[[Snippets]]
+  Description = "Link to Github actions built in variables"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables\""
+
+[[Snippets]]
+  Description = "Link to AutoKey Wiki Documentation"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://github.com/autokey/autokey/wiki\""
+
+[[Snippets]]
+  Description = "Link to Rust and Neovim - A Thorough Guide and Walkthrough"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#why-neovim-for-rust-development\""
+
+[[Snippets]]
+  Description = "Link to Conditionally show function in shell only if in git repo"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://gist.github.com/Piotr1215/41c4670cd9d282683613a3338123f3c4\""
+
+[[Snippets]]
+  Description = "Link to FL0 Deploy backend applications and databases in minutes"
+  Output = ""
+  Tag = ["git", "web", "databases", "link"]
+  command = "xdg-open \"https://www.fl0.com/?ref=producthunt\""
+
+[[Snippets]]
+  Description = "Link to MPV Keyboard Shortcuts - Make Tech Easier — Mozilla Firefox"
+  Output = ""
+  Tag = ["linux", "link"]
+  command = "xdg-open \"https://www.maketecheasier.com/cheatsheet/mpv-keyboard-shortcuts/\""
+
+[[Snippets]]
+  Description = "Link to Activate Azure global admin role"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://portal.azure.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadmigratedroles\""
+
+[[Snippets]]
+  Description = "Link to PlantUML Themes"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://plantuml.com/theme\""
+
+[[Snippets]]
+  Description = "Link to Nix package versions when needing specific version of the package"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://lazamar.co.uk/nix-versions/\""
+
+[[Snippets]]
+  Description = "Link to P&T as a Function Gdoc"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/863ff6c2f53af47424dab941dbef83ca12e7d74f/design/design-doc-composition-functions.md#patch-and-transform-as-a-function\""
+
+[[Snippets]]
+  Description = "Link to Writing Crossplane Composition Function"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://youtu.be/otwg-bO757A\""
+
+[[Snippets]]
+  Description = "Link to Write Go Function"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://docs.crossplane.io/knowledge-base/guides/write-a-composition-function-in-go/\""
+
+[[Snippets]]
+  Description = "Link to My killercoda, katacoda scenarios"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://killercoda.com/creator/scenarios\""
+
+[[Snippets]]
+  Description = "Link to Crossplane Local Development Instructions"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/crossplane/crossplane/blob/master/contributing/README.md#establishing-a-development-environment\""
+
+[[Snippets]]
+  Description = "Link to ollama models"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://ollama.ai/library\""
+
+[[Snippets]]
+  Description = "Link to client-go-examples for kubectl"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/iximiuz/client-go-examples\""
+
+[[Snippets]]
+  Description = "Link to ngrok dashboard"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://dashboard.ngrok.com/\""
+
+[[Snippets]]
+  Description = "Link to Levels FYI - Job board"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.levels.fyi/profile\""
+
+[[Snippets]]
+  Description = "Link to Developer Conferences Agenda"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://developers.events/\""
+
+[[Snippets]]
+  Description = "Link to Resolve Git Merge Conflicts with Neovim and Fugitive!"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.youtube.com/watch?v=vpwJ7fqD1CE\""
+
+[[Snippets]]
+  Description = "Link to Upbound marketplace"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://marketplace.upbound.io/\""
+
+[[Snippets]]
+  Description = "Link to List of neovim nvim text objects"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://github.com/chrisgrieser/nvim-various-textobjs?tab=readme-ov-file#list-of-text-objects\""
+
+[[Snippets]]
+  Description = "Link to ugrep grep replacement"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://ugrep.com/?ref=console.dev#TUI\""
+
+[[Snippets]]
+  Description = "Link to brev portal"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://console.brev.dev/\""
+
+[[Snippets]]
+  Description = "Link to Devbox tools per shell"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://www.jetpack.io/devbox/docs/\""
+
+[[Snippets]]
+  Description = "Link to Certificates tracing tool"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://crt.sh/\""
+
+[[Snippets]]
+  Description = "Link to Algolia dashboard github login"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://dashboard.algolia.com/apps/YVUCIOP9V7/explorer/browse/itcertificationsguide?searchMode=search\""
+
+[[Snippets]]
+  Description = "Link to dca build pipeline on netlify"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://app.netlify.com/teams/piotr1215/builds\""
+
+[[Snippets]]
+  Description = "Link to helm charts repository artifacthub"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://artifacthub.io/\""
+
+[[Snippets]]
+  Description = "Link to local development certificates anchor"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://anchor.dev/\""
+
+[[Snippets]]
+  Description = "Link to software licenses expalined in plain english, FOSSA"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://www.tldrlegal.com/\""
+
+[[Snippets]]
+  Description = "Link to zenity autokey implementaton"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://autokey.github.io/api.html\""
+
+[[Snippets]]
+  Description = "Link to def list_menu_multi"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://autokey.github.io/_modules/autokey/scripting/dialog_gtk.html#GtkDialog.list_menu_multi\""
+
+[[Snippets]]
+  Description = "Link to fiverr find web page developers and designers"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://www.fiverr.com/\""
+
+[[Snippets]]
+  Description = "Link to test regular expressions regex tester"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://regex101.com/\""
+
+[[Snippets]]
+  Description = "Link to eraser.io AI generated diagrams, really handy for systems design"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://app.eraser.io\""
+
+[[Snippets]]
+  Description = "Link to ttl.sh | An anonymous & ephemeral (and free) Docker image registry — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"http://ttl.sh/\""
+
+[[Snippets]]
+  Description = "Link to image.nvim discord server"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://discord.com/channels/1178095355548680222/1178098370468921465\""
+
+[[Snippets]]
+  Description = "Link to Incus system container and vm manager"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://linuxcontainers.org/incus/docs/main/\""
+
+[[Snippets]]
+  Description = "Link to bash hacker wiki"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://flokoe.github.io/bash-hackers-wiki/#how-to\""
+
+[[Snippets]]
+  Description = "Link to zsh-tips-tricks"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://strcat.de/zsh/#tipps\""
+
+[[Snippets]]
+  Description = "Link to None"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.youtube.com/watch?v=oh4N2wBJCc8\""
+
+[[Snippets]]
+  Description = "Link to gamma presentations"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://gamma.app/settings#\""
+
+[[Snippets]]
+  Description = "Link to linux vms in browser"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"http://copy.sh/v86/\""
+
+[[Snippets]]
+  Description = "Link to Really cool blog valuable dev"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://thevaluable.dev/post/\""
+
+[[Snippets]]
+  Description = "Link to devcontainer add your own feature"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/devcontainers/feature-starter\""
+
+[[Snippets]]
+  Description = "Link to netflix"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.netflix.com/browse\""
+
+[[Snippets]]
+  Description = "Link to loft content strategy"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://docs.google.com/spreadsheets/d/1PVLQFsa4lPW-8aT2LUkgTTNKTLeBm5UJp44vjDGOHXg/edit?gid=1737628795#gid=1737628795\""
+
+[[Snippets]]
+  Description = "Link to timewarrior cheatsheet"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/mkluge/timewcs\""
+
+[[Snippets]]
+  Description = "Link to dracula  tmux config"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://draculatheme.com/tmux\""
+
+[[Snippets]]
+  Description = "Link to gptscript builtin tools"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/gptscript-ai/gptscript/blob/6ec5178d9d26d21114f992e1da1b794ee27e440e/pkg/builtin/builtin.go\""
+
+[[Snippets]]
+  Description = "Link to Fast, Declarative, Reproducible, and Composable Developer Environments - devenv in nix"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://devenv.sh/\""
+
+[[Snippets]]
+  Description = "Link to good kubernetes controllers tutorial operators custom resources"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/gianlucam76/kubernetes-controller-tutorial/blob/main/docs/custom-resources.md\""
+
+[[Snippets]]
+  Description = "Link to Public Domain Pictures"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://public.work/\""
+
+[[Snippets]]
+  Description = "Link to Kubernetes CRD generation pitfalls"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://ahmet.im/blog/crd-generation-pitfalls/\""
+
+[[Snippets]]
+  Description = "Link to go app service blueprint"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/Melkeydev/go-blueprint\""
+
+[[Snippets]]
+  Description = "Link to github large runners pricing"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions#per-minute-rates-for-x64-powered-larger-runners\""
+
+[[Snippets]]
+  Description = "Link to docusaurus scss variables"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://gist.githubusercontent.com/abhigyantrips/b828ca46b2460c6699c73e0162f6be80/raw/3a1a6625e9dc92fa235b07a186bce8cc0a69f384/docusaurus-css-variables.css\""
+
+[[Snippets]]
+  Description = "Link to all hands november loft"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://docs.google.com/presentation/d/1yYxcWC7uYCOkrfkwktkHCmJeASaUTp8keJkADnkZ8lI/edit#slide=id.g3124b87c8d1_0_1125\""
+
+[[Snippets]]
+  Description = "Link to weekly engineering sync slides loft"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://drive.google.com/drive/folders/16RirnEug8fA2WztbbSiVS-0x_vXQpxGO\""
+
+[[Snippets]]
+  Description = "Link to canva youtube and blog content"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://www.canva.com/\""
+
+[[Snippets]]
+  Description = "Link to eksctl config file schema eks aws"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://eksctl.io/usage/schema/\""
+
+[[Snippets]]
+  Description = "Link to list of azure locations up to date regions"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://gist.github.com/ausfestivus/04e55c7d80229069bf3bc75870630ec8\""
+
+[[Snippets]]
+  Description = "Link to Installed Extensions - GNOME Shell Extensions — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://extensions.gnome.org/local/\""
+
+[[Snippets]]
+  Description = "Link to restic backup cli"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://restic.readthedocs.io/en/stable/010_introduction.html\""
+
+[[Snippets]]
+  Description = "Link to 12 antipatterns o iac"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://itnext.io/the-12-anti-factors-of-infrastructure-as-code-acb52fba3ae0\""
+
+[[Snippets]]
+  Description = "Link to available gcp regions and zones google cloud"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://cloud.google.com/compute/docs/regions-zones\""
+
+[[Snippets]]
+  Description = "Link to web-search oh my zsh search engines list"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search#:~:text=Available%20search%20contexts%20are:\""
+
+[[Snippets]]
+  Description = "Link to taskwarrior virtual tags"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://taskwarrior.org/docs/tags/#:~:text=conditions%2C%20for%20convenience.-,Supported%20Virtual%20Tags,-Since%20version%202.2.0%2C\""
+
+[[Snippets]]
+  Description = "Link to github runner base images ubuntu runner-images"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/actions/runner-images\""
+
+[[Snippets]]
+  Description = "Link to How platform teams get stuff done — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://martinfowler.com/articles/platform-teams-stuff-done.html\""
+
+[[Snippets]]
+  Description = "Link to artifacthub loft packages"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://artifacthub.io/packages/helm/loft/loft\""
+
+[[Snippets]]
+  Description = "Link to typ.ing — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://typ.ing/\""
+
+[[Snippets]]
+  Description = "Link to Workflow syntax for GitHub Actions - GitHub Docs — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows\""
+
+[[Snippets]]
+  Description = "Link to install claude desktop on linux"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/aaddrick/claude-desktop-debian?tab=readme-ov-file#1-debian-package-new\""
+
+[[Snippets]]
+  Description = "Link to bad nauchein thermen Aktuelle Auslastung"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://sprudelhoftherme.de/\""
+
+[[Snippets]]
+  Description = "Link to engineering slides link"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://drive.google.com/drive/folders/1w1l6B9-3jU4-dz1O2eod0wUiSPuzE1Oj\""
+
+[[Snippets]]
+  Description = "Link to Tide Mende | Character | zKillboard — Mozilla Firefox"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://zkillboard.com/character/1216590223/\""
+
+[[Snippets]]
+  Description = "Link to slack loft release bot app"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://api.slack.com/apps/A08D0T15MRC/incoming-webhooks?\""
+
+[[Snippets]]
+  Description = "Link to github require status checks to pass before merging"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks\""
+
+[[Snippets]]
+  Description = "Link to nginx compatibility chart kubernetes"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/kubernetes/ingress-nginx?tab=readme-ov-file#supported-versions-table\""
+
+[[Snippets]]
+  Description = "Link to custom terraform functions"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/valentindeaconu/terraform-provider-func\""
+
+[[Snippets]]
+  Description = "Link to good awk overview tutorial"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/vivus-ignis/the-art-of-the-terminal/tree/master/awksome\""
+
+[[Snippets]]
+  Description = "Link to vcluster and platform release dates"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.notion.so/loftsh/Release-Dates-12e10940806980ac925ee70613c6a14f\""
+
+[[Snippets]]
+  Description = "Link to pure bash bible"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/dylanaraps/pure-sh-bible\""
+
+[[Snippets]]
+  Description = "Link to pure bash bible guide"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/dylanaraps/pure-bash-bible\""
+
+[[Snippets]]
+  Description = "Link to Introduction - Model Context Protocol Specification"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://modelcontextprotocol.io/introduction\""
+
+[[Snippets]]
+  Description = "Link to claude awesome mcp servers"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/punkpeye/awesome-mcp-servers\""
+
+[[Snippets]]
+  Description = "Link to mcp servers official website"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://mcpservers.org/\""
+
+[[Snippets]]
+  Description = "Link to official mcp servers list original github"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/modelcontextprotocol/servers\""
+
+[[Snippets]]
+  Description = "Link to build mcp server with llm claude"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://modelcontextprotocol.io/tutorials/building-mcp-with-llms\""
+
+[[Snippets]]
+  Description = "Link to github codeowners file syntax"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners\""
+
+[[Snippets]]
+  Description = "Link to linux task spooler"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/justanhduc/task-spooler\""
+
+[[Snippets]]
+  Description = "Link to linear"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://linear.app/loft/my-issues/assigned\""
+
+[[Snippets]]
+  Description = "Link to ast-grep lsp based grep for code"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/ast-grep/ast-grep\""
+
+[[Snippets]]
+  Description = "Link to gitingest for llm repos"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://gitingest.com/\""
+
+[[Snippets]]
+  Description = "Link to deepwiki for llms"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://deepwiki.org/\""
+
+[[Snippets]]
+  Description = "Link to mcp specification github repository"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/modelcontextprotocol/modelcontextprotocol\""
+
+[[Snippets]]
+  Description = "Link to mcp claude hooks"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docs.anthropic.com/en/docs/claude-code/hooks\""
+
+[[Snippets]]
+  Description = "Link to presenterm"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/mfontanini/presenterm\""
+
+[[Snippets]]
+  Description = "Link to mpc build custom remote servers"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://support.anthropic.com/en/articles/11503834-building-custom-connectors-via-remote-mcp-servers\""
+
+[[Snippets]]
+  Description = "Link to mcp complete guide to building remote mcp servers"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://simplescraper.io/blog/how-to-mcp\""
+
+[[Snippets]]
+  Description = "Link to docusaurus config js settings"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docusaurus.io/docs/2.x/api/docusaurus-config\""
+
+[[Snippets]]
+  Description = "Link to speicherstadt coffee kaffee"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.speicherstadt-kaffee.shop/kaffee/\""
+
+[[Snippets]]
+  Description = "Link to mvz maintal doctor"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://mvzmaintal.de/\""
+
+[[Snippets]]
+  Description = "Link to list of neovim events nvim"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://neovim.io/doc/user/autocmd.html#_5.-events\""
+
+[[Snippets]]
+  Description = "Link to claude code cookbooks"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open https://github.com/anthropics/claude-cookbooks"
+
+[[Snippets]]
+  Description = "Link to mcp servers official doc"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://docs.claude.com/en/docs/mcp\""
+
+[[Snippets]]
+  Description = "Link to lufthansa documents download invoice"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.booking.lufthansa.com/documents?lg=DE\""
+
+[[Snippets]]
+  Description = "Link to submit talk to fosdem"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://pretalx.fosdem.org/fosdem-2026/submit/25shIl/info/\""
+
+[[Snippets]]
+  Description = "Link to claude code best practices"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.anthropic.com/engineering/claude-code-best-practices\""
+
+[[Snippets]]
+  Description = "Link to claude skills authoring best practices"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://anthropic.mintlify.app/en/docs/agents-and-tools/agent-skills/best-practices\""
+
+[[Snippets]]
+  Description = "Link to claude code execution with mcp"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.anthropic.com/engineering/code-execution-with-mcp\""
+
+[[Snippets]]
+  Description = "Link to CNCF Platforms White Paper"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://tag-app-delivery.cncf.io/whitepapers/platforms/\""
+
+[[Snippets]]
+  Description = "Link to Mysterious Coastal Dark Music"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.youtube.com/watch?v=DYggTo8Db8A\""
+
+[[Snippets]]
+  Description = "Link to kuberetes kubeent check depraceated apis"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/doitintl/kube-no-trouble\""
+
+[[Snippets]]
+  Description = "Link to extrakto tool for tmux copy mode"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.com/laktak/extrakto\""
+
+[[Snippets]]
+  Description = "Link to How to build secure and scalable remote MCP servers"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/\""
+
+[[Snippets]]
+  Description = "Link to Block's Playbook for Designing MCP Servers"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://engineering.block.xyz/blog/blocks-playbook-for-designing-mcp-servers\""
+
+[[Snippets]]
+  Description = "Link to claude code usage lenght limits"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work\""
+
+[[Snippets]]
+  Description = "Link to resume vcluster docs clawler algolia"
+  Output = ""
+  Tag = ["link"]
+  command = "xdg-open \"https://dashboard.algolia.com/apps/K85RIQNFGF/crawler/crawler/6ef7998d-aa91-4a85-a369-85c758fc8a16/overview\""
+
+[[Snippets]]
+  Description = "Link to Dimitra GoDaddy Management"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://account.godaddy.com/products?del_code=1\""
+
+[[Snippets]]
+  Description = "Link to Wacker's coffee shop"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://wackers-kaffee.com/en/\""
+
+[[Snippets]]
+  Description = "Link to OVH Dedicated Servers View"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://manager.eu.ovhcloud.com/beta/#/bare-metal/dedicated/listing\""
+
+[[Snippets]]
+  Description = "Link to Manage My Slack Apps"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://api.slack.com/apps\""
+
+[[Snippets]]
+  Description = "Link to bash conditional operators"
+  Output = ""
+  Tag = ["web", "link"]
+  command = "xdg-open \"https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#:~:text=6.4%20bash%20conditional%20expressions\""

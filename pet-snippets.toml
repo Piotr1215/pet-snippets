@@ -120,12 +120,6 @@
   command = "ctags -R --exclude=.git--exclude=vendor --exclude=node_modules --exclude=db --exclude=log ."
 
 [[Snippets]]
-  Description = "Link to bash conditional operators"
-  Output = ""
-  Tag = ["link", "nvim"]
-  command = "https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#:~:text=6.4%20bash%20conditional%20expressions"
-
-[[Snippets]]
   Description = "SSH generate ecdsa key in the ssh folder"
   Output = ""
   Tag = []
@@ -292,12 +286,6 @@
   Output = ""
   Tag = ["linux"]
   command = "install -D /dev/null path/to/file"
-
-[[Snippets]]
-  Description = "up cli build xpkg package ignoring workflow files"
-  Output = ""
-  Tag = ["network", "cli"]
-  command = "up xpkg build --ignore=\".github/workflows/*.yaml,.github/workflows/*.yml,examples/*.yaml,.work/uptest-datasource.yaml\""
 
 [[Snippets]]
   Description = "taskwarrior run task action with debugging when developing hooks"
