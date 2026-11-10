@@ -700,3 +700,21 @@
   Output = ""
   Tag = ["claude", "eve", "session"]
   command = "cd /home/decoder/dev && claude -r cf2d4572-610b-4c64-b3ef-383efaff0836"
+
+[[Snippets]]
+  Description = "git: show last week's commits with dates, one line each"
+  Output = ""
+  Tag = ["claude"]
+  command = "git -C ~/.claude log --since=1.week --no-merges --pretty=format:'%h %ad %s' --date=short | head -5"
+
+[[Snippets]]
+  Description = "ykman: add a totp mfa account to yubikey"
+  Output = "Prompts for the base32 secret from the site's 2FA setup."
+  Tag = ["totp", "yubikey", "ykman", "2fa", "mfa"]
+  command = "ykman oath accounts add <name>"
+
+[[Snippets]]
+  Description = "git: push ~/.claude, ~/.codex and dotfiles, then show each branch status"
+  Output = "Stops at the first failed push. Last lines show ahead/behind per repo."
+  Tag = ["git", "claude", "codex", "dotfiles", "backup"]
+  command = 'for d in ~/.claude ~/.codex ~/dev/dotfiles; do git -C "$d" push || break; done; for d in ~/.claude ~/.codex ~/dev/dotfiles; do git -C "$d" status -sb | head -1; done'
