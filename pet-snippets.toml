@@ -718,3 +718,9 @@
   Output = "Stops at the first failed push. Last lines show ahead/behind per repo."
   Tag = ["git", "claude", "codex", "dotfiles", "backup"]
   command = 'for d in ~/.claude ~/.codex ~/dev/dotfiles; do git -C "$d" push || break; done; for d in ~/.claude ~/.codex ~/dev/dotfiles; do git -C "$d" status -sb | head -1; done'
+
+[[Snippets]]
+  Description = "temp: show cpu temperature, fan speed, load and the processes heating the cpu"
+  Output = "Package and core temps with fans, load average, then the top processes by CPU with their full command lines."
+  Tag = ["temperature", "cpu", "sensors", "ps", "performance"]
+  command = "sensors 2>/dev/null | rg -i 'package|core 0|fan|edge'; uptime; ps -eo pid,pcpu,pmem,etime,args --sort=-pcpu | cut -c1-160 | head -<count=12>"
